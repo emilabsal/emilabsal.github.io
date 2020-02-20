@@ -887,30 +887,6 @@ nav a:hover {
 	}
 }
 
-@media screen and (max-width: 992px) {
-	.arbitr {
-		background-attachment: scroll;
-		-webkit-flex-direction: column;
-		-moz-flex-direction: column;
-		-ms-flex-direction: column;
-		-o-flex-direction: column;
-		flex-direction: column;
-	}
-
-	.arbitr-wrap {
-		width: 100%;
-		-webkit-flex-direction: column;
-		-moz-flex-direction: column;
-		-ms-flex-direction: column;
-		-o-flex-direction: column;
-		flex-direction: column;
-	}
-
-	.arbitr-services {
-		width: 90%;
-		margin-bottom: 3em;
-	}
-}
 
 /*registration*/
 .reg {
@@ -1121,15 +1097,6 @@ nav a:hover {
 	}
 }
 
-@media screen and (max-width: 992px) {
-	.reg-text {
-		width: 70%;
-	}
-
-	.reg-accordion {
-	width: 70%;
-}
-}
 
 /*clients*/
 .clients {
