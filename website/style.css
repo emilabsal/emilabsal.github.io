@@ -907,7 +907,7 @@ nav a:hover {
 	}
 
 	.arbitr-services {
-		width: 80%;
+		width: 90%;
 		margin-bottom: 3em;
 	}
 }
@@ -1123,11 +1123,11 @@ nav a:hover {
 
 @media screen and (max-width: 992px) {
 	.reg-text {
-		width: 40%;
+		width: 70%;
 	}
 
 	.reg-accordion {
-	width: 50%;
+	width: 70%;
 }
 }
 
