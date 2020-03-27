@@ -1,0 +1,175 @@
+// Variables
+
+$mainColor: red;
+$darkColor: lighten(#000, 10%);
+$lightColor: #ffffff;
+$mainFont: 'Montserrat', sans-serif;
+
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+// Styles
+.logo {
+    padding: 3rem 2rem;
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+input {
+    display: none;
+}
+
+#n1:checked ~ label[for="n1"],
+#n2:checked ~ label[for="n2"],
+#n3:checked ~ label[for="n3"],
+#n4:checked ~ label[for="n4"],
+#n5:checked ~ label[for="n5"],
+#n6:checked ~ label[for="n6"] {
+    background-color: $mainColor;
+    color: white;
+}
+
+#n1:checked ~ #i1,
+#n2:checked ~ #i2,
+#n3:checked ~ #i3,
+#n4:checked ~ #i4,
+#n5:checked ~ #i5,
+#n6:checked ~ #i6 {
+    display: block;
+}
+
+// #n1:checked ~ #i1>label[for="l1"],
+// #n2:checked ~ #i2>label[for="l2"],
+// #n3:checked ~ #i3>label[for="l3"],
+// #n4:checked ~ #i4>label[for="l4"],
+// #n5:checked ~ #i5>label[for="l5"],
+// #n6:checked ~ #i6>label[for="l6"] {
+//     color: red;
+// }
+
+#p1:checked ~ label[for="p1"] {
+    color: red;
+}
+
+#l1:checked ~ label[for="l1"] {
+    color: red;
+}
+
+
+.inner {
+    display: none;
+}
+
+
+
+aside {
+    width: 25%;
+    height: 100vh;
+    min-width: 20rem;
+    background-color: grey;
+    color: $lightColor;
+    position: relative;
+}
+
+label {
+    width: 100%;
+    display: inline-block;
+    height: 80px;
+    padding: 1rem 2rem;
+    line-height: 1.7;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(#fff, .5);
+    display: flex;
+    align-items: center;
+    font-family: $mainFont;
+
+    &:hover {
+        background-color: red;
+        cursor: pointer;
+        color: white;
+    }
+}
+
+.inner {
+
+    font-family: $mainFont;
+
+
+    .lecture {
+        width: 100%;
+        height: 60px;
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+        background-color: $lightColor;
+        color: $darkColor;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .practice {
+        width: 100%;
+        height: 60px;
+        padding: 1rem 2rem;
+        font-size: 0.8rem;
+        background-color: $lightColor;
+        color: $darkColor;
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+// content-lection
+
+.lection {
+    position: absolute;
+    top: 0;
+    right: -70rem;
+    width: 70rem;
+    color: black;
+    display: none;
+    padding: 1rem 2rem;
+}
+
+#l1:checked ~ .lection {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+
+    &:hover {
+        color: red;
+    }
+}
+
+.doc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+
+    img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 10px;
+    }
+}
