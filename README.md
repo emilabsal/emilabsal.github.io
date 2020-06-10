@@ -17,3 +17,10 @@
 * [Pinterest](https://www.pinterest.ru/)
 * [Awwwards](https://www.awwwards.com/)
 * [Uidesigndaily](https://uidesigndaily.com/)
+* [Bestwebsitegallery](https://bestwebsite.gallery/)
+
+## Web Resources
+* [Uplabs](https://www.uplabs.com/)
+
+## Web Templates
+* [Colorlib](https://colorlib.com/wp/themes/)
