@@ -1,2 +1,1 @@
-# emilabsal.github.io
-LexSh
+# Полезные ссылки
