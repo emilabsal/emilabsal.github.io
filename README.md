@@ -21,6 +21,7 @@
 
 ## Web Resources
 * [Uplabs](https://www.uplabs.com/)
+* [Freebiesbug](https://freebiesbug.com/) (psd, ai, fonts, templates, ui kits)
 
 ## Web Templates
 * [Colorlib](https://colorlib.com/wp/themes/)
