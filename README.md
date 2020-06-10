@@ -2,4 +2,4 @@
 
 
 ## Изображения
-  [Google](https://google.com)
+  **Google**
