@@ -17,11 +17,11 @@
 * [Pinterest](https://www.pinterest.ru/)
 * [Awwwards](https://www.awwwards.com/)
 * [Designspiration](https://www.designspiration.com/)
-* [Siteinspire](https://www.siteinspire.com/)
-* [webdesign-inspiration](https://www.webdesign-inspiration.com/)
-* [Uidesigndaily](https://uidesigndaily.com/)
-* [Bestwebsitegallery](https://bestwebsite.gallery/)
-* [Calltoidea](https://www.calltoidea.com/)
+* [SiteInspire](https://www.siteinspire.com/)
+* [WebDesign Inspiration](https://www.webdesign-inspiration.com/)
+* [UIDesignDaily](https://uidesigndaily.com/)
+* [Best Website Gallery](https://bestwebsite.gallery/)
+* [CallToIdea](https://www.calltoidea.com/)
 * [Lapa.ninja](https://www.lapa.ninja/)
 
 ## Web Resources
@@ -30,4 +30,4 @@
 
 ## Web Templates
 * [Colorlib](https://colorlib.com/wp/themes/)
-* [Onepagelove](https://onepagelove.com/)
+* [One Page Love](https://onepagelove.com/)
