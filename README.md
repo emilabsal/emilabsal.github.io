@@ -16,12 +16,18 @@
 * [Dribbble](https://dribbble.com/)
 * [Pinterest](https://www.pinterest.ru/)
 * [Awwwards](https://www.awwwards.com/)
+* [Designspiration](https://www.designspiration.com/)
+* [Siteinspire](https://www.siteinspire.com/)
+* [webdesign-inspiration](https://www.webdesign-inspiration.com/)
 * [Uidesigndaily](https://uidesigndaily.com/)
 * [Bestwebsitegallery](https://bestwebsite.gallery/)
+* [Calltoidea](https://www.calltoidea.com/)
+* [Lapa.ninja](https://www.lapa.ninja/)
 
 ## Web Resources
-* [Uplabs](https://www.uplabs.com/)
-* [Freebiesbug](https://freebiesbug.com/) (psd, ai, fonts, templates, ui kits)
+* [Uplabs](https://www.uplabs.com/) (web, app templates, branding, marketing, icons, mockups)
+* [Freebiesbug](https://freebiesbug.com/) (psd, ai, fonts, web templates, ui kits)
 
 ## Web Templates
 * [Colorlib](https://colorlib.com/wp/themes/)
+* [Onepagelove](https://onepagelove.com/)
