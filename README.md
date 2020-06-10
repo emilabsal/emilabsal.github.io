@@ -10,12 +10,28 @@
 * [Lifeofpix](https://www.lifeofpix.com/)
 * [Isorepublic](https://isorepublic.com/)
 * [Foodiesfeed](https://www.foodiesfeed.com/)
+* [Picjumbo](https://picjumbo.com/)
+* [RawPixel](https://www.rawpixel.com/?sort=shuffle&page=1)
+
+## PNG
+* [PngTree](https://ru.pngtree.com/)
+
+## Vectors
+* [VectorStock](https://www.vectorstock.com/)
+
+## Icons
+* [Flaticon](https://www.flaticon.com/)
+* [Iconfinder](https://www.iconfinder.com/)
+* [Font Awesome](https://fontawesome.ru/)
+* [Iconmonstr](https://iconmonstr.com/)
 
 ## Inspiration
 * [Behance](https://www.behance.net/)
 * [Dribbble](https://dribbble.com/)
 * [Pinterest](https://www.pinterest.ru/)
 * [Awwwards](https://www.awwwards.com/)
+* [All Awards](http://allawards.ru/)
+* [Siiimple](https://siiimple.com/)
 * [Designspiration](https://www.designspiration.com/)
 * [SiteInspire](https://www.siteinspire.com/)
 * [WebDesign Inspiration](https://www.webdesign-inspiration.com/)
@@ -24,10 +40,22 @@
 * [CallToIdea](https://www.calltoidea.com/)
 * [Lapa.ninja](https://www.lapa.ninja/)
 
+## Web Market
+* [Envato](https://elements.envato.com/ru/)
+* [TemplateMonster](https://www.templatemonster.com/ru/)
+* [CreativeMarket](https://creativemarket.com/)
+
 ## Web Resources
-* [Uplabs](https://www.uplabs.com/) (web, app templates, branding, marketing, icons, mockups)
-* [Freebiesbug](https://freebiesbug.com/) (psd, ai, fonts, web templates, ui kits)
+* [Freepik](https://ru.freepik.com/home) (vectors, photos, psd, icons)
+* [GraphicsLand](https://graphicsland.ru/) (ae, ai, psd, xd, sketch, fonts, icons, textures, web templates, effects)
+* [UpLabs](https://www.uplabs.com/) (web, app templates, branding, marketing, icons, mockups)
+* [Freebiesbug](https://freebiesbug.com/) (psd, ai, sketch, fonts, web templates, ui kits)
+* [UiSpace](https://uispace.net/) (psd, ai, sketch, icons, fonts, scripts)
 
 ## Web Templates
 * [Colorlib](https://colorlib.com/wp/themes/)
+* [HTML5 UP](https://html5up.net/)
 * [One Page Love](https://onepagelove.com/)
+
+## Articles
+* [UXPlanet](https://uxplanet.org/user-experience/home)
