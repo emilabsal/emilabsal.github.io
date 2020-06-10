@@ -1,6 +1,6 @@
-# Полезные ссылки
+# Useful Resources
 
-## Изображения
+## Images
 * [Unsplash](https://unsplash.com/)
 * [Pexels](https://www.pexels.com/)
 * [Pixabay](https://pixabay.com/ru/)
@@ -10,3 +10,10 @@
 * [Lifeofpix](https://www.lifeofpix.com/)
 * [Isorepublic](https://isorepublic.com/)
 * [Foodiesfeed](https://www.foodiesfeed.com/)
+
+## Inspiration
+* [Behance](https://www.behance.net/)
+* [Dribbble](https://dribbble.com/)
+* [Pinterest](https://www.pinterest.ru/)
+* [Awwwards](https://www.awwwards.com/)
+* [Uidesigndaily](https://uidesigndaily.com/)
