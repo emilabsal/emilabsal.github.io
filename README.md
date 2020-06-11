@@ -7,6 +7,7 @@
 * [Unsplash](https://unsplash.com/)
 * [Pexels](https://www.pexels.com/)
 * [Pixabay](https://pixabay.com/ru/)
+* [Tin Eye](https://tineye.com/)
 * [Kaboompics](https://kaboompics.com/)
 * [Stocksnap](https://stocksnap.io/)
 * [Freestockimages](https://www.freestockimages.ru/photo)
@@ -16,17 +17,28 @@
 * [Picjumbo](https://picjumbo.com/)
 * [RawPixel](https://www.rawpixel.com/?sort=shuffle&page=1)
 
+## Video
+* [Pexels](https://www.pexels.com/videos)
+* [Pixabay](https://pixabay.com/ru/videos/)
+* [Coverr](https://coverr.co/)
+* [Videezy](https://www.videezy.com/)
+* [Videvo](https://www.videvo.net/stock-video-footage/)
+
 ## Illustrations
 * [Undraw](https://undraw.co/illustrations)
 * [Drawkit](https://www.drawkit.io/)
 * [Manypixels](https://www.manypixels.co/gallery/)
 * [Opendoodles](https://www.opendoodles.com/)
+* [Openpeeps](https://www.openpeeps.com/)
+* [Lukaszadam](https://lukaszadam.com/illustrations)
 
 ## Pattern / Texture
 * [The Pattern Library](http://thepatternlibrary.com/)
+* [Heropatterns](http://www.heropatterns.com/)
 
 ## Vectors
 * [VectorStock](https://www.vectorstock.com/)
+* [Retrovectors](http://retrovectors.com/)
 
 ## Icons
 * [Flaticon](https://www.flaticon.com/)
@@ -50,6 +62,22 @@
 * [CallToIdea](https://www.calltoidea.com/)
 * [Lapa.ninja](https://www.lapa.ninja/)
 
+## Fonts
+* [Google Fonts](https://fonts.google.com/?1)
+
+
+## Colors
+* [Coolors](https://coolors.co/)
+* [Material Palette](https://www.materialpalette.com/)
+* [Material Color Tool](https://material.io/resources/color/#!/?view.left=0&view.right=0&primary.color=D32F2F)
+* [Color Adobe](https://color.adobe.com/ru/create/color-wheel)
+* [CSS Gradient](https://cssgradient.io/)
+* [Brandcolors](https://brandcolors.net/)
+* [UI Gradients](https://uigradients.com/#Passion)
+* [Web Gradients](https://webgradients.com/)
+* [Egg Gradients](https://www.eggradients.com/)
+
+
 ## Web Market
 * [Envato](https://elements.envato.com/ru/)
 * [TemplateMonster](https://www.templatemonster.com/ru/)
@@ -69,3 +97,18 @@
 
 ## Articles
 * [UXPlanet](https://uxplanet.org/user-experience/home)
+
+
+## Web Tools
+* [CSS Validator](https://jigsaw.w3.org/css-validator/) (CSS Validation)
+* [CSS Lint](http://csslint.net/) (CSS linter)
+* [Neumorphism](https://neumorphism.io/#55b9f3) (Neumorphism maker)
+* [BEM](https://ru.bem.info/methodology/) (BEM methodology)
+* [Mattkersley](http://mattkersley.com/responsive/) (Adaptive testing)
+* [Squooosh](https://squoosh.app/) (Image optimization)
+* [IMGOnline](https://www.imgonline.com.ua/get-dominant-colors.php) (Color picker from image)
+* [Temp Mail](https://temp-mail.org/ru/) (Temporary mailbox)
+* [Material Design](https://material.io/) (Material Design)
+
+## JS Libraries
+* [Fullpage.js](https://alvarotrigo.com/fullPage/#page1)
