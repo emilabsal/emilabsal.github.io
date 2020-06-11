@@ -1,5 +1,8 @@
 # Useful Resources
 
+# Table of Contents
+* [Images](#Images)
+
 ## Images
 * [Unsplash](https://unsplash.com/)
 * [Pexels](https://www.pexels.com/)
@@ -13,8 +16,14 @@
 * [Picjumbo](https://picjumbo.com/)
 * [RawPixel](https://www.rawpixel.com/?sort=shuffle&page=1)
 
-## PNG
-* [PngTree](https://ru.pngtree.com/)
+## Illustrations
+* [Undraw](https://undraw.co/illustrations)
+* [Drawkit](https://www.drawkit.io/)
+* [Manypixels](https://www.manypixels.co/gallery/)
+* [Opendoodles](https://www.opendoodles.com/)
+
+## Pattern / Texture
+* [The Pattern Library](http://thepatternlibrary.com/)
 
 ## Vectors
 * [VectorStock](https://www.vectorstock.com/)
@@ -22,6 +31,7 @@
 ## Icons
 * [Flaticon](https://www.flaticon.com/)
 * [Iconfinder](https://www.iconfinder.com/)
+* [PngTree](https://ru.pngtree.com/)
 * [Font Awesome](https://fontawesome.ru/)
 * [Iconmonstr](https://iconmonstr.com/)
 
