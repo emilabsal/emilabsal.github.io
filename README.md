@@ -112,3 +112,5 @@
 
 ## JS Libraries
 * [Fullpage.js](https://alvarotrigo.com/fullPage/#page1)
+* [Three.js](https://threejs.org/)
+* [Particles.js](https://vincentgarreau.com/particles.js/)
