@@ -35,6 +35,7 @@
 ## Pattern / Texture
 * [The Pattern Library](http://thepatternlibrary.com/)
 * [Heropatterns](http://www.heropatterns.com/)
+* [Transparent Textures](https://transparenttextures.com/)
 
 ## Vectors
 * [VectorStock](https://www.vectorstock.com/)
