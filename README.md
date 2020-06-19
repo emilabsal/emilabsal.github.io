@@ -115,3 +115,8 @@
 * [Fullpage.js](https://alvarotrigo.com/fullPage/#page1)
 * [Three.js](https://threejs.org/)
 * [Particles.js](https://vincentgarreau.com/particles.js/)
+
+## Design/Wireframing
+* [Figma](https://www.figma.com/)
+* [Adobe XD](https://www.adobe.com/ru/products/xd.html)
+* [Draftium](https://draftium.com/)
