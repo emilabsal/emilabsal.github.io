@@ -31,6 +31,10 @@
 * [Opendoodles](https://www.opendoodles.com/)
 * [Openpeeps](https://www.openpeeps.com/)
 * [Lukaszadam](https://lukaszadam.com/illustrations)
+* [Ouch](https://icons8.com/ouch)
+* [IRA Design](https://iradesign.io/illustrations)
+* [Illustratious](https://illustratious.com/?premium=false)
+* [Iconscout](https://iconscout.com/free-illustrations)
 
 ## Pattern / Texture
 * [The Pattern Library](http://thepatternlibrary.com/)
@@ -85,6 +89,7 @@
 * [CreativeMarket](https://creativemarket.com/)
 
 ## Web Resources
+* [Evernote.design](https://www.evernote.design/) (collection of design elements)
 * [Freepik](https://ru.freepik.com/home) (vectors, photos, psd, icons)
 * [GraphicsLand](https://graphicsland.ru/) (ae, ai, psd, xd, sketch, fonts, icons, textures, web templates, effects)
 * [UpLabs](https://www.uplabs.com/) (web, app templates, branding, marketing, icons, mockups)
