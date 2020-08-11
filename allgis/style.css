@@ -1,0 +1,1314 @@
+@font-face {
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  src: url(fonts/futurafuturiscondextraboldc.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "FuturaBookC";
+  font-weight: 400;
+  font-size: 100%;
+  box-sizing: border-box;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  width: 100%;
+  background-color: #074AF4;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 15% 85%;
+  color: #ffffff;
+  padding: 0 4rem;
+}
+header .logo {
+  width: 100%;
+  grid-row: span 2;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+header .contacts {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+header .contacts a {
+  font-size: 0.9rem;
+}
+header .contacts .telephone {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+header .contacts .telephone::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -25%;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  background: url(icons/phone.svg) no-repeat center/contain;
+}
+header .contacts .envelope {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+header .contacts .envelope::before {
+  content: "";
+  position: absolute;
+  top: -3%;
+  left: -38%;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  background: url(icons/mail.svg) no-repeat center/contain;
+}
+header .contacts a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+header .contacts a:first-child {
+  margin-right: 4rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+header .contacts a:last-child {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+header nav ul {
+  display: flex;
+}
+header nav li {
+  display: inline-block;
+  padding: 1rem 2rem;
+}
+header nav a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+header nav li:last-child {
+  padding-right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  header {
+    grid-template-columns: 20% 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    grid-template-columns: 25% 75%;
+  }
+}
+@media screen and (max-width: 576px) {
+  header {
+    grid-template-columns: 100%;
+    padding: 0 1rem;
+  }
+
+  header .logo {
+    width: 100%;
+    grid-row: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  header .contacts {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  header nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.banner {
+  width: 100%;
+  min-height: 700px;
+  height: 90vh;
+  background-color: #074AF4;
+  padding: 2rem 0;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.banner .adv {
+  position: absolute;
+  bottom: 5%;
+  left: 4%;
+  z-index: 100;
+}
+.banner .adv__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 150px;
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+.banner .adv .present {
+  width: 24px;
+  height: 24px;
+  background: url(icons/presentation.svg) no-repeat center/cover;
+}
+.banner .adv .feed {
+  width: 24px;
+  height: 24px;
+  background: url(icons/feedback.svg) no-repeat center/cover;
+}
+.banner .adv .ruler {
+  width: 24px;
+  height: 24px;
+  background: url(icons/ruler.svg) no-repeat center/cover;
+}
+.banner .adv .text {
+  width: 250px;
+}
+.banner .slide1 {
+  width: 70%;
+  height: 100%;
+  background: url(img-optimum/first.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.banner .slide1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 74, 244, 0.9);
+  z-index: -1;
+}
+.banner .slide1 h3 {
+  font-size: 4rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+.banner .slide1 p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.banner .slide1 button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.banner .slide1 button:focus, .banner .slide1 button:active {
+  border: 1px solid #ffffff;
+}
+.banner .slide1 button:hover {
+  box-shadow: 5px 5px 0 0 #ffffff;
+}
+.banner .slide-mini {
+  position: absolute;
+  z-index: 1;
+  top: 10%;
+  left: 65%;
+  width: 17%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner .item {
+  width: 100%;
+  height: 30%;
+}
+.banner .item:nth-child(1) {
+  background: url(img-optimum/first.jpg) no-repeat center/cover;
+}
+.banner .item:nth-child(2) {
+  background: url(img-optimum/second.jpg) no-repeat center/cover;
+}
+.banner .item:nth-child(3) {
+  background: url(img-optimum/third.jpg) no-repeat center/cover;
+}
+
+@media screen and (max-width: 1500px) {
+  .banner .slide-mini {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .banner .slide1 h3 {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner .slide-mini {
+    display: none;
+  }
+
+  .banner .slide1 {
+    width: 100%;
+  }
+}
+.spektr {
+  width: 100%;
+  background-color: #074AF4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 4rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  flex-wrap: wrap;
+}
+.spektr__img {
+  flex: 1 0 50%;
+  height: 600px;
+  background: url(img-optimum/worker.png) no-repeat center/contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 1rem;
+}
+.spektr__img h2 {
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+.spektr__img span {
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  font-size: 2rem;
+  display: inline-block;
+  width: 60%;
+}
+.spektr__content {
+  flex: 1 0 50%;
+  height: 600px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.spektr__desc {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+.spektr__desc .item {
+  width: 300px;
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  height: 150px;
+  padding: 1rem;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  transition: all 0.3s;
+}
+.spektr__desc .item:hover {
+  box-shadow: 7px 7px 0 0 #ffffff;
+}
+.spektr__desc span {
+  width: 100%;
+  text-align: left;
+}
+.spektr__desc .roof {
+  width: 2.5rem;
+}
+.spektr__desc .basement {
+  width: 2rem;
+  margin-bottom: 0.3rem;
+}
+.spektr__desc .blocks {
+  width: 2.5rem;
+}
+.spektr__desc .hydrotec {
+  margin-bottom: 0.3rem;
+}
+.spektr__desc .subway {
+  width: 2rem;
+}
+
+@media screen and (max-width: 1250px) {
+  .spektr__desc .item {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .spektr__img {
+    flex: 1 0 100%;
+    margin-bottom: 1rem;
+  }
+
+  .spektr__content {
+    flex: 1 0 100%;
+    height: auto;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+
+  .spektr__desc .item {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .spektr__desc .item {
+    width: 200px;
+  }
+}
+.partners {
+  width: 100%;
+  padding: 1rem 4rem;
+  background-color: #074AF4;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.partners h3 {
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.partners__partner img {
+  margin-right: 3rem;
+  width: 3rem;
+  max-width: 100%;
+}
+.partners__partner img:nth-child(1), .partners__partner img:nth-child(2) {
+  width: 5rem;
+}
+.partners .partner__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.partners__client img {
+  margin-right: 4rem;
+  width: 3rem;
+  max-width: 100%;
+}
+.partners__client img:nth-child(2) {
+  width: 8rem;
+}
+.partners__client h3 {
+  text-align: left;
+}
+.partners .client__content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .partners__partner {
+    margin-bottom: 2rem;
+  }
+}
+.roof-hydro {
+  width: 100%;
+  padding: 6rem 4rem;
+  padding-bottom: 1rem;
+  background: url(img-optimum/roofs.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+}
+.roof-hydro::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 74, 244, 0.9);
+  z-index: -1;
+}
+.roof-hydro h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 50%;
+}
+.roof-hydro .roof-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.roof-hydro .roof-top-left {
+  flex: 1 0 50%;
+  padding-right: 1rem;
+}
+.roof-hydro .roof-top-left ul {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 3px dashed rgba(255, 255, 255, 0.7);
+}
+.roof-hydro .roof-top-right {
+  flex: 1 0 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.roof-hydro .roof-top-right img {
+  max-width: 100%;
+  width: 30rem;
+}
+.roof-hydro .roof-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 0;
+}
+.roof-hydro .roof-bottom-left {
+  flex: 1 0 50%;
+}
+.roof-hydro .roof-bottom-left img {
+  max-width: 100%;
+  width: 30rem;
+}
+.roof-hydro .roof-bottom-right {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.roof-hydro .roof-bottom-right ul {
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 3px dashed rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+.roof-hydro .roof-bottom-right button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.roof-hydro .roof-bottom-right button:focus, .roof-hydro .roof-bottom-right button:active {
+  border: 1px solid #ffffff;
+}
+.roof-hydro .roof-bottom-right button:hover {
+  box-shadow: 5px 5px 0 0 #ffffff;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal-inner {
+  width: 30%;
+  padding: 2rem 0;
+  background-color: #074AF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 20px 20px 0 0 #ffffff;
+}
+.modal-inner h4 {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.modal-inner span {
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 1rem;
+  margin-right: 3rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+}
+.modal-inner span:hover, .modal-inner span:active, .modal-inner span:focus {
+  color: #ffffff;
+}
+.modal-inner form {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-inner form label {
+  margin-bottom: 0.5rem;
+}
+.modal-inner form input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+.modal-inner form input:focus, .modal-inner form input:active {
+  border: 1px solid #ffffff;
+}
+.modal-inner form textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  height: 100px;
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
+.modal-inner form textarea:focus, .modal-inner form textarea:active {
+  border: 1px solid #ffffff;
+}
+.modal-inner form button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+}
+.modal-inner form button:active, .modal-inner form button:focus {
+  border: 1px solid #ffffff;
+}
+.modal-inner form button:hover {
+  background-color: #ffffff;
+  color: #074AF4;
+  border: 1px solid #ffffff;
+}
+
+@media screen and (max-width: 1200px) {
+  .modal-inner {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .modal-inner {
+    width: 60%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .modal-inner {
+    width: 100%;
+  }
+}
+.underground {
+  width: 100%;
+  background: url(img-optimum/bg-underground.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 4rem;
+  flex-wrap: wrap;
+}
+.underground h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.underground::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 74, 244, 0.9);
+  z-index: -1;
+}
+.underground__left {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.underground__left img {
+  max-width: 100%;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+.underground__left button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  transition: all 0.3s;
+}
+.underground__left button:focus, .underground__left button:active {
+  border: 1px solid #ffffff;
+}
+.underground__left button:hover {
+  box-shadow: 5px 5px 0 0 #ffffff;
+}
+.underground__right {
+  flex: 1 0 50%;
+  padding-left: 2rem;
+}
+.underground__right ul {
+  width: 70%;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (max-width: 992px) {
+  .underground__right ul {
+    width: 100%;
+  }
+}
+.base {
+  width: 100%;
+  background: url(img-optimum/bg-base.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 4rem;
+  flex-wrap: wrap;
+}
+.base h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.base::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 74, 244, 0.9);
+  z-index: -1;
+}
+.base__right {
+  flex: 1 0 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.base__right img {
+  max-width: 100%;
+  width: 30rem;
+}
+.base__left {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+.base__left ul {
+  width: 70%;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+}
+.base__left button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+.base__left button:focus, .base__left button:active {
+  border: 1px solid #ffffff;
+}
+.base__left button:hover {
+  box-shadow: 5px 5px 0 0 #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .base__left ul {
+    width: 100%;
+  }
+
+  .base__left {
+    padding-right: 2rem;
+  }
+}
+.hydro {
+  width: 100%;
+  background: url(img-optimum/ges.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 4rem;
+}
+.hydro h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+.hydro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 74, 244, 0.9);
+  z-index: -1;
+}
+.hydro__inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.hydro .hydro-left {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.hydro .hydro-left ul {
+  width: 70%;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+  margin-bottom: 2rem;
+}
+.hydro .hydro-right {
+  flex: 1 0 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 1rem;
+}
+.hydro .hydro-right button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  margin-bottom: 4rem;
+}
+.hydro .hydro-right button:focus, .hydro .hydro-right button:active {
+  border: 1px solid #ffffff;
+}
+.hydro .hydro-right button:hover {
+  box-shadow: 5px 5px 0 0 #ffffff;
+}
+.hydro .hydro-right img {
+  max-width: 100%;
+  width: 20rem;
+}
+
+@media screen and (max-width: 992px) {
+  .hydro .hydro-left ul {
+    width: 100%;
+  }
+
+  .hydro-left {
+    padding-right: 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .hydro .hydro-right {
+    flex: 1 0 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .hydro h2 {
+    font-size: 2rem;
+  }
+}
+.metro {
+  width: 100%;
+  background: url(img-optimum/bg-metro.jpg) no-repeat center/cover;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 4rem;
+}
+.metro h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+.metro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 74, 244, 0.9);
+  z-index: -1;
+}
+.metro__inner {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.metro__left {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-right: 1rem;
+}
+.metro__left ul {
+  width: 70%;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+}
+.metro__right {
+  flex: 1 0 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.metro__right button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.metro__right button:focus, .metro__right button:active {
+  border: 1px solid #ffffff;
+}
+.metro__right button:hover {
+  box-shadow: 5px 5px 0 0 #ffffff;
+}
+.metro__right img {
+  max-width: 100%;
+  width: 20rem;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .metro__left ul {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .metro__left {
+    flex: 1 0 100%;
+    margin-bottom: 2rem;
+  }
+}
+.other {
+  width: 100%;
+  background-color: #074AF4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 4rem;
+}
+.other .poly, .other .warm, .other .injection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.other .injection {
+  border: none;
+}
+.other .img-inner {
+  flex: 1 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other .img-inner img {
+  max-width: 100%;
+  width: 10rem;
+}
+.other__content {
+  flex: 1 0 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.other__content h2 {
+  flex: 1 0 35%;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  font-size: 2.5rem;
+  padding-right: 1rem;
+}
+.other__content p {
+  flex: 1 0 65%;
+  font-size: 1.2rem;
+  padding-right: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .other__content h2 {
+    font-size: 170%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .other .poly, .other .warm, .other .injection {
+    height: auto;
+    padding: 2rem 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .other .poly, .other .warm, .other .injection {
+    height: auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .other__content {
+    margin-bottom: 2rem;
+  }
+}
+.projects {
+  width: 100%;
+  background-color: #074AF4;
+  padding: 4rem;
+}
+.projects h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  margin-bottom: 3rem;
+  width: 50%;
+}
+.projects__content {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 3rem;
+  justify-items: center;
+}
+.projects__content .item {
+  width: 100%;
+  height: 300px;
+  border: 3px dashed #ffffff;
+  background-color: #FBBD09;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects__content .item-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #FBBD09;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.projects__content .item span {
+  position: absolute;
+  z-index: 3;
+  top: 5%;
+  left: 5%;
+}
+.projects__content .item img {
+  max-width: 100%;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+@media screen and (max-width: 992px) {
+  .projects__content {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .projects__content {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 1rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .projects__content {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1rem;
+  }
+}
+.info {
+  width: 100%;
+  background-color: #074AF4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem;
+}
+.info h2 {
+  font-size: 3.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  text-align: left;
+}
+.info h3 {
+  font-size: 2.5rem;
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+.info__content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.info__left {
+  flex: 1 0 50%;
+}
+.info__left span {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+.info__left p {
+  margin-bottom: 2rem;
+}
+.info__left a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+.info__left .map {
+  width: 482px;
+  height: 282px;
+  overflow: hidden;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  padding: 1rem 1rem 1rem 1rem;
+}
+.info__right {
+  flex: 1 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 2rem;
+}
+.info__right form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.info__right form label {
+  margin-bottom: 0.5rem;
+}
+.info__right form input {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+.info__right form input:focus, .info__right form input:active {
+  border: 1px solid #ffffff;
+}
+.info__right form textarea {
+  width: 100%;
+  resize: none;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.5rem 1rem;
+  height: 100px;
+  background-color: transparent;
+  margin-bottom: 1rem;
+}
+.info__right form textarea:focus, .info__right form textarea:active {
+  border: 1px solid #ffffff;
+}
+.info__right form button {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.7rem 2rem;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s;
+}
+.info__right form button:active, .info__right form button:focus {
+  border: 1px solid #ffffff;
+}
+.info__right form button:hover {
+  background-color: #ffffff;
+  color: #074AF4;
+  border: 1px solid #ffffff;
+}
+
+@media screen and (max-width: 992px) {
+  .info__right {
+    flex: 1 0 40%;
+  }
+  .info__right form {
+    width: 100%;
+  }
+
+  .info__left {
+    flex: 1 0 30%;
+  }
+
+  .info__left .map {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border: none;
+    padding: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info__left {
+    flex: 1 0 100%;
+    margin-bottom: 2rem;
+  }
+}
+footer {
+  width: 100%;
+  background-color: #074AF4;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 2rem 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+footer .footer-left h3 {
+  font-family: "FuturaFuturisCondExtraBoldC", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+footer .footer-left .req {
+  width: 170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 0.5rem;
+}
+footer .footer-left span {
+  width: 50px;
+}
+footer .footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .footer-right a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
