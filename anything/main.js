@@ -2,17 +2,18 @@
 const menu = document.querySelector('.menu-mobile');
 const close = document.querySelector('.close');
 const nav = document.querySelector('nav');
-const bodi = document.querySelector('body');
 
-menu.addEventListener('click', function(){
-    nav.style.display = 'flex';
-    bodi.style.overflow = 'hidden';
-})
 
-close.addEventListener('click', function(){
-    nav.style.display = 'none';
-    bodi.style.overflow = 'scroll';
-})
+if (document.documentElement.clientWidth < 768) {
+    menu.addEventListener('click', function(){
+        nav.style.display = 'flex';
+    })
+
+    close.addEventListener('click', function(){
+        nav.style.display = 'none';
+    })
+}
+
 
 // up-button
 $(function() {
