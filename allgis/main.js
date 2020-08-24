@@ -20,3 +20,21 @@ window.addEventListener('click', function(e) {
         modal.style.display = 'none';
     }
 });
+
+// modal-project
+const modalProject = document.querySelectorAll('.project-modal');
+const itemModal = document.querySelectorAll('.item-modal');
+const btnProject = document.querySelector('.project-btn');
+
+
+for(let y = 0; y < itemModal.length; y++) {
+    itemModal[y].addEventListener('click', function(){
+        modalProject[y].style.display = 'flex';
+    })
+
+    window.addEventListener('click', function(e) {
+        if(e.target == modalProject[y]) {
+            modalProject[y].style.display = 'none';
+        }
+    });
+}

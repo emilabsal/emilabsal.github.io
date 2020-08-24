@@ -40,6 +40,7 @@ $lightColor: #ffffff;
 body {
     max-width: 2000px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 ul, li {
@@ -179,7 +180,6 @@ header {
         grid-template-columns: 25% 75%;
         padding: 1rem 1rem;
 
-
     }
 }
 
@@ -189,7 +189,7 @@ header {
         padding: 1rem 1rem;
 
         nav ul li {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
         }
     }
 
@@ -260,6 +260,15 @@ header {
         justify-content: center;
         align-items: center;
     }
+}
+
+@media screen and (max-width: 370px) {
+    header {
+
+        nav ul li {
+            font-size: 0.6rem;
+    }
+}
 }
 
 // banner
@@ -435,6 +444,10 @@ header {
 
 
 @media screen and (max-width: 420px) {
+    .banner {
+        font-size: 80%;
+    }
+
     .banner .slide1 h3 {
         font-size: 2rem;
     }
@@ -554,6 +567,10 @@ header {
     .spektr__desc .item {
         width: 250px;
     }
+
+    .spektr__desc {
+        margin-top: 1rem;
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -579,6 +596,12 @@ header {
     .spektr__desc .item {
         width: 200px;
     }
+
+    .spektr {
+        h2 {
+            font-size: 2rem;
+        }
+    }
 }
 
 @media screen and (max-width: 380px) {
@@ -588,9 +611,14 @@ header {
 }
 
 @media screen and (max-width: 520px) {
+    .spektr {
+        font-size: 80%;
+    }
+
     .spektr__desc {
         grid-template-columns: repeat(1, 1fr);
         justify-items: center;
+
 
         .item {
             width: 220px;
@@ -826,9 +854,21 @@ header {
     }
 }
 
+@media screen and (max-width: 576px) {
+    button {
+        font-size: 80% !important;
+    }
+}
+
 @media screen and (max-width: 768px) {
+
     .roof-hydro {
         padding: 1rem;
+
+    }
+
+    .roof-hydro li {
+        font-size: 95%;
     }
 
     .roof-hydro h2 {
@@ -854,6 +894,17 @@ header {
 
     .roof-hydro .roof-bottom-right {
         flex: 1 0 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .roof-hydro li {
+        font-size: 80%;
+    }
+
+    .roof-hydro h2 {
+        font-size: 2rem;
+        width: 80%;
     }
 }
 
@@ -977,6 +1028,7 @@ header {
 }
 
 @media screen and (max-width: 576px) {
+
     .modal-inner {
         width: 100%;
     }
@@ -1096,8 +1148,24 @@ header {
         flex: 1 0 100%;
     }
 
+    .underground li {
+        font-size: 95%;
+    }
+
 
 }
+
+@media screen and (max-width: 576px) {
+    .underground h2 {
+        font-size: 2rem;
+        width: 80%;
+    }
+
+    .underground li {
+        font-size: 80%;
+    }
+}
+
 
 // basement
 .base {
@@ -1194,6 +1262,10 @@ header {
     .base {
         padding: 1rem;
 
+        li {
+            font-size: 95%;
+        }
+
         h2 {
             font-size: 2.3rem;
         }
@@ -1206,6 +1278,20 @@ header {
 
     .base__right {
         flex: 1 0 100%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .base {
+        padding: 1rem;
+
+        li {
+            font-size: 80%;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
     }
 }
 
@@ -1308,6 +1394,10 @@ header {
 @media screen and (max-width: 768px) {
     .hydro {
         padding: 1rem;
+
+        li {
+            font-size: 95%;
+        }
     }
 
     .hydro .hydro-right {
@@ -1316,6 +1406,7 @@ header {
 
     .hydro h2 {
         font-size: 2.3rem;
+
     }
 
     .hydro .hydro-left {
@@ -1326,6 +1417,10 @@ header {
 @media screen and (max-width: 576px) {
     .hydro {
         padding: 1rem;
+
+        li {
+            font-size: 80%;
+        }
     }
 
     .hydro h2 {
@@ -1427,6 +1522,10 @@ header {
 @media screen and (max-width: 768px) {
     .metro {
         padding: 1rem;
+
+        li {
+            font-size: 95%;
+        }
     }
 
     .metro__left {
@@ -1443,6 +1542,10 @@ header {
 @media screen and (max-width: 576px) {
     .metro {
         padding: 1rem;
+
+        li {
+            font-size: 80%;
+        }
     }
 
     .metro h2 {
@@ -1524,6 +1627,14 @@ header {
         padding: 1rem;
     }
 
+    .other__content h2 {
+        font-size: 2rem;
+    }
+
+    .other__content p {
+        font-size: 95%;
+    }
+
     .other .poly, .other .warm, .other .injection {
         height: auto;
         padding: 2rem 0;
@@ -1580,6 +1691,7 @@ header {
             display: flex;
             justify-content: center;
             align-items: center;
+            cursor: pointer;
 
             &-inner {
                 position: relative;
@@ -1607,9 +1719,103 @@ header {
     }
 }
 
+
+.project-modal {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba($lightColor, .7);
+    display: none;
+}
+
+.project-inner {
+    width: 50%;
+    background-color: $mainColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        @include btn;
+        border: 1px solid rgba($lightColor, .5);
+        transition: all .3s;
+        margin-bottom: 2rem;
+    }
+
+    button:active, button:focus {
+        border: 1px solid $lightColor;
+    }
+
+    button:hover {
+        background-color: $lightColor;
+        color: $mainColor;
+        border: 1px solid $lightColor;
+    }
+}
+
+.modal-img {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+    background: url(img-optimum/dynamo.jpg) no-repeat center/cover;
+}
+
+.img2 {
+    background: url(img-optimum/roof-project.jpg) no-repeat center/cover;
+}
+
+.img3 {
+    background: url(img-optimum/filtr-project.jpg) no-repeat center/cover;
+}
+
+.img4 {
+    background: url(img-optimum/roof2-project.jpg) no-repeat center/cover;
+}
+
+.modal-content {
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.modal-left {
+    flex: 1 0 30%;
+    margin-right: 1rem;
+
+    h3 {
+        margin-bottom: 1rem;
+    }
+
+    span {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 0.3rem;
+    }
+}
+
+.modal-right {
+    flex: 1 0 40%;
+
+    li {
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+}
+
 @media screen and (max-width: 1200px) {
     .projects__content .item {
         height: 200px;
+    }
+
+    .project-inner {
+        width: 70%;
     }
 }
 
@@ -1619,6 +1825,10 @@ header {
         grid-template-columns: repeat(3, 1fr);
         row-gap: 1rem;
     }
+
+    .project-inner {
+        width: 80%;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1626,16 +1836,47 @@ header {
         grid-template-columns: repeat(2, 1fr);
         row-gap: 1rem;
     }
+
+    .project-inner {
+        width: 90%;
+    }
+
+    .modal-img {
+        height: 180px;
+    }
+
+    .modal-content {
+        display: flex;
+        font-size: 90%;
+    }
 }
 
 @media screen and (max-width: 576px) {
     .projects {
         padding: 1rem;
+
+        h2 {
+            font-size: 2rem;
+        }
     }
 
     .projects__content {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 1rem;
+    }
+
+    .project-inner {
+        width: 90%;
+    }
+
+    .modal-img {
+        height: 150px;
+    }
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        font-size: 85%;
     }
 }
 
@@ -1823,6 +2064,12 @@ header {
 @media screen and (max-width: 576px) {
     .info {
         padding: 1rem;
+        font-size: 80%;
+
+        h2, h3 {
+            font-size: 2rem;
+        }
+
     }
 
     .info__left .map {
@@ -1886,6 +2133,10 @@ footer {
     }
 
     .footer-left {
+        margin-bottom: 1rem;
+    }
+
+    .logo-under {
         margin-bottom: 1rem;
     }
 }
