@@ -1,0 +1,574 @@
+// fonts
+@font-face {
+    font-family: 'GilroyMedium';
+    src: url(fonts/gilroy-medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilroyBold';
+    src: url(fonts/gilroy-bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GilroyExtraBold';
+    src: url(fonts/gilroy-extrabold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronicle Display Bold';
+    src: url(fonts/chronicle-display-bold.otf) format('otf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Chronicle Display Semibold';
+    src: url(fonts/chronicle-display-simibold.otf) format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+
+
+// Variables
+$mainFont: 'GilroyBold';
+$logoFont: 'Chronicle Display Bold';
+$addFont: 'GilroyExtraBold';
+$sloganFont: 'Chronicle Display Semibold';
+$mainColor: #fff;
+$bgColor: #0B1D26;
+$accentColor: #FBD784;
+$rightFont: 'GilroyMedium';
+
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $mainFont;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $bgColor;
+    color: $mainColor;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: $accentColor;
+    transition: all .3s;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+
+// Styles
+
+// header
+// top
+header {
+    width: 100%;
+    height: 120vh;
+    padding: 2rem 4rem;
+    background: url(image/mount.jpg) no-repeat center/cover;
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+    border: none;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(11, 29, 38, 0) 0%, rgba(11, 29, 38, 1) 90.38%),
+    linear-gradient(330.24deg, rgba(11, 29, 38, 0) 31.06%, #0B1D26 108.93%);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: $logoFont;
+    letter-spacing: 1px;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+}
+
+.nav__link {
+    font-size: 1.1rem;
+}
+
+.account__title {
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.account__title::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(icons/profile.svg) no-repeat center/cover;
+
+}
+
+
+// middle
+.middle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12rem;
+}
+
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+       writing-mode: vertical-lr;
+       display: inline-block;
+       transform-origin: left top;
+       margin-bottom: 1rem;
+       font-size: 1.1rem;
+    }
+
+    &__img {
+        display: inline-block;
+        max-width: 100%;
+        margin: .5rem 0;
+    }
+
+    &__img:first-child {
+        margin-top: 5rem;
+    }
+}
+
+// slogan
+.slogan {
+    width: 60%;
+
+    &__subtitle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 2rem;
+    }
+
+    &__line {
+        display: inline-block;
+        width: 4.5rem;
+        height: 2px;
+        background-color: $accentColor;
+        margin-right: 2rem;
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        color: $accentColor;
+        letter-spacing: 6px;
+        font-family: $addFont;
+    }
+
+    &__title {
+        font-size: 4.5rem;
+        font-family: $sloganFont;
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+
+    &__scroll {
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 1;
+        transition: all .2s;
+    }
+
+    &__scroll:hover &__icon {
+        fill: $accentColor;
+        transition: all .2s;
+    }
+
+    &__down {
+        position: absolute;
+        z-index: -1;
+        top: 8%;
+        right: -35%;
+    }
+
+    &__scroll:hover &__down {
+        animation: down linear .2s forwards;
+    }
+
+    @keyframes down {
+        from {
+            top: 8%;
+        }
+
+        to {
+            top: 50%;
+        }
+    }
+
+    .top {
+        animation: top linear .2s forwards;
+    }
+
+    @keyframes top {
+        from {
+            top: 50%;
+        }
+
+        to {
+            top: 8%;
+        }
+    }
+}
+
+
+
+// slider
+.slider {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+    }
+
+    &__item {
+        display: inline-block;
+        padding: 1rem;
+        border-right: 3px solid rgba($mainColor, .5);
+        font-size: 1rem;
+
+        &_active {
+            border-right: 3px solid $mainColor;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    * {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    * {
+        font-size: 75%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 85%;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-start;
+        align-items: center;
+
+        &__title {
+            writing-mode: horizontal-tb;
+        }
+    }
+
+    .middle {
+        margin-top: 4rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border: 1px solid #000;
+    }
+
+    .slogan {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    .slider {
+        align-self: flex-end;
+    }
+
+    .slider__list {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+// blocks
+main {
+    width: 100%;
+    padding: 2rem 8rem;
+    border: none;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 16rem;
+
+
+    &__text {
+        padding: 0 6rem 0 6rem;
+        flex: 1 0 50%;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__text:nth-child(2) {
+        padding: 0 1em 0 11rem;
+    }
+
+    &__text::before {
+        content: '01';
+        position: absolute;
+        z-index: -1;
+        top: -25%;
+        left: -1%;
+        font-size: 12rem;
+        color: rgba($mainColor, .1);
+    }
+
+    &__text:nth-child(2)::before {
+        content: '02';
+        position: absolute;
+        z-index: -1;
+        top: -25%;
+        left: 6%;
+        font-size: 12rem;
+        color: rgba($mainColor, .1);
+    }
+
+    &__text:nth-child(3)::before {
+        content: '03';
+        position: absolute;
+        z-index: -1;
+        top: -25%;
+        left: 6%;
+        font-size: 12rem;
+        color: rgba($mainColor, .1);
+    }
+
+
+    &__img {
+        display: inline-block;
+        max-width: 100%;
+        height: 40rem;
+        flex: 1 0 35%
+    }
+
+    &__subtitle {
+        position: relative;
+        z-index: 1;
+        font-size: 1.1rem;
+        color: $accentColor;
+        text-transform: uppercase;
+        letter-spacing: 6px;
+        padding-left: 6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    &__subtitle::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 40%;
+        left: 0;
+        width: 4.5rem;
+        height: 2px;
+        background-color: $accentColor;
+    }
+
+    &__title {
+        font-size: 4rem;
+        font-family: $sloganFont;
+        margin-bottom: 1.5rem;
+    }
+
+    &__desc {
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    &__link {
+        color: $accentColor;
+        font-size: 1.1rem;
+        position: relative;
+        z-index: 1;
+        transition: all .3s;
+    }
+
+    &__link:hover::after {
+        right: -50%;
+    }
+
+    &__link:hover {
+        color: $mainColor;
+    }
+
+    &__link::after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: -30%;
+        width: 1rem;
+        height: 1.5rem;
+        background: url(icons/arrow-read.svg) no-repeat center/contain;
+        transition: all .3s;
+
+    }
+}
+
+// footer
+footer {
+    width: 100%;
+    padding: 0 8rem 7.5rem 8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+
+}
+
+.about {
+    flex: 1 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__logo {
+        display: inline-block;
+        font-size: 2rem;
+        font-family: $logoFont;
+        margin-bottom: 1.5rem;
+    }
+
+    &__text {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+
+    &__copyright {
+        color: rgba($mainColor, .5);
+        font-family: $rightFont;
+    }
+}
+
+.links {
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.blog {
+    margin-right: 10rem;
+
+    &__title {
+        font-size: 1.5rem;
+        color: $accentColor;
+        margin-bottom: 1.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        font-size: 1.1rem;
+        font-family: $rightFont;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.info {
+
+    &__title {
+        font-size: 1.5rem;
+        color: $accentColor;
+        margin-bottom: 1.5rem;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: flex-start;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+    }
+
+    &__link {
+        font-size: 1.1rem;
+        font-family: $rightFont;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+}

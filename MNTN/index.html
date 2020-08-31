@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MNTN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <!-- top part -->
+        <div class="top">
+            <a class="logo" href="#">MNTN</a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">Equipment</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">About us</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="account">
+                <a class="account__title" href="#">Account</a>
+            </div>
+        </div>
+
+        <!-- middle part -->
+        <div class="middle">
+            <div class="social">
+                <p class="social__title">Follow us</p>
+                <img src="icons/instagram.svg" alt="instagram" class="social__img">
+                <img src="icons/twitter.svg" alt="twitter" class="social__img">
+            </div>
+            <div class="slogan">
+                <div class="slogan__subtitle">
+                    <span class="slogan__line"></span>
+                    <p class="slogan__text">A hiking guide</p>
+                </div>
+                <h2 class="slogan__title">Be prepared for the mountains and Beyond!</h2>
+                <a class="slogan__scroll" href="#main">scroll down
+                    <svg class="slogan__down" width="16" height="24" viewBox="0 0 16 24" xmlns="http://www.w3.org/2000/svg">
+                        <path class="slogan__icon" d="M16 16L14.59 14.59L9 20.17V0H7V20.17L1.42 14.58L0 16L8 24L16 16Z" fill="white"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="slider">
+                <ul class="slider__list">
+                    <li class="slider__item slider__item_active">Start</li>
+                    <li class="slider__item">1</li>
+                    <li class="slider__item">2</li>
+                    <li class="slider__item">3</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- main content -->
+    <main id="main">
+        <!-- first block -->
+        <div class="block">
+            <div class="block__text">
+                <p class="block__subtitle">Get started</p>
+                <h3 class="block__title">What level of hiker are you?</h3>
+                <p class="block__desc">Determining what level of hiker you are can be an important tool when planning
+                    future hikes. This hiking level guide will help you plan hikes according to different hike ratings
+                    set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice,
+                    moderate, advanced moderate, expert, or expert backpacker? </p>
+                <a class="block__link" href="#">read more</a>
+            </div>
+            <picture class="block__img">
+                <source srcset="image/01.webp" type="image/webp">
+                <img src="image/01.jpg" alt="level of hiking">
+            </picture>
+        </div>
+
+        <!-- second block -->
+        <div class="block">
+            <picture class="block__img">
+                <source srcset="image/02.webp" type="image/webp">
+                <img src="image/02.jpg" alt="hiking gear">
+            </picture>
+            <div class="block__text">
+                <p class="block__subtitle">Hiking Essentials</p>
+                <h3 class="block__title">Picking the right Hiking Gear!</h3>
+                <p class="block__desc">The nice thing about beginning hiking is that you don’t really need any special
+                    gear, you can probably get away with things you already have.Let’s start with clothing. A typical
+                    mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe
+                    wif they get sweaty or wet.</p>
+                <a class="block__link" href="#">read more</a>
+            </div>
+        </div>
+
+        <!-- third block -->
+        <div class="block">
+            <div class="block__text">
+                <p class="block__subtitle">where you go is the key</p>
+                <h3 class="block__title">Understand Your Map & Timing</h3>
+                <p class="block__desc">To start, print out the hiking guide and map. If it’s raining, throw them in a
+                    Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to
+                    know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a
+                    mile, I make a right turn at the junction..</p>
+                <a class="block__link" href="#">read more</a>
+            </div>
+            <picture class="block__img">
+                <source srcset="image/03.webp" type="image/webp">
+                <img src="image/03.jpg" alt="map&timing">
+            </picture>
+        </div>
+    </main>
+
+    <footer>
+        <div class="about">
+            <div class="about__top">
+                <a class="about__logo" href="#">MNTN</a>
+                <p class="about__text">Get out there & discover your next slope, mountain & destination!</p>
+            </div>
+            <p class="about__copyright">Copyright 2019 MNTN, Inc. Terms & Privacy</p>
+        </div>
+        <div class="links">
+            <div class="blog">
+                <h4 class="blog__title">More on The Blog</h4>
+                <ul class="blog__list">
+                    <li class="blog__item"><a class="blog__link" href="#">About MNTN</a></li>
+                    <li class="blog__item"><a class="blog__link" href="#">Contributors & Writers</a></li>
+                    <li class="blog__item"><a class="blog__link" href="#">Write For Us</a></li>
+                    <li class="blog__item"><a class="blog__link" href="#">Contact Us</a></li>
+                    <li class="blog__item"><a class="blog__link" href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="info">
+                <h4 class="info__title">More on MNTN</h4>
+                <ul class="info__list">
+                    <li class="info__item"><a class="info__link" href="#">The Team</a></li>
+                    <li class="info__item"><a class="info__link" href="#">Jobs</a></li>
+                    <li class="info__item"><a class="info__link" href="#">Press</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
