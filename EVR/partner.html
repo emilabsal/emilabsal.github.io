@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Сотрудничество</title>
+    <title>EVR | Сотрудничество</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Yeseva+One&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -20,11 +20,10 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="catalogue.html">Каталог</a></li>
                     <li class="nav__item"><a class="nav__link" href="about.html">О компании</a></li>
                     <li class="nav__item"><a class="nav__link active-link" href="partner.html">Сотрудничество</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="delivery.html">Оплата и доставка</a></li>
                 </ul>
             </nav>
             <div class="nav__icons">
@@ -92,7 +91,7 @@
                     <h3 class="benef__text">Флаконы от 100 шт.</h3>
                     <h3 class="benef__text">Картон, тираж от 1000 шт.</h3>
                 </div>
-                <a href="#" class="benef__link">Перейти в каталог</a>
+                <a href="catalogue.html" class="benef__link">Перейти в каталог</a>
             </div>
         </div>
     </section>
@@ -130,14 +129,14 @@
                         <li class="addit__item">заказывать продукцию от «EVR PARFUM CAR» на 70%
                             дешевле, чем у конкурентов.</li>
                     </ul>
-                    <a href="#" class="addit__link">Стать дилером</a>
+                    <a href="#connection" class="addit__link">Стать дилером</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- form -->
-    <section class="connect">
+    <section class="connect" id="connection">
         <div class="container connect__wrap">
             <div class="connect__left">
                 <form class="form">
@@ -152,7 +151,7 @@
                     <input type="text" name="name" id="name" placeholder="Имя" class="form__field">
                     <input type="email" name="email" id="email" placeholder="Эл. почта" class="form__field">
                     <input type="tel" name="tel" id="tel" placeholder="Телефон" class="form__field">
-                    <button class="form__btn" id="form__send">Отправить</button>
+                    <input type="button" class="form__btn" id="form__send" value="Отправить">
                 </form>
             </div>
             <div class="connect__right">
@@ -160,10 +159,11 @@
                     <p class="address__city">г. Набережные Челны,
                         ул. Пушкина, д. 4</p>
                     <a class="address__phone" href="tel:89874210521">+7 987 421-05-21</a>
-                    <a class="address__email" href="mailto:parfumecar@mail.ru">parfumecar@mail.ru</a>
+                    <a class="address__email" href="mailto:parfum.car@yandex.ru">parfum.car@yandex.ru</a>
                 </div>
             </div>
         </div>
+        <img src="icons/stars/index-star5.svg" class="star5">
     </section>
 
     <!-- footer (start) -->
@@ -178,8 +178,9 @@
             <div class="footer__contacts">
                 <span class="footer__contact">© 2020 EVR Авто-парфюм</span>
                 <span class="footer__contact">+7 987 421-05-21</span>
-                <span class="footer__contact">parfumecar@mail.ru</span>
-                <span class="footer__contact">@parfumcar_evr</span>
+                <span class="footer__contact">parfum.car@yandex.ru</span>
+                <a href="https://www.instagram.com/parfumcar_evr/" class="footer__contact footer__insta"
+                    target="_blank">@parfumcar_evr</a>
             </div>
             <span class="footer__od">Сделано в <a class="footer__link" href="http://opendigital.pro">Open
                     Digital</a></span>
@@ -187,7 +188,38 @@
     </footer>
     <!-- footer (end) -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script>
+        //form
+        $(document).ready(function () {
+            $('#form__send').on('click', function () {
+                var company = $('#company').val();
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var tel = $('#tel').val();
+
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'post',
+                    data: {
+                        "company": company,
+                        "name": name,
+                        "email": email,
+                        "tel": tel,
+                    },
+                    success: function () {
+                        alert("Сообщение успешно отправлено");
+                    },
+                    error: function () {
+                        alert("Ошибка, сообщение не отправлено");
+                    }
+                })
+            })
+        })
+    </script>
 </body>
 
 </html>

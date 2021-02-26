@@ -21,11 +21,10 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a class="nav__link active-link" href="index.html">Главная</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="catalogue.html">Каталог</a></li>
                     <li class="nav__item"><a class="nav__link" href="about.html">О компании</a></li>
                     <li class="nav__item"><a class="nav__link" href="partner.html">Сотрудничество</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Оплата и доставка</a></li>
-                    <li class="nav__item"><a class="nav__link" href="#">Контакты</a></li>
+                    <li class="nav__item"><a class="nav__link" href="delivery.html">Оплата и доставка</a></li>
                 </ul>
             </nav>
             <div class="nav__icons">
@@ -108,13 +107,15 @@
                     <li class="sales__item">На каждые 100 штук позиций в заказе
                         большая деревянная стойка в подарок!</li>
                 </ul>
-                <button class="sales__btn">Подробнее</button>
+                <a href="partner.html" class="sales__btn">Подробнее</a>
             </div>
             <div class="sales__image">
                 <img class="sales__img" src="img/index-parfume1.png" alt>
             </div>
         </div>
+        <img src="icons/stars/index-star2.svg" class="star2">
     </section>
+
 
     <!-- calculation -->
     <section class="calc">
@@ -126,44 +127,101 @@
                         <div class="calculation__tabs">
                             <span class="calculation__item active-calc">Мелкооптовая точка</span>
                             <span class="calculation__item">Крупный опт</span>
-                            <span class="calculation__item">Дилер</span>
                         </div>
-                        <div class="calculation__content">
-                            <div class="count">
-                                <span class="count__title">Флакон 5 мл</span>
-                                <div class="count__num">
-                                    <input type="number" class="count__field">
-                                    <span class="count__mult">*</span>
-                                    <span class="count__number">139</span>
-                                    <span class="count__equal">=</span>
-                                    <span class="count__res">69 500 р</span>
+                        <div class="calculation__c">
+                            <div class="calculation__content">
+                                <div class="count">
+                                    <span class="count__title">Флакон 5 мл</span>
+                                    <div class="count__num">
+                                        <input type="number" class="count__field" value="1" min="0">
+                                        <span class="count__mult">*</span>
+                                        <span class="count__number">300</span>
+                                        <span class="count__equal">=</span>
+                                        <span class="count__res"></span><span style="font-weight: 600;"> р</span>
+                                    </div>
+                                </div>
+                                <div class="count">
+                                    <span class="count__title">Картон, шт.</span>
+                                    <div class="count__num">
+                                        <input type="number" class="count__field" value="1" min="0">
+                                        <span class="count__mult">*</span>
+                                        <span class="count__number">300</span>
+                                        <span class="count__equal">=</span>
+                                        <span class="count__res"></span><span style="font-weight: 600;"> р</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="count">
-                                <span class="count__title">Картон, шт.</span>
-                                <div class="count__num">
-                                    <input type="number" class="count__field">
-                                    <span class="count__mult">*</span>
-                                    <span class="count__number">76</span>
-                                    <span class="count__equal">=</span>
-                                    <span class="count__res">9 120 р</span>
-                                </div>
+                            <div class="calculation__res">
+                                <span class="calculation__num"></span><span style="font-weight: 600;"> р</span>
                             </div>
                         </div>
-                        <div class="calculation__res">
-                            <span class="calculation__num">139 750 р</span>
+                        <div class="calculation__c content1">
+                            <div class="ctabs">
+                                <span class="citem active-citem">Без НДС</span>
+                                <span class="citem">С НДС</span>
+                            </div>
+                            <div class="calculation__content citem-content">
+                                <div class="counts">
+                                    <span class="counts__title">Флакон 5 мл</span>
+                                    <div class="counts__num">
+                                        <input type="number" class="sfield" value="100" min="0">
+                                        <span class="counts__mult">*</span>
+                                        <span class="snumber">180</span>
+                                        <span class="counts__equal">=</span>
+                                        <span class="sres"></span><span style="font-weight: 600;"> р</span>
+                                    </div>
+                                </div>
+                                <div class="counts">
+                                    <span class="counts__title">Картон, шт.</span>
+                                    <div class="counts__num">
+                                        <input type="number" class="sfield" value="100" min="0">
+                                        <span class="counts__mult">*</span>
+                                        <span class="snumber">95</span>
+                                        <span class="counts__equal">=</span>
+                                        <span class="sres"></span><span style="font-weight: 600;"> р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calculation__content citem-content">
+                                <div class="counts">
+                                    <span class="counts__title">Флакон 5 мл</span>
+                                    <div class="counts__num">
+                                        <input type="number" class="ffield" value="100" min="0">
+                                        <span class="counts__mult">*</span>
+                                        <span class="fnumber">198</span>
+                                        <span class="counts__equal">=</span>
+                                        <span class="fres"></span><span style="font-weight: 600;"> р</span>
+                                    </div>
+                                </div>
+                                <div class="counts">
+                                    <span class="counts__title">Картон, шт.</span>
+                                    <div class="counts__num">
+                                        <input type="number" class="ffield" value="100" min="0">
+                                        <span class="counts__mult">*</span>
+                                        <span class="fnumber">105</span>
+                                        <span class="counts__equal">=</span>
+                                        <span class="fres"></span><span style="font-weight: 600;"> р</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="calculations__res">
+                                <span class="calculations__num"></span><span style="font-weight: 600;"> р</span>
+                            </div>
                         </div>
                     </div>
+
                     <div class="dealer">
-                        <button class="dealer__btn">Стать дилером</button>
+                        <a href="#connection" class="dealer__btn">Стать дилером</a>
                     </div>
                 </div>
             </div>
+            <img src="icons/stars/index-star3.svg" class="star3">
         </div>
+        <img src="icons/stars/index-star4.svg" class="star4">
     </section>
 
     <!-- form -->
-    <section class="connect">
+    <section class="connect" id="connection">
         <div class="container connect__wrap">
             <div class="connect__left">
                 <form class="form">
@@ -178,7 +236,7 @@
                     <input type="text" name="name" id="name" placeholder="Имя" class="form__field">
                     <input type="email" name="email" id="email" placeholder="Эл. почта" class="form__field">
                     <input type="tel" name="tel" id="tel" placeholder="Телефон" class="form__field">
-                    <button class="form__btn" id="form__send">Отправить</button>
+                    <input type="button" class="form__btn" id="form__send" value="Отправить">
                 </form>
             </div>
             <div class="connect__right">
@@ -186,10 +244,11 @@
                     <p class="address__city">г. Набережные Челны,
                         ул. Пушкина, д. 4</p>
                     <a class="address__phone" href="tel:89874210521">+7 987 421-05-21</a>
-                    <a class="address__email" href="mailto:parfumecar@mail.ru">parfumecar@mail.ru</a>
+                    <a class="address__email" href="mailto:parfum.car@yandex.ru">parfum.car@yandex.ru</a>
                 </div>
             </div>
         </div>
+        <img src="icons/stars/index-star5.svg" class="star5">
     </section>
 
     <!-- footer (start) -->
@@ -204,8 +263,9 @@
             <div class="footer__contacts">
                 <span class="footer__contact">© 2020 EVR Авто-парфюм</span>
                 <span class="footer__contact">+7 987 421-05-21</span>
-                <span class="footer__contact">parfumecar@mail.ru</span>
-                <span class="footer__contact">@parfumcar_evr</span>
+                <span class="footer__contact">parfum.car@yandex.ru</span>
+                <a href="https://www.instagram.com/parfumcar_evr/" class="footer__contact footer__insta"
+                    target="_blank">@parfumcar_evr</a>
             </div>
             <span class="footer__od">Сделано в <a class="footer__link" href="http://opendigital.pro">Open
                     Digital</a></span>
@@ -213,7 +273,39 @@
     </footer>
     <!-- footer (end) -->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
     <script src="index.js"></script>
+
+    <script>
+        //form
+        $(document).ready(function () {
+            $('#form__send').on('click', function () {
+                var company = $('#company').val();
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var tel = $('#tel').val();
+
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'post',
+                    data: {
+                        "company": company,
+                        "name": name,
+                        "email": email,
+                        "tel": tel,
+                    },
+                    success: function () {
+                        alert("Сообщение успешно отправлено");
+                    },
+                    error: function () {
+                        alert("Ошибка, сообщение не отправлено");
+                    }
+                })
+            })
+        })
+    </script>
 
 </body>
 
