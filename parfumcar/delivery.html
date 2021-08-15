@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVR | Оплата и доставка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Yeseva+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- header (start) -->
+    <header class="header container">
+        <div class="header__top">
+            <a href="index.html"><img class="logo" src="icons/logo.svg" alt="Логотип"></a>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="index.html">Главная</a></li>
+                    <li class="nav__item"><a class="nav__link" href="about.html">О компании</a></li>
+                    <li class="nav__item"><a class="nav__link" href="catalogue.html">Каталог</a></li>
+                    <li class="nav__item"><a class="nav__link" href="partner.html">Сотрудничество</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#fpartners" id="mypartner">Партнеры</a></li>
+                    <li class="nav__item"><a class="nav__link active-link" href="delivery.html">Оплата и доставка</a>
+                    </li>
+                    <li class="nav__item"><a class="nav__link" href="#connection" id="mycontact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="nav__icons">
+                <img src="icons/menu.svg" class="menu">
+                <a href="catalogue.html"><img class="sale" src="icons/sale.svg"></a>
+                <span class="close">&#9587;</span>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <a class="phone" href="tel:89874210521">+7 987 421-05-21</a>
+        </div>
+    </header>
+    <!-- header (end) -->
+
+    <!-- delivery -->
+    <section class="delivery">
+        <div class="container delivery__wrap">
+            <h2 class="delivery__title">Оплата и доставка</h2>
+            <div class="delivery__desc">
+                <p class="delivery__text">Мы осуществляем доставку транспортными компаниями
+                    по всему миру, а также через постаматы.</p>
+                <p class="delivery__text">Оплата осуществляется по безналичному расчету
+                    после выставления нами счета и резервирования товара.</p>
+                <p class="delivery__text">К оплате принимаем платежи на карту Тинькофф Банка,
+                    а также Сбербанка.</p>
+                <a href="catalogue.html" class="delivery__link">Перейти в каталог</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- form -->
+    <section class="connect" id="connection">
+        <div class="container connect__wrap">
+            <div class="connect__left">
+                <form class="form">
+                    <h3 class="form__title">Свяжитесь с нами</h3>
+                    <div class="form__tabs">
+                        <label for="natural" class="natural active-form">Физ. лицо</label>
+                        <input type="radio" name="client" id="natural" checked>
+                        <label for="legal" class="legal">Юр. лицо</label>
+                        <input type="radio" name="client" id="legal">
+                    </div>
+                    <input type="text" name="company" id="company" placeholder="Компания" class="form__field">
+                    <input type="text" name="name" id="name" placeholder="Имя" class="form__field">
+                    <input type="email" name="email" id="email" placeholder="Эл. почта" class="form__field">
+                    <input type="tel" name="tel" id="tel" placeholder="Телефон" class="form__field">
+                    <input type="button" class="form__btn" id="form__send" value="Отправить">
+                </form>
+            </div>
+            <div class="connect__right">
+                <div class="address">
+                    <p class="address__city">г. Набережные Челны,
+                        ул. Пушкина, д. 4</p>
+                    <a class="address__phone" href="tel:89874210521">+7 987 421-05-21</a>
+                    <a class="address__email" href="mailto:parfumecar@gmail.com">parfumecar@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <img src="icons/stars/index-star5.svg" class="star5">
+    </section>
+
+    <!-- footer (start) -->
+    <footer class="footer">
+        <div class="container footer__wrap">
+            <h2 class="footer__logo" id="fpartners">Наши партнеры</h2>
+            <div class="footer__brands">
+                <div class="footer__top">
+                    <img src="icons/partners/taif.svg" alt class="footer__brand taif">
+                    <img src="icons/partners/neft.svg" alt class="footer__brand">
+                    <img src="icons/partners/kolesa.svg" alt class="footer__brand">
+
+
+                </div>
+                <div class="footer__middle">
+                    <img src="icons/partners/koleso.svg" alt class="footer__brand">
+                    <img src="icons/partners/atd.svg" alt class="footer__brand">
+                    <img src="icons/partners/ultima.png" alt class="footer__brand ultima">
+                    <img src="icons/partners/virtus.png" alt class="footer__brand">
+                    <img src="icons/partners/tts.svg" alt class="footer__brand">
+
+                </div>
+                <div class="footer__bottom">
+                    <img src="icons/partners/topline.png" alt class="footer__brand">
+                    <img src="icons/partners/lama.png" alt class="footer__brand">
+                    <img src="icons/partners/expert.png" alt class="footer__brand expert">
+                </div>
+
+            </div>
+            <div class="footer__contacts">
+                <span class="footer__contact">© 2020 EVR Авто-парфюм</span>
+                <span class="footer__contact">+7 987 421-05-21</span>
+                <span class="footer__contact">parfumecar@gmail.com</span>
+                <a href="https://www.instagram.com/parfumcar_evr/" class="footer__contact footer__insta"
+                    target="_blank">@parfumcar_evr</a>
+            </div>
+            <span class="footer__od">Сделано в <a class="footer__link" href="http://opendigital.pro">Open
+                    Digital</a></span>
+        </div>
+    </footer>
+    <!-- footer (end) -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <script>
+        //form
+        $(document).ready(function () {
+            $('#form__send').on('click', function () {
+                var company = $('#company').val();
+                var name = $('#name').val();
+                var email = $('#email').val();
+                var tel = $('#tel').val();
+
+                $.ajax({
+                    url: 'mail.php',
+                    type: 'post',
+                    data: {
+                        "company": company,
+                        "name": name,
+                        "email": email,
+                        "tel": tel,
+                    },
+                    success: function () {
+                        alert("Сообщение успешно отправлено");
+                    },
+                    error: function () {
+                        alert("Ошибка, сообщение не отправлено");
+                    }
+                })
+            })
+        })
+    </script>
+
+</body>
+
+</html>
