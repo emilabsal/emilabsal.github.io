@@ -1,0 +1,12 @@
+@mixin link() {
+  font-weight: $addFontWeight;
+  line-height: 24px;
+}
+
+@mixin title() {
+  line-height: 32px;
+  font-weight: $addFontWeight;
+  font-size: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba($darkColor, 0.2);
+}

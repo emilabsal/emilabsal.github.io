@@ -1,0 +1,205 @@
+include ./header.html
+
+#wrap
+    main.main
+        .page-wrap
+            .screen-first 
+                .container
+                    .contest-wrapper
+                        .contest
+                            a.contest__img-wrapper(href="#") 
+                                img.contest__img(src="icons/medal.svg", alt="Конкурс") 
+                                .contest__hover 
+                                    img.contest__hover-img(src="icons/arrow-left.svg", alt="Стрелка влево")
+                            .contest-text 
+                                span.contest-text__title Конкурс БИБОСС
+                                p.contest-text__desc «Лучшее видео о франшизе»
+                    .competition 
+                        h2.competition__title Видео о франшизе «Персональное решение»
+                        .competition-block 
+                            .competition-block__video
+                                video.competition-block__poster(poster="images/video.jpg")
+                                .competition-block__play
+                                    .competition-block__play-inner
+                                        img.competition-block__icon(src="icons/watch.svg", alt="Включить видео")
+                                        span.competition-block__sign 
+                                            | Смотреть 
+                                            br 
+                                            | видео
+                            .competition-block__vote
+                                h3.competition-block__title Голосование
+                                p.competition-block__text Для того, чтобы проголосовать за видео, нужно сделать репост в любой из соцсетей:
+                                .competition-social 
+                                    .competition-btn.competition-btn--fb
+                                        .competition-btn__circle.competition-btn__circle--fb
+                                            img.competition-btn__icon(src="icons/facebook.svg", alt="Фейсбук")
+                                        span.competition-btn__title Голосовать FB
+                                    .competition-btn.competition-btn--vk 
+                                        .competition-btn__circle.competition-btn__circle--vk 
+                                            img.competition-btn__icon(src="icons/vk.svg", alt="Вконтакте")
+                                        span.competition-btn__title Голосовать VK
+                                    .competition-btn.competition-btn--ok
+                                        .competition-btn__circle.competition-btn__circle--ok 
+                                            img.competition-btn__icon(src="icons/ok.svg", alt="Одноклассники")
+                                        span.competition-btn__title Голосовать OK
+                                    span.competition-social__quantity 657 голосов
+            .screen-second           
+                .container
+                    .about-wrapper
+                        .about 
+                            .about-left 
+                                img.about-left__img(src="images/personal.jpg", alt="Персональное решение")
+                                .about-left-desc 
+                                    h3.about-left__title Персональное решение
+                                    p.about-left__subtitle Инвестиции 378 000 — 675 000 ₽
+                                    a.about-left__link(href="#") Страница франшизы 
+                                        img.about-left__icon(src="icons/arrow-right.svg", alt="Стрелка вправо")
+                            .about-right
+                                .about-right__top
+                                    img.about-right__img(src="images/avatar.png", alt="Аватарка")
+                                    .about-right__desc 
+                                        span.about-right__name Дмитрий Варфоломеев
+                                        p.about-right__job Представитель
+                                button.about-right__btn Запросить финплан 
+                .container 
+                    .content
+                        .content-left
+                            .company
+                                h2.company__title О компании 
+                                p.company__text Открой СВОЙ БИЗНЕС на услугах рабочей силы и ЗАРАБАТЫВАЙ от 200 000 рублей в месяц. 
+                                p.company__text За руку доведем до 200 000 руб/ мес личного дохода, даже если это твой первый бизнес!
+                                p.company__text - НАЧАТЬ ОЧЕНЬ ЛЕГКО
+                                p.company__text Без найма кучи народу, закупок, оборудования и “закапывания” миллионов на годы. Первое время можно без офиса.
+                                a.company__link(href="#") Страница франшизы
+                                    img.company__icon(src="icons/arrow-right.svg", alt="Стрелка вправо")
+                            .price 
+                                h2.price__title Стоимость франшизы и цена владения
+                                .price-grid 
+                                    .price-grid__name Вступительный взнос
+                                    .price-grid__text 150 000 — 400 000 ₽
+                                    .price-grid__name Роялти
+                                    .price-grid__text 5% от оборота в месяц, но не более 10 000 руб. При этом минимальная гарантированная сумма, подлежащая переводу Дилером, составляет 5 000 рублей (для городов менее 250 тысяч жителей 3 000 руб., для городов менее 100 тысяч согласовывается)
+                                    .price-grid__name Иные текущие платежи
+                                    .price-grid__text Аттестация и повышение квалификации тренеров 2 000 — 5 000 рублей в год
+                                .price__download
+                                    a.price__link(href="#") 
+                                        .price__wrapper 
+                                            svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' )
+                                                path.price__icon(fill-rule='evenodd'  clip-rule='evenodd' d='M12 2C12.5523 2 13 2.44772 13 3V12.5858L16.2929 9.29289C16.6834 8.90237 17.3166 8.90237 17.7071 9.29289C18.0976 9.68342 18.0976 10.3166 17.7071 10.7071L12.7071 15.7071C12.3166 16.0976 11.6834 16.0976 11.2929 15.7071L6.29289 10.7071C5.90237 10.3166 5.90237 9.68342 6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289L11 12.5858V3C11 2.44772 11.4477 2 12 2ZM3 12C3.55228 12 4 12.4477 4 13V17C4 18.6569 5.34315 20 7 20H17C18.6569 20 20 18.6569 20 17V13C20 12.4477 20.4477 12 21 12C21.5523 12 22 12.4477 22 13V17C22 19.7614 19.7614 22 17 22H7C4.23858 22 2 19.7614 2 17V13C2 12.4477 2.44772 12 3 12Z' fill='black' fill-opacity='0.2')
+                                        | Запросить финансовый план   
+                            .description 
+                                h2.description__title Описание франшизы
+                                p.description__text ЧЕМ ТЫ БУДЕШЬ ЗАНИМАТЬСЯ? И КАК БУДЕШЬ ЗАРАБАТЫВАТЬ НА УСЛУГАХ РАБОЧЕЙ СИЛЫ?
+                                p.description__text Ты будешь предоставлять рабочую силу на склады, фабрики, заводы, производства со сдельной и почасовой оплатой.
+                                p.description__text Кто будет работать у тебя?
+                                ul.description__list    
+                                    li.description__item Рабочие, ищущие дополнительный заработок
+                                    li.description__item Временно безработные люди 
+                                a.description__link(href="#") Страница франшизы
+                                    img.description__icon(src="icons/arrow-right.svg", alt="Стрелка вправо")
+                            .gallery
+                                .gallery__wrapper 
+                                    - for(let i = 0; i < 4; i++)
+                                        img.gallery__item(src="images/"+(i+1)+".jpg", alt="Картинка")
+                            .connect 
+                                .connect-person
+                                    img.connect-person__img(src="images/avatar.png", alt="Аватарка")
+                                    .connect-person__desc 
+                                        span.connect-person__name Дмитрий Варфоломеев
+                                        p.connect-person__job Представитель
+                                .connect-wrapper 
+                                    .connect__left
+                                        form.form(action="#")
+                                            label.form__labl
+                                                input.form__field(type="text", placeholder="Ваше имя")
+                                                .form__img-wrapper
+                                                    svg(width='19' height='20' viewBox='0 0 19 20' xmlns='http://www.w3.org/2000/svg')
+                                                        path.form__img(d='M12 5C12 3.34314 10.6569 2 9 2C7.34314 2 6 3.34314 6 5C6 6.65686 7.34314 8 9 8C10.6569 8 12 6.65686 12 5ZM14 5C14 7.76143 11.7614 10 9 10C6.23857 10 4 7.76143 4 5C4 2.23858 6.23857 0 9 0C11.7614 0 14 2.23858 14 5ZM18 16.9283C18.122 18.6085 16.7389 20 15.0507 20L2.95681 20C1.26854 20 -0.114524 18.6085 0.00750184 16.9283C0.286783 13.0828 4.26692 11 9.00006 11C13.7239 11 17.7183 13.0499 18 16.9283ZM16.005 17.0732C15.7951 14.1819 12.6055 13 8.99985 13C5.37245 13 2.20898 14.2238 2.00204 17.0732C1.96645 17.5633 2.4005 18 2.95661 18L15.0505 18C15.6066 18 16.0406 17.5633 16.005 17.0732Z' fill='black' fill-opacity='0.2')  
+                                            label.form__labl                                              
+                                                input.form__field(type="email", placeholder="E-mail")
+                                                .form__img-wrapper
+                                                    svg(width='22' height='18' viewBox='0 0 22 18' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                        path.form__img(d='M3 0C1.5 0 0 1.5 0 3V15C0 16.5 1.5 18 3 18H19C20.5 18 22 16.5 22 15V3C22 1.5 20.5 0 19 0H3ZM20 5.35341L11 9.40341L2 5.35341V3C2 2.44772 2.44772 2 3 2H19C19.5523 2 20 2.44772 20 3V5.35341ZM20 7.54659V15C20 15.5523 19.5523 16 19 16H3C2.44772 16 2 15.5523 2 15V7.54659L10.1793 11.2273C10.7012 11.4621 11.2988 11.4621 11.8207 11.2273L20 7.54659Z' fill='black' fill-opacity='0.2')
+                                            label.form__labl 
+                                                input.form__field(type="number", placeholder="Номер телефона")
+                                                .form__img-wrapper
+                                                    svg(width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                                        path.form__img(fill-rule='evenodd' clip-rule='evenodd' d='M16.3077 1H7.69231C6.20615 1 5 2.12 5 3.5V20.5C5 21.88 6.20615 23 7.69231 23H16.3077C17.7938 23 19 21.88 19 20.5V3.5C19 2.12 17.7938 1 16.3077 1ZM12 22C11.17 22 10.5 21.33 10.5 20.5C10.5 19.67 11.17 19 12 19C12.83 19 13.5 19.67 13.5 20.5C13.5 21.33 12.83 22 12 22ZM17 18H7V4H17V18Z' fill='black' fill-opacity='0.2')
+
+                                            textarea.form__textarea Здравствуйте. Заинтересовало Ваше предложение, вышлите подробности на почту. 
+                                            .form__captcha
+                                                label.form__label  
+                                                    input.form__check(type="checkbox") 
+                                                    .form__checkbox
+                                                        svg.form__checkbox-icon(height='512pt' viewBox='0 0 512 512' width='512pt' xmlns='http://www.w3.org/2000/svg')
+                                                            path(d='m512 58.667969c0-32.363281-26.304688-58.667969-58.667969-58.667969h-394.664062c-32.363281 0-58.667969 26.304688-58.667969 58.667969v394.664062c0 32.363281 26.304688 58.667969 58.667969 58.667969h394.664062c32.363281 0 58.667969-26.304688 58.667969-58.667969zm0 0' fill='#4caf50')
+                                                            path(d='m385.75 171.585938c8.339844 8.339843 8.339844 21.820312 0 30.164062l-138.667969 138.664062c-4.160156 4.160157-9.621093 6.253907-15.082031 6.253907s-10.921875-2.09375-15.082031-6.253907l-69.332031-69.332031c-8.34375-8.339843-8.34375-21.824219 0-30.164062 8.339843-8.34375 21.820312-8.34375 30.164062 0l54.25 54.25 123.585938-123.582031c8.339843-8.34375 21.820312-8.34375 30.164062 0zm0 0' fill='#fafafa')
+
+                                                    | Я не робот
+                                                span.form__safe 
+                                                    | Проверка 
+                                                    br 
+                                                    | безопасности
+                                            button.form__send Отправить сообщение
+                                            .form__after 
+                                                img.form__icon(src="icons/hand.svg", alt="Данные в безопасности")
+                                                p.form__text Ваши данные в полной безопасности. Они видны только автору объявления.
+
+                                    .connect__right
+                                        .info
+                                            h3.info__title Что можно обсудить с представителем:
+                                            ul.info__list        
+                                                -    
+                                                    let descs = [
+                                                        'Узнать есть ли возможность открытия в вашем городе', 
+                                                        'Попросить контакты уже действующих франчайзи',
+                                                        'Получить шаблоны договоров для ознакомления',
+                                                        'Ознакомиться с финансовым планом и этапами запуска бизнеса',
+                                                        'Узнать какие гарантии может дать франшиза',
+                                                        'Обсудить возможность скидки',
+                                                    ]
+
+                
+                                                each desc in descs  
+                                                    li.info__item #{desc}
+                        .content-right
+                            .numbers
+                                h2.numbers__title Показатели
+                                -
+                                    let years = ['1725', '1894', '26 850', '1'] 
+                                    let signs = ['Год основания компании', 'Год запуска франчайзинга', 'Франшизных предприятий', 'Собственных предприятий'] 
+
+                                - for(let i = 0; i < years.length; i++) 
+                                    .numbers__block 
+                                        span.numbers__year #{years[i]}
+                                        p.numbers__text #{signs[i]}
+                    .another 
+                        h2.another__title Другие участники конкурса
+                        .another__wrap
+
+                            -
+                                let firms = [
+                                    {name: 'Borodach', text: 'Мужские парикмахерские'},
+                                    {name: 'Персональное решение', text: 'Сеть услуг рабочей силы'},
+                                    {name: 'TOY.RU', text: 'Магазин детских игрушек'},
+                                    {name: 'Заголовок', text: 'Описание'},
+                                    {name: 'Заголовок', text: 'Описание'},
+                                    {name: 'Заголовок', text: 'Описание'},
+                                ];
+
+
+                            each elem, i in firms
+                                .another-card
+                                    .another-card__video
+                                        video.another-card__poster(poster="images/video"+(i+1)+".jpg") 
+                                        .another-card__play-wrap
+                                            img.another-card__play(src="icons/play.svg", alt="Запустить")
+                                    h4.another-card__title #{elem.name}
+                                    span.another-card__subtitle #{elem.text}
+                                    a.another-card__link Смотреть и голосовать
+                                        img.another-card__icon(src="icons/arrow-right.svg", alt="Стрелка вправо")
+
+                        button.another__btn Все участники конкурса
+
+
+include ./footer.html
