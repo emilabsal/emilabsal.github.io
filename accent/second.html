@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="box-outer">
+        <div class="box-inner">
+          <div class="inner">
+            <canvas id="myChart" width="400" height="400"></canvas>
+            <div class="sign">
+              <span class="num">1%</span>
+              <p>
+                Карты и <br />
+                агрегаторы
+                <span class="arrow"></span>
+              </p>
+            </div>
+            <div class="sign">
+              <span class="num">12%</span>
+              <p>
+                Соцсети
+                <span class="arrow"></span>
+              </p>
+            </div>
+            <div class="sign">
+              <span class="num">44%</span>
+              <p>
+                Операторы <br />
+                Call-центра
+                <span class="arrow"></span>
+              </p>
+            </div>
+            <div class="sign">
+              <span class="num">34%</span>
+              <p>
+                Мобильное <br />
+                приложение
+                <span class="arrow"></span>
+              </p>
+            </div>
+            <div class="sign">
+              <span class="num">9%</span>
+              <p>
+                Сайт
+                <span class="arrow"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
+    <script>
+      var ctx = document.getElementById("myChart").getContext("2d");
+
+      var myChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          labels: [
+            "Операторы Call-центра",
+            "Мобильное приложение",
+            "Сайт",
+            "Карты и агрегаторы",
+            "Соцсети",
+          ],
+          datasets: [
+            {
+              data: [44, 34, 9, 1, 12],
+              backgroundColor: [
+                "#FAB791",
+                "#96D2C1",
+                "#D2DC63",
+                "#90D5DE",
+                "#F389AB",
+              ],
+              borderWidth: 0,
+              rotation: 20,
+            },
+          ],
+        },
+
+        options: {
+          responsive: true,
+
+          plugins: {
+            tooltip: {
+              enabled: false,
+            },
+            legend: {
+              display: false,
+            },
+            hover: { mode: null },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
