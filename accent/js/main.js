@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   setTimeout(() => {
-    image.style.background = "url(../img/dog.jpg) no-repeat center/contain";
+    image.style.background = "url(img/dog.jpg) no-repeat center/contain";
     parts.forEach((el) => {
       el.style.display = "none";
     });
