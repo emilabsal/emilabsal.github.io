@@ -1,23 +1,27 @@
 /* Fonts */
 @font-face {
   font-family: "Gotham Pro";
-  src: url(/fonts/GothamPro.ttf);
+  src: url(../fonts/GothamPro.ttf);
 }
 
 @font-face {
   font-family: "Gotham Pro Bold";
-  src: url(/fonts/GothamPro-Bold.ttf);
+  src: url(../fonts/GothamPro-Bold.ttf);
 }
 
 @font-face {
   font-family: "Igra Sans";
-  src: url(/fonts/IgraSans.ttf);
+  src: url(../fonts/IgraSans.ttf);
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden !important;
 }
 
 body {
@@ -112,13 +116,20 @@ body {
   transition: 1s;
 }
 
+.add {
+  width: 100%;
+  max-width: 570px;
+  max-height: 640px;
+  min-height: 500px;
+  height: auto;
+}
+
 .part {
   display: inline-block;
   width: 25%;
   height: 100%;
   animation: circle 2s linear forwards;
   transition: 1s;
-  /* display: none; */
 }
 
 .part:nth-child(1) {
