@@ -1,0 +1,861 @@
+//Variables
+$accentColor: #E63756
+$darkColor: #1A202C
+$textColor: #4A5568
+$mainColor: #EDF6FE
+$lightColor: #fff
+$borderColor: #EBE7E7
+$breadcrumbs: #B8BCC3
+$mainFont: 'Open Sans', sans-serif
+$addFont: 'Rubik', sans-serif
+
+//Styles   
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    color: $darkColor
+    font-family: $mainFont
+
+.container
+    max-width: 1440px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+
+a
+    text-decoration: none
+    color: inherit
+
+li
+    list-style-type: none
+
+html, body
+    overflow-x: hidden !important
+
+//Шапка
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 30px
+    width: 100%
+    &__close
+        display: none
+        position: absolute
+        top: 18px
+        right: 28px
+        font-size: 40px
+        &:hover
+            color: lighten($darkColor, 20%)
+    &__block
+        display: flex
+        width: 85%
+        align-items: center
+        justify-content: space-between
+    &__menu
+        display: none
+    &__text
+        display: none
+    &__account
+        padding: 10px 35px
+        outline: none
+        background-color: $accentColor
+        font-size: 16px
+        color: $lightColor
+        border-radius: 8px
+        cursor: pointer
+        border: none
+        &:hover
+            background-color: darken($accentColor, 10%)
+.navigation
+    display: flex
+    align-items: center
+    &__phone
+        margin-left: 23px
+        color: $accentColor
+        &:hover
+            color: darken($accentColor, 20%)
+.nav
+    display: flex
+    &__list
+        display: flex
+    &__item
+        margin-left: 23px
+        margin-right: 23px
+        &:nth-child(3)
+            color: $accentColor
+            .nav__link::after
+                background: $accentColor
+                width: 5px
+                height: 5px
+                border-radius: 50%
+                right: -8px
+                top: 2px
+
+    &__link
+        font-size: 16px
+        line-height: 22px
+        position: relative
+        &:hover
+            text-decoration: underline
+
+        &::after
+            content: ''
+            position: absolute
+            top: 6px
+            right: -14px
+            width: 10px
+            height: 10px
+            background: url(../icons/arrow-down.svg) no-repeat center
+//Баннер
+.banner
+    padding-top: 40px
+    padding-bottom: 105px
+    width: 100%
+    background: url(../img/banner.png) no-repeat bottom center/cover
+    &__wrapper
+        padding: 0 30px
+    &__title
+        font-size: 44px
+        font-weight: 500
+        font-family: $addFont
+.bread
+    margin-bottom: 29px
+    &__page
+        display: inline-block
+        cursor: pointer
+        font-size: 14px
+        color: $breadcrumbs
+        margin-right: 10px
+        &:hover
+            text-decoration: underline
+        &--active
+            color: $accentColor
+            cursor: default
+            &:hover
+                text-decoration: none
+    &__divide
+        display: inline-block
+        margin-right: 10px
+        color: $breadcrumbs
+
+//Контент
+.content
+    padding-top: 34px
+    padding-left: 30px
+    padding-right: 30px
+    &__title
+        font-weight: 500
+        font-size: 40px
+        line-height: 47px
+        font-family: $addFont
+        margin-bottom: 42px
+    &__main
+        width: 100%
+        display: flex
+        padding-top: 48px
+        border-top: 1px solid $borderColor
+    &__left
+
+        margin-right: 117px
+        width: calc(73% - 117px)
+
+    &__right
+
+        width: 27%
+.slider
+    width: 100%
+    border: 1px solid $borderColor
+    border-radius: 10px
+    position: relative
+    display: flex
+    flex-direction: column
+    margin-bottom: 28px
+    overflow: hidden
+    &__card
+        border-top-right-radius: 10px
+        border-top-left-radius: 10px
+        width: 100%
+        display: flex !important
+        justify-content: center
+        align-items: center
+        background-color: $mainColor
+        padding: 31px 0
+        img
+            display: inline-block
+            max-width: 100%
+.slick-arrow
+    width: 28px
+    height: 28px
+    border-radius: 50%
+    border: 1px solid $borderColor
+    position: absolute
+    bottom: 10px
+    right: 0
+    cursor: pointer
+    background: none
+    transition: .3s
+    &:hover
+        border: 1px solid $accentColor
+        svg path
+            stroke: $accentColor
+.next-arrow
+    right: 18px
+.prev-arrow
+    right: 54px
+    transform: scale(-1, 1)
+.slick-dots
+    width: 100%
+    height: 49px
+    position: static
+    display: flex
+    justify-content: center
+    align-items: center
+    li
+        width: 7px !important
+        height: 7px !important
+        background-color: #CBD5E0
+        flex-shrink: 0 !important
+        border-radius: 50%
+        margin-left: 8px
+        margin-right: 8px
+    li button
+        width: 7px
+        height: 7px
+        padding: 0
+    li button::before
+        display: none
+    .slick-active
+        background-color: $accentColor
+.desc
+
+    &__text
+        color: $textColor
+        margin-bottom: 16px
+        line-height: 200%
+        &--last
+            margin-bottom: 64px
+    &__title
+        margin-bottom: 16px
+    &__list
+        margin-bottom: 16px
+    &__item
+        color: $textColor
+        line-height: 200%
+
+//Таблица
+.table
+    &__caption
+        font-weight: 500
+        font-size: 24px
+        line-height: 28px
+        font-family: $addFont
+        margin-bottom: 32px
+    &-main
+        width: 100%
+        display: grid
+        grid-template-columns: 1fr 1fr 5fr
+        margin-bottom: 71px
+        border: 1px solid $borderColor
+        border-radius: 10px
+    &-header
+        &__check,
+        &__date,
+        &__text
+            font-size: 16px
+            text-align: center
+            padding: 20px 5px
+            background-color: $mainColor
+            line-height: 19px
+            font-family: $addFont
+        &__check
+            padding-left: 33px
+        &__text
+            padding-right: 33px
+    &-body
+        &__check,
+        &__date,
+        &__text
+            padding-left: 5px
+            padding-right: 5px
+            padding-top: 25px
+            padding-bottom: 31px
+            color: $textColor
+            border-bottom: 1px solid $borderColor
+            line-height: 22px
+        &__check
+            margin-left: 33px
+            text-align: center
+        &__text
+            margin-right: 33px
+        &__date
+            text-align: center
+//Отзывы
+.feed
+    width: 100%
+    margin-bottom: 75px
+    &__top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 36px
+        border-bottom: 1px solid $borderColor
+    &__title
+        font-family: $addFont
+        font-weight: 500
+        font-size: 24px
+        line-height: 28px
+    &__link
+        font-size: 16px
+        line-height: 22px
+        color: $accentColor
+        text-decoration: underline
+        &:hover
+            color: darken($accentColor, 20%)
+    &-main
+        width: 100%
+
+        &__card
+            padding-top: 23px
+            padding-bottom: 21px
+            border-bottom: 1px solid $borderColor
+
+        &__top,
+        &__bottom
+            display: flex
+            align-items: center
+            justify-content: space-between
+        &__name,
+        &__date
+            font-size: 16px
+            line-height: 170%
+            color: $textColor
+        &__text
+            font-size: 16px
+            line-height: 170%
+//Аренда конфигурации
+.configure
+    width: 100%
+    border-radius: 8px
+    border: 1px solid $borderColor
+    &__title
+        padding: 21px 0
+        background-color: $mainColor
+        text-align: center
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+    &__main
+        padding: 22px 40px
+        display: grid
+        grid-template-columns: 1fr 3fr
+        column-gap: 20px
+    &__user,
+    &__price
+        font-size: 16px
+        line-height: 210%
+    &__price
+        color: $accentColor
+//Информация
+.info
+    width: 100%
+    border-radius: 8px
+    border: 1px solid $borderColor
+    margin-top: 31px
+    margin-bottom: 20px
+    &__title
+        padding: 21px 0
+        background-color: $mainColor
+        text-align: center
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+    &__main
+        padding: 19px 49px
+        display: grid
+        grid-template-columns: 2fr 1fr
+        column-gap: 20px
+        row-gap: 2px
+
+    &__name
+        display: flex
+        align-items: center
+        font-size: 16px
+        line-height: 210%
+        color: $textColor
+    &__text
+        display: flex
+        align-items: center
+        font-weight: 600
+        font-size: 16px
+        line-height: 210%
+//Скачать
+.download
+    width: 100%
+    background-color: $accentColor
+    font-weight: 600
+    font-size: 16px
+    color: $lightColor
+    border-radius: 8px
+    padding: 15px
+    outline: none
+    border: none
+    cursor: pointer
+    box-shadow: 0px 14.8458px 24.3895px rgba(255, 136, 157, 0.4)
+    margin-bottom: 32px
+    transition: .3s
+    &:hover
+        background-color: darken($accentColor, 10%)
+//Документация
+.doc
+    width: 100%
+    border-radius: 8px
+    border: 1px solid $borderColor
+    margin-bottom: 32px
+    &__title
+        padding: 21px 0
+        background-color: $mainColor
+        text-align: center
+        font-weight: 600
+        font-size: 16px
+        line-height: 22px
+    &__main
+        padding: 24px 16px
+        display: flex
+        align-items: center
+    &__img
+        max-width: 100%
+        flex-shrink: 0
+        margin-right: 24px
+    &__text
+        font-size: 16px
+        line-height: 170%
+        color: $textColor
+        font-weight: 300
+    &__link
+        color: #2F80ED
+.demo,
+.video
+    width: 100%
+    border-radius: 8px
+    border: 1px solid $accentColor
+    background-color: $lightColor
+    margin-bottom: 20px
+    padding: 14px
+    font-size: 16px
+    line-height: 22px
+    color: $accentColor
+    cursor: pointer
+    transition: .3s
+    &:hover
+        background-color: $accentColor
+        color: $lightColor
+//Форма обратной связи
+.form
+    width: 100%
+    display: flex
+    flex-direction: column
+    &__wrapper
+        width: 100%
+        padding: 53px 76px
+        border: 1px solid $borderColor
+        border-radius: 15px
+        margin-bottom: 78px
+    &__input
+        border-radius: 8px
+        outline: none
+        border: 1px solid $borderColor
+        margin-bottom: 14px
+        padding: 9px 35px
+        font-size: 16px
+        line-height: 22px
+
+        &:focus
+            border: 1px solid $darkColor
+        &::placeholder
+            color: #666666
+    &__textarea
+        outline: none
+        height: 100px
+        resize: none
+        border: 1px solid $borderColor
+        font-size: 16px
+        border-radius: 8px
+        line-height: 22px
+        padding: 9px 35px
+        margin-bottom: 15px
+        &:focus
+            border: 1px solid $darkColor
+        &::placeholder
+            color: #666666
+    &__text
+        font-size: 16px
+        line-height: 22px
+        color: #666666
+        margin-bottom: 22px
+        display: inline-block
+    &__file
+        visibility: hidden
+        height: 0px
+    &__label
+        width: 315px
+        padding: 14px
+        border: 1px solid $accentColor
+        text-align: center
+        color: $accentColor
+        line-height: 22px
+        transition: .3s
+        cursor: pointer
+        border-radius: 8px
+        margin-bottom: 57px
+        &:hover
+            background-color: $accentColor
+            color: $lightColor
+    &__note
+        font-size: 16px
+        line-height: 22px
+        color: #666666
+        display: inline-block
+        margin-bottom: 70px
+        > span
+            color: $accentColor
+    &__send
+        width: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+    &__submit
+        width: 315px
+        background-color: $accentColor
+        font-size: 16px
+        line-height: 22px
+        padding: 14px
+        border-radius: 8px
+        cursor: pointer
+        color: #F7FAFC
+        outline: none
+        border: none
+        box-shadow: 0px 14.8458px 24.3895px rgba(255, 136, 157, 0.4)
+        margin-bottom: 19px
+        &:hover
+            background-color: darken($accentColor, 10%)
+    &__policy
+        font-size: 16px
+        line-height: 170%
+        text-align: center
+        max-width: 315px
+        width: 100%
+        color: $textColor
+        font-weight: 300
+    &__link
+        text-decoration: underline
+        &:hover
+            color: lighten($textColor, 20%)
+// Подвал
+.footer
+    width: 100%
+    &__outer
+        padding-left: 30px
+        padding-right: 30px
+    &__wrapper
+        padding-top: 80px
+        padding-bottom: 80px
+        border-top: 1px solid $borderColor
+        display: grid
+        grid-template-columns: repeat(6, 1fr)
+        column-gap: 40px
+
+    &__title
+        font-weight: 500
+        font-size: 16px
+        line-height: 24px
+        font-family: $addFont
+        margin-bottom: 30px
+    &__link
+        display: block
+        font-size: 13px
+        line-height: 29px
+        margin-bottom: 1.5px
+        &:hover
+            text-decoration: underline
+    &__icons
+        display: inline-grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 33px
+        row-gap: 22px
+        justify-items: center
+        margin-bottom: 30px
+    &__icon
+        max-width: 100%
+        cursor: pointer
+    &__img
+        max-width: 100%
+        margin-bottom: 15px
+        cursor: pointer
+    &__tel
+        font-size: 13px
+        line-height: 29px
+        display: block
+        margin-bottom: 1px
+        &:hover
+            text-decoration: underline
+        &--last
+            margin-bottom: 88px
+    &__desc
+        font-size: 12px
+        line-height: 28px
+        display: block
+
+@media screen and (max-width: 1440px)
+    .content
+        &__left
+            margin-right: 5%
+            width: 66%
+        &__right
+            width: 29%
+
+@media screen and (max-width: 1350px)
+    .nav__item
+        margin-left: 15px
+        margin-right: 15px
+@media screen and (min-width: 1221px)
+    .header__block
+        display: flex
+@media screen and (max-width: 1220px)
+    .header
+        position: relative
+        justify-content: flex-start
+        &__text
+            display: block
+            margin-left: 14px
+        &__menu
+            display: block
+            margin-left: auto
+            &:hover rect
+                fill: lighten($darkColor, 20%)
+
+        &__block
+            position: fixed
+            overflow-y: auto
+            top: 0
+            left: 0
+            width: 100%
+            min-height: 100vh
+            z-index: 100
+            flex-direction: column
+            background-color: $lightColor
+            justify-content: flex-start
+            align-items: flex-start
+            padding: 50px
+            display: none
+
+        &__close
+            display: block
+    .navigation
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        margin-bottom: 20px
+        &__phone
+            margin-left: 0
+    .nav
+        &__list
+            flex-direction: column
+
+        &__item
+            margin-bottom: 20px
+            margin-left: 0
+@media screen and (max-width: 1100px)
+    .content
+        &__left
+            margin-right: 2%
+            width: 68%
+        &__right
+            width: 30%
+    .configure__main
+        padding: 15px 20px
+    .info__main
+        padding: 15px 20px
+    .form__wrapper
+        padding: 20px
+@media screen and (max-width: 1000px)
+    .content
+        &__main
+            display: block
+        &__left
+            width: 100%
+        &__right
+            width: 100%
+            display: flex
+            flex-direction: column
+            align-items: center
+    .footer
+        &__wrapper
+            grid-template-columns: repeat(3, 1fr )
+            row-gap: 20px
+            column-gap: 20px
+        &__img
+            display: block
+    .configure__main
+        grid-template-columns: 2fr 1fr
+    .download,
+    .demo,
+    .video
+        width: 50%
+@media screen and (max-width: 576px)
+    .footer
+        &__wrapper
+            grid-template-columns: repeat(2, 1fr)
+    .content
+        padding-left: 0
+        padding-right: 0
+        &__title
+            padding-left: 16px
+            padding-right: 16px
+            margin-bottom: 0
+        &__main
+            border-top: none
+        &__title
+            font-size: 25px
+    .banner
+        padding-bottom: 60px
+        &__title
+            font-size: 25px
+    .slider
+        border: none
+        &__card
+            padding-left: 27px
+            padding-right: 27px
+    .desc
+        &__text,
+        &__title,
+        &__list
+            margin-left: 8px
+            margin-right: 8px
+    .table__caption
+        text-align: center
+    .form
+        &__submit,
+        &__policy
+            width: 100%
+
+        &__note
+            display: none
+        &__label
+            width: 100%
+            margin-bottom: 40px
+        &__input,
+        &__textarea
+            padding-left: 20px
+            font-size: 14px
+        &__wrapper
+            margin-left: 8px
+            margin-right: 8px
+            padding-left: 16px
+            padding-right: 16px
+    .feed-main
+        &__name
+            margin-right: 5px
+        &__stars
+            position: absolute
+            top: 25px
+            right: 16px
+        &__top
+            width: calc(100% - 160px)
+            margin-bottom: 18px
+        &__card
+            position: relative
+            padding-left: 16px
+            padding-right: 16px
+    .feed
+        margin-bottom: 40px
+        &__link
+            display: none
+
+        &__top
+            display: block
+        &__title
+            display: block
+            text-align: center
+    .table-main
+        margin-bottom: 40px
+    .table-body__check
+        margin-left: 16px
+        padding-top: 10px
+        padding-bottom: 10px
+        font-size: 14px
+    .table-body__text
+        margin-right: 16px
+        padding-top: 10px
+        padding-bottom: 10px
+        font-size: 14px
+    .table-body__date
+        padding-top: 10px
+        padding-bottom: 10px
+        font-size: 14px
+    .table-header
+        &__check
+            padding-left: 16px
+        &__text
+            padding-right: 0
+    .footer__outer
+        padding-left: 16px
+        padding-right: 16px
+    .footer__wrapper
+        padding-top: 20px
+        padding-bottom: 20px
+    .banner
+        &__wrapper
+            padding-left: 16px
+            padding-right: 16px
+            display: flex
+            justify-content: center
+            align-items: center
+            flex-direction: column
+    .header
+        padding-left: 16px
+        padding-right: 16px
+        &__close
+            right: 16px
+    .configure__main,
+    .info__main
+        grid-template-columns: repeat(2, 1fr )
+.download,
+.demo,
+.video
+    width: calc(100% - 32px)
+    margin-left: 16px
+    margin-right: 16px
+
+@media screen and (max-width: 450px)
+    .footer
+        &__wrapper
+            grid-template-columns: repeat(1, 1fr)
+
+        &__icons
+            display: grid
+            grid-template-columns: repeat(6, 1fr )
+        &__main
+            display: none
+        &__title
+            position: relative
+            margin-bottom: 20px
+
+            &::after
+                position: absolute
+                content: '\032C'
+                top: -19px
+                right: 5px
+                font-size: 40px
+        &__col:nth-child(6)  .footer__title,
+        &__col:nth-child(5)  .footer__title
+            &::after
+                content: ''
+
+        &__img
+            display: inline-block
+            margin-bottom: 30px
+        &__tel--last
+            margin-bottom: 10px
