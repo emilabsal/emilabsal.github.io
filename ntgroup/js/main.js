@@ -31,15 +31,33 @@ $(document).ready(function () {
     }
   });
 
-  $(".nav__call").click(function () {
-    $(".order").css("display", "flex");
-    $("body").css("height", "100vh");
-    $("body").css("oveflow-y", "hidden");
+  $(".nav__call").each(function () {
+    $(this).click(function () {
+      $(".order").css("display", "flex");
+      $("body").css("height", "100vh");
+      $("body").css("oveflow-y", "hidden");
+    });
   });
 
   $(".order__close").click(function () {
     $(".order").css("display", "none");
     $("body").css("height", "auto");
     $("body").css("oveflow-y", "auto");
+  });
+
+  $(".clickit").click(function () {
+    if (!$(".clickit").hasClass("transf")) {
+      $(".clickit").addClass("transf");
+    } else {
+      $(".clickit").removeClass("transf");
+    }
+  });
+
+  console.log($(".form-strokes").offset().top);
+
+  $(window).resize(function () {
+    if ($(this).width() < 1171) {
+      $(".header__bottom").css("display", "none");
+    }
   });
 });

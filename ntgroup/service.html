@@ -11,17 +11,19 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="sass/slick.css" />
     <link rel="stylesheet" href="sass/slick-theme.css" />
     <link rel="stylesheet" href="sass/style.css" />
   </head>
   <body>
     <section class="banner-service">
-      <!-- шапка  -->
+      <div class="banner__circle"></div>
+      <!-- шапка -->
       <header class="header container">
         <div class="header__top">
           <div class="header__logo-inner">
-            <a href="#"
+            <a href="index.html"
               ><img src="img/logo.svg" alt="" class="header__logo"
             /></a>
             <span
@@ -67,16 +69,16 @@
                 <g>
                   <path
                     d="M436.992,74.953c-99.989-99.959-262.08-99.935-362.039,0.055s-99.935,262.08,0.055,362.039s262.08,99.935,362.039-0.055
-                c48.006-48.021,74.968-113.146,74.953-181.047C511.986,188.055,485.005,122.951,436.992,74.953z M387.703,356.605
-                c-0.011,0.011-0.022,0.023-0.034,0.034v-0.085l-12.971,12.885c-16.775,16.987-41.206,23.976-64.427,18.432
-                c-23.395-6.262-45.635-16.23-65.877-29.525c-18.806-12.019-36.234-26.069-51.968-41.899
-                c-14.477-14.371-27.483-30.151-38.827-47.104c-12.408-18.242-22.229-38.114-29.184-59.051
-                c-7.973-24.596-1.366-51.585,17.067-69.717l15.189-15.189c4.223-4.242,11.085-4.257,15.326-0.034
-                c0.011,0.011,0.023,0.022,0.034,0.034l47.957,47.957c4.242,4.223,4.257,11.085,0.034,15.326c-0.011,0.011-0.022,0.022-0.034,0.034
-                l-28.16,28.16c-8.08,7.992-9.096,20.692-2.389,29.867c10.185,13.978,21.456,27.131,33.707,39.339
-                c13.659,13.718,28.508,26.197,44.373,37.291c9.167,6.394,21.595,5.316,29.525-2.56l27.221-27.648
-                c4.223-4.242,11.085-4.257,15.326-0.034c0.011,0.011,0.022,0.022,0.034,0.034l48.043,48.128
-                C391.911,345.502,391.926,352.363,387.703,356.605z"
+			c48.006-48.021,74.968-113.146,74.953-181.047C511.986,188.055,485.005,122.951,436.992,74.953z M387.703,356.605
+			c-0.011,0.011-0.022,0.023-0.034,0.034v-0.085l-12.971,12.885c-16.775,16.987-41.206,23.976-64.427,18.432
+			c-23.395-6.262-45.635-16.23-65.877-29.525c-18.806-12.019-36.234-26.069-51.968-41.899
+			c-14.477-14.371-27.483-30.151-38.827-47.104c-12.408-18.242-22.229-38.114-29.184-59.051
+			c-7.973-24.596-1.366-51.585,17.067-69.717l15.189-15.189c4.223-4.242,11.085-4.257,15.326-0.034
+			c0.011,0.011,0.023,0.022,0.034,0.034l47.957,47.957c4.242,4.223,4.257,11.085,0.034,15.326c-0.011,0.011-0.022,0.022-0.034,0.034
+			l-28.16,28.16c-8.08,7.992-9.096,20.692-2.389,29.867c10.185,13.978,21.456,27.131,33.707,39.339
+			c13.659,13.718,28.508,26.197,44.373,37.291c9.167,6.394,21.595,5.316,29.525-2.56l27.221-27.648
+			c4.223-4.242,11.085-4.257,15.326-0.034c0.011,0.011,0.022,0.022,0.034,0.034l48.043,48.128
+			C391.911,345.502,391.926,352.363,387.703,356.605z"
                   />
                 </g>
               </svg>
@@ -105,19 +107,105 @@
           <nav class="nav">
             <ul>
               <li><a href="#">Ремонт помещений</a></li>
-              <li><a href="#">Ремонт офисов</a></li>
-              <li><a href="#">Услуги</a></li>
+              <li><a href="service.html">Ремонт офисов</a></li>
+              <li class="li-link">
+                <a href="#">Услуги</a>
+                <ul class="ul-first">
+                  <li>
+                    <a href="#" class="li-link1">Отделка помещений</a>
+                    <ul class="ul-second">
+                      <li><a href="#">Производственных помещений</a></li>
+                      <li><a href="#">Складских помещений</a></li>
+                      <li><a href="#">Помещений школы</a></li>
+                      <li><a href="#">Медицинских помещений</a></li>
+                      <li><a href="#">Общественных помещений</a></li>
+                      <li><a href="#">Нежилых помещений</a></li>
+                      <li><a href="#">Внутренняя отделка помещений</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Электромонтажные работы</a></li>
+                  <li><a href="#">Демонтаж зданий и сооружений</a></li>
+                </ul>
+              </li>
               <li><a href="#">Цены</a></li>
-              <li><a href="#">Проекты</a></li>
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="projects.html">Проекты</a></li>
+              <li><a href="about.html">О компании</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <button class="nav__call">Заказать звонок</button>
           </nav>
+          <span class="header__close">&times;</span>
         </div>
       </header>
 
-      <!-- Щапка END -->
+      <!-- Заказать звонок -->
+      <div class="order">
+        <div class="order__inner">
+          <svg
+            class="order__close"
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M2 2L42 42M42 2L2 42" stroke="#1F4960" stroke-width="3" />
+          </svg>
+
+          <h2>Заказать звонок</h2>
+          <p>
+            Оставьте заявку и наши специалисты свяжутся с вами в ближайшее время
+            для уточнения подробностей
+          </p>
+          <form class="order__form">
+            <div class="order__top">
+              <div class="order__input">
+                <label for="user">Ваше имя</label>
+                <input
+                  type="text"
+                  name="user"
+                  id="user"
+                  placeholder="Введите имя"
+                />
+              </div>
+              <div class="order__input">
+                <label for="mobile">Введите телефон</label>
+                <input
+                  type="tel"
+                  name="mobile"
+                  id="mobile"
+                  placeholder="Введите телефон"
+                />
+              </div>
+            </div>
+            <div class="order__bottom">
+              <p>
+                Нажимая кнопку «Отправить», вы соглашаетесь на обработку
+                персональных данных
+              </p>
+
+              <button type="button" class="block-link order__link">
+                <span>консультация специалиста</span>
+
+                <svg
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="36" height="36" rx="10" fill="#54DE72" />
+                  <path
+                    d="M9 17.5H26M26 17.5L19.5 11M26 17.5L19.5 24"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
 
       <!-- Хлебные крошки -->
       <div class="breadcrumbs container">
@@ -161,7 +249,12 @@
     </section>
 
     <!-- О компании -->
-    <section class="service-about container">
+    <section
+      class="service-about container"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
       <div class="service-about__left">
         <h2>Заголовок h2</h2>
         <p>
@@ -186,7 +279,12 @@
 
     <!-- Почему мы? -->
     <section class="why">
-      <div class="why__wrapper container">
+      <div
+        class="why__wrapper container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <h2>Почему ремонт офисов стоит доверить именно нам? н2</h2>
         <div class="why__inner">
           <div class="why__left">
@@ -240,7 +338,12 @@
     </section>
 
     <!-- Форма обратной связи -->
-    <section class="connect container service-connect">
+    <section
+      class="connect container service-connect"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-once="true"
+    >
       <div class="connect__left">
         <img src="img/form.png" alt="" />
       </div>
@@ -299,7 +402,12 @@
     <!-- Слайдер -->
     <section class="slider__wrapper">
       <div class="slider__circle"></div>
-      <div class="slider__main container">
+      <div
+        class="slider__main container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <div class="slider__left">
           <h2>Наши проекты</h2>
           <div class="slider__arrows"></div>
@@ -415,36 +523,141 @@
 
     <!-- Услуги по ремонту офисов -->
     <section class="remont">
-      <div class="remont__wrapper container">
+      <div
+        class="remont__wrapper container"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
+        <div class="strokes__line">
+          <div class="strokes__col"></div>
+          <div class="strokes__col"></div>
+          <div class="strokes__col"></div>
+        </div>
         <h2>Услуги по ремонту офисов</h2>
         <div class="remont__grid">
           <div class="remont__card">
             <img src="img/service-remont.png" alt="" />
-            <span>Косметический ремонт офисов</span>
+            <a href="#"
+              >Косметический ремонт офисов
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7.5H17M17 7.5L10.5 1M17 7.5L10.5 14"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
           <div class="remont__card">
-            <img src="img/service-remont.png" alt="" />
-            <span>Ремонт переговорных </span>
+            <img src="img/office/2.png" alt="" />
+            <a href="#"
+              >Ремонт переговорных
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7.5H17M17 7.5L10.5 1M17 7.5L10.5 14"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
           <div class="remont__card">
-            <img src="img/service-remont.png" alt="" />
-            <span>Ремонт кабинета </span>
+            <img src="img/office/3.png" alt="" />
+            <a href="#"
+              >Ремонт кабинета
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7.5H17M17 7.5L10.5 1M17 7.5L10.5 14"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
           <div class="remont__card">
-            <img src="img/service-remont.png" alt="" />
-            <span>Отдельные услуги </span>
+            <img src="img/office/4.png" alt="" />
+            <a href="#"
+              >Отдельные услуги
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7.5H17M17 7.5L10.5 1M17 7.5L10.5 14"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
           <div class="remont__card">
-            <img src="img/service-remont.png" alt="" />
-            <span>Капитальный ремонт офисов </span>
+            <img src="img/office/5.png" alt="" />
+            <a href="#"
+              >Капитальный ремонт офисов
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7.5H17M17 7.5L10.5 1M17 7.5L10.5 14"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
           <div class="remont__card">
-            <img src="img/service-remont.png" alt="" />
-            <span>Срочный ремонт офисов</span>
+            <img src="img/office/6.png" alt="" />
+            <a href="#"
+              >Срочный ремонт офисов
+              <svg
+                width="19"
+                height="15"
+                viewBox="0 0 19 15"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M0 7.5H17M17 7.5L10.5 1M17 7.5L10.5 14"
+                  stroke="white"
+                  stroke-width="2"
+                />
+              </svg>
+            </a>
           </div>
         </div>
 
-        <div class="remont-guarantee">
+        <div
+          class="remont-guarantee"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <h3>заголовок н3</h3>
           <p>
             Гарантией соблюдения сроков является договор, в котором прописано
@@ -457,7 +670,12 @@
           </p>
         </div>
 
-        <div class="remont-table">
+        <div
+          class="remont-table"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-once="true"
+        >
           <h4>заголовок н4</h4>
           <table>
             <tr>
@@ -502,11 +720,14 @@
       <div class="footer__inner container">
         <div class="footer__col">
           <div class="footer__top">
-            <img src="img/logo-white.svg" alt="Логотип" />
+            <a href="index.html">
+              <img src="img/logo-white.svg" alt="Логотип"
+            /></a>
+
             <div class="footer__block">
               <span>Телефон</span>
               <a href="tel:88002589657">8 800 258 96 57</a>
-              <button class="phone-call">Заказать звонок</button>
+              <button class="phone-call nav__call">Заказать звонок</button>
             </div>
             <div class="footer__block">
               <span>Адрес</span>
@@ -596,7 +817,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <a href="#">Ремонт офисов</a>
+          <a href="service.html">Ремонт офисов</a>
           <ul>
             <li><a href="#">Косметический ремонт офисов</a></li>
             <li><a href="#">Ремонт переговорных</a></li>
@@ -626,9 +847,9 @@
             </ul>
             <a href="#">Электромонтажные работы</a>
             <a href="#">Цены</a>
-            <a href="#">Проекты</a>
-            <a href="#">О компании</a>
-            <a href="#">Контакты</a>
+            <a href="projects.html">Проекты</a>
+            <a href="about.html">О компании</a>
+            <a href="contacts.html">Контакты</a>
           </div>
           <a href="#" class="footer__policy">Политика конфиденциальности</a>
         </div>
@@ -642,6 +863,11 @@
       referrerpolicy="no-referrer"
     ></script>
     <script src="js/slick.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

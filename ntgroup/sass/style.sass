@@ -64,6 +64,8 @@ li
         width: 100%
         height: 100%
         z-index: -1
+        +mq(custom, $pixels: 1350)
+            display: none
     &__circle
         position: absolute
         max-width: 297px
@@ -332,6 +334,8 @@ li
             font-size: 14px
             line-height: 17px
             color: $blueColor
+            &:hover
+                color: darken($blueColor, 10%)
     &__phone
         flex-shrink: 0
         +mq(custom, $pixels: 1171)
@@ -349,6 +353,8 @@ li
             font-weight: 500
             font-size: 20px
             line-height: 24px
+            &:hover
+                color: darken($blueColor, 10%)
     &__close
         display: none
         +mq(custom, $pixels: 1171)
@@ -365,6 +371,9 @@ li
         background-color: $bottomColor
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
+        +mq(custom, $pixels: 1171)
+            overflow-y: auto
+            height: 100vh
 
         +mq(custom, $pixels: 1171)
             background-color: $lightColor
@@ -420,10 +429,98 @@ li
         cursor: pointer
         border: 2px solid transparent
         flex-shrink: 0
+        +mq(custom, $pixels: 1171)
+            margin-bottom: 20px
         &:hover
             border-bottom: 2px solid $accentColor
 
-// Линии
+.li-link
+    position: relative
+    &:hover > .ul-first
+        display: block
+        +mq(custom, $pixels: 1171)
+            display: none
+
+.ul-first
+    display: none
+    position: absolute
+    width: 314px
+    top: 22px
+    left: 0
+    border-radius: 15px
+    background-color: $lightColor
+    +mq(custom, $pixels: 1171)
+        display: block
+        position: static
+
+    > li:first-child a
+        border-top-right-radius: 15px
+        border-top-left-radius: 15px
+    > li:last-child a
+        border-bottom-right-radius: 15px
+        border-bottom-left-radius: 15px
+    > li:first-child > a
+        &::after
+            content: ''
+            position: absolute
+            right: 20px
+            top: 50%
+            transform: translateY(-50%)
+            width: 4.5px
+            height: 9px
+            display: none
+            background: url(../icons/menu.svg) no-repeat center
+        &:hover
+            background-color: #D2DBDF
+            &::after
+                display: inline-block
+
+    > li
+        display: inline-block
+        width: 100%
+        > a
+            display: inline-block
+            width: 100%
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            padding: 13px 35px 13px 20px
+            position: relative
+            +mq(custom, $pixels: 1171)
+                padding: 10px
+            &:hover
+                background-color: #D2DBDF
+
+.li-link1
+    position: relative
+    &:hover + .ul-second
+        display: block
+
+.ul-second
+    display: none
+    position: absolute
+    top: 0
+    right: -296px
+    padding: 20px
+    border: 2px solid #D2DBDF
+    border-radius: 15px
+    background-color: $lightColor
+    +mq(custom, $pixels: 1171)
+        display: block
+        position: static
+        border: none
+        padding: 5px
+        padding-left: 20px
+    > li
+        margin-bottom: 8px
+        &:last-child
+            margin-bottom: 0
+        &:hover a
+            color: $accentColor
+    &:hover
+        display: block
+
+    // Линии
 .strokes
     width: 100%
     height: 100%
@@ -447,9 +544,48 @@ li
         border-right: 2px solid rgba($blueColor, .2)
         &:nth-child(2)
             border: none
+
+.clickit
+    position: absolute
+    top: -60px
+    z-index: 100
+    left: -120px
+    border-radius: 15px
+    overflow: hidden
+    cursor: pointer
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+    +mq(custom, $pixels: 1426)
+        display: none
+    > h3
+        font-weight: bold
+        font-size: 12px
+        line-height: 11px
+        text-transform: uppercase
+        color: $lightColor
+        font-family: $titleFont
+        padding: 12px
+        background-color: $accentColor
+    &__img
+        height: 175px
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.transf
+    transform: scale(1.5)
+    width: 150px
+    left: -40px
+    > .clickit__img
+        object-fit: cover
+        height: 200px
+    > h3
+        display: none
+
 //Услуги
 .services
     display: flex
+
     +mq(sm)
         display: grid
         grid-template-columns: repeat(1, 1fr)
@@ -509,16 +645,14 @@ li
 
         > h2
             position: absolute
-            font-family: $titleFont
-            font-weight: bold
-            font-size: 35px
-            line-height: 40px
+            +title()
             top: 0
             left: -2px
             padding-top: 76px
             padding-left: 45px
             padding-bottom: 95px
             z-index: 1
+            color: $blueColor
             background-color: $lightColor
             +mq(sm)
                 display: none
@@ -557,6 +691,7 @@ li
             justify-content: space-between
             > svg
                 margin-left: auto
+                flex-shrink: 0
                 display: none
             +mq(xs)
                 font-size: 16px
@@ -602,7 +737,8 @@ li
 .connect
     display: flex
     justify-content: space-between
-    margin-bottom: 108px
+    padding-bottom: 108px
+    background-color: $lightColor
     +mq(custom, $pixels: 1110)
         flex-direction: column
 
@@ -642,6 +778,7 @@ li
             text-transform: uppercase
             color: $blueColor
             padding-bottom: 43px
+            padding-top: 30px
             background-color: $lightColor
             +mq(custom, $pixels: 1110)
                 padding-bottom: 20px
@@ -685,9 +822,12 @@ li
 
         > p
             position: absolute
-            bottom: -50px
-            right: 0
+            bottom: -85px
+            right: -5px
+            background-color: $lightColor
+            padding-top: 18px
             font-size: 14px
+            padding-bottom: 30px
             line-height: 17px
             color: rgba($textColor, .5)
             max-width: 331px
@@ -745,6 +885,8 @@ li
                 justify-content: center
                 width: initial
                 padding: 6px 18px
+            +mq(custom, $pixels: 370)
+                margin-bottom: 20px
 
             &:hover,
             &:focus
@@ -817,12 +959,16 @@ li
     &__text
         max-width: 400px
         width: 100%
-        margin-bottom: 75px
+        padding-bottom: 75px
+        background-color: $lightColor
+
         +mq(custom, $pixels: 870)
             margin-bottom: 40px
+            padding-bottom: 0
         +mq(md)
             max-width: 550px
         > h2
+            position: relative
             font-weight: bold
             font-size: 60px
             line-height: 60px
@@ -830,6 +976,26 @@ li
             color: $blueColor
             font-family: $titleFont
             margin-bottom: 31px
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                right: 0
+                width: 21px
+                height: 18px
+                background: url(../icons/quote1.svg) no-repeat center
+                +mq(custom, $pixels: 1270)
+                    display: none
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: -30px
+                width: 21px
+                height: 18px
+                background: url(../icons/quote1.svg) no-repeat center
+                +mq(custom, $pixels: 1270)
+                    display: none
             +mq(md)
                 font-size: 24px
                 line-height: 32px
@@ -891,15 +1057,18 @@ li
         &--quality
             background-color: $blueColor
             z-index: 2
-            margin-top: 40px
+            margin-top: 20px
             padding-bottom: 80px
             +mq(custom, $pixels: 870)
                 margin-top: 0
 
-            > img
+            > svg
+                position: absolute
+                display: inline-block
                 top: 0
                 right: 0
                 z-index: -1
+
             > span
                 margin-bottom: 48px
                 +mq(md)
@@ -956,7 +1125,8 @@ li
         &--video
             background-color: #E1F3E5
             z-index: 2
-            > img
+            > svg
+                position: absolute
                 z-index: -1
                 bottom: 10px
                 width: 85%
@@ -977,7 +1147,8 @@ li
         &--key
             background-color: #E9EDF0
             z-index: 2
-            > img
+            > svg
+                position: absolute
                 top: 0
                 right: 0
                 z-index: -1
@@ -1432,7 +1603,7 @@ li
         z-index: -2
         background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
 
-    > img
+    > svg
         position: absolute
         top: 0
         left: 0
@@ -1592,6 +1763,8 @@ li
         > img
             max-width: 151px
             width: 100%
+        > a
+            display: inline-block
             margin-bottom: 30px
     &__block
         display: flex
@@ -1708,6 +1881,7 @@ p
 
 // СТРАНИЦА УСЛУГ
 .banner-service
+    position: relative
     width: 100%
     background: url(../img/service.png) no-repeat center/cover
     position: relative
@@ -1725,7 +1899,7 @@ p
         bottom: 0
         right: 0
         background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
-        z-index: -1
+        z-index: -2
     &__link
         +mq(xs)
             margin-top: 30px
@@ -1940,14 +2114,22 @@ p
         padding: 40px 0
 
     &__wrapper
+        position: relative
+
+        .strokes__col:nth-child(1)
+            border-right: none
+
+        .strokes__col:nth-child(3)
+            border-left: none
 
         > h2
             +title($clr: $blueColor)
-            margin-bottom: 58px
+            padding-bottom: 58px
+            background-color: #fff
             +mq(sm)
                 font-size: 30px
                 line-height: 30px
-                margin-bottom: 20px
+                padding-bottom: 20px
             +mq(xs)
                 font-size: 22px
     &__grid
@@ -1971,7 +2153,7 @@ p
         overflow: hidden
         height: 270px
         z-index: 1
-        padding: 30px
+        padding: 20px
         filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.25))
         background: linear-gradient(230.99deg, rgba(36, 198, 71, 0.5) 0%, rgba(36, 198, 71, 0) 50%), linear-gradient(230.99deg, rgba(31, 73, 96, 0) 50%, #1F4960 100%)
         +mq(custom, $pixels: 1170)
@@ -1986,6 +2168,19 @@ p
         +mq(xs)
             margin-left: 5px
             margin-right: 5px
+        &:hover
+            > a
+
+                display: flex
+                justify-content: space-between
+                background: rgba(36, 198, 71, 0.4)
+                backdrop-filter: blur(5px)
+                border-radius: 10px
+                align-items: center
+                > svg
+                    display: block
+                    flex-shrink: 0
+
         > img
             position: absolute
             top: 0
@@ -2007,6 +2202,19 @@ p
             +mq(sm)
                 font-size: 16px
                 margin-top: 110px
+        > a
+            display: inline-block
+            margin-top: 162px
+            padding: 5px 20px
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            color: $lightColor
+            +mq(sm)
+                font-size: 16px
+                margin-top: 110px
+            > svg
+                display: none
 
 .remont-guarantee
     margin-left: 45px
@@ -2126,7 +2334,7 @@ p
         width: 100%
         height: 100%
         background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
-        z-index: -1
+        z-index: -2
     &__inner
         max-width: 295px
 
@@ -2375,8 +2583,12 @@ p
         width: 100%
         height: 100%
         background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
-        z-index: -1
+        z-index: -2
     &__wrapper
+    .breadcrumbs
+        margin-bottom: 180px
+        +mq(sm)
+            margin-bottom: 30px
     &__inner
         width: 100%
         max-width: 539px
@@ -2568,6 +2780,11 @@ p
     z-index: 1
     +mq(sm)
         padding-bottom: 50px
+    .breadcrumbs
+        margin-bottom: 180px
+        +mq(sm)
+            margin-bottom: 30px
+
     &::after
         content: ''
         position: absolute
@@ -2576,6 +2793,11 @@ p
         width: 100%
         height: 100%
         background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
+        z-index: -2
+    &__svg
+        position: absolute
+        top: 10px
+        left: 51px
         z-index: -1
     &__inner
         max-width: 539px
@@ -2760,8 +2982,8 @@ p
     left: 0
     z-index: 1000
     width: 100%
-    height: 100vh
-    overflow: auto
+    min-height: 100vh
+    overflow-y: auto !important
     background-color: #D5DDE2
     display: flex
     justify-content: center
@@ -2785,6 +3007,7 @@ p
             stroke: darken($blueColor, 10%)
 
     &__inner
+        vertical-align: middle
         width: 100%
         max-width: 544px
         +mq(custom, $pixels: 580)
@@ -2799,12 +3022,16 @@ p
             font-size: 20px
             line-height: 24px
             margin-bottom: 57px
+            +mq(xs)
+                margin-bottom: 20px
     &__top
         display: flex
         column-gap: 30px
         margin-bottom: 37px
         +mq(custom, $pixels: 580)
             flex-direction: column
+        +mq(xs)
+            margin-bottom: 20px
     &__input
         width: 100%
         display: flex
@@ -2830,6 +3057,7 @@ p
                 color: rgba($textColor, .2)
     &__bottom
         display: flex
+        align-items: flex-start
         +mq(custom, $pixels: 500)
             flex-direction: column
 
@@ -2842,6 +3070,7 @@ p
             margin-right: 74px
             +mq(xs)
                 margin-right: 20px
+
             +mq(custom, $pixels: 500)
                 width: 100%
                 max-width: initial
@@ -2851,3 +3080,92 @@ p
         margin-top: 0
         outline: none
         border: none
+        cursor: pointer
+        width: initial
+
+// Успешная отправка сообщения
+
+.success
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    display: none
+    > img
+        margin-bottom: 50px
+        +mq(xs)
+            width: 100px
+            margin-bottom: 20px
+    > span
+        display: inline-block
+        +title($clr: $blueColor, $fz: 70px, $lh: 40px)
+        margin-bottom: 28px
+        +mq(xs)
+            font-size: 40px
+            margin-bottom: 10px
+    > p
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+    &-order
+        display: flex
+        position: static
+        .success
+            display: flex
+//Анимации
+.banner__path
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path 10s .5s linear forwards
+
+.banner-about__path
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path4 6s .5s linear forwards
+    +mq(custom, $pixels: 1350)
+        display: none
+
+.video-path--active
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path2 12s .5s linear forwards
+
+.key-path--active
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path1 12s .5s linear forwards
+
+.form-strokes--active
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path3 8s .5s linear forwards
+
+@keyframes path
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path1
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path2
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path3
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path4
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
