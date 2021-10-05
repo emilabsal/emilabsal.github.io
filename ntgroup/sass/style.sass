@@ -161,7 +161,7 @@ li
     &__cards
         display: flex
         width: 100%
-        column-gap: 30px
+        gap: 30px
         align-items: stretch
         +mq(xs)
             flex-direction: column
@@ -324,7 +324,7 @@ li
             line-height: 14px
             color: rgba($blueColor, .5)
             margin-bottom: 3px
-            display: inline-block
+            display: block
 
         > p
             font-size: 14px
@@ -438,6 +438,7 @@ li
     position: relative
     &:hover > .ul-first
         display: block
+        z-index: 10
         +mq(custom, $pixels: 1171)
             display: none
 
@@ -546,16 +547,17 @@ li
             border: none
 
 .clickit
-    position: absolute
-    top: -60px
-    z-index: 100
-    left: -120px
+    position: fixed
+    bottom: 10px
+    z-index: 10
+    left: 40px
     border-radius: 15px
     overflow: hidden
     cursor: pointer
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+    display: none
     +mq(custom, $pixels: 1426)
-        display: none
+        display: none !important
     > h3
         font-weight: bold
         font-size: 12px
@@ -581,6 +583,9 @@ li
         height: 200px
     > h3
         display: none
+
+.clickit-active
+    display: block
 
 //Услуги
 .services
@@ -658,6 +663,7 @@ li
                 display: none
 
     &__block
+        display: inline-block
         z-index: 2
         width: 100%
         height: 270px
@@ -673,13 +679,13 @@ li
             margin-bottom: 10px
 
         &:hover
-            > a
+            > span
                 background: rgba(36, 198, 71, 0.4)
                 backdrop-filter: blur(5px)
                 border-radius: 10px
                 > svg
                     display: block
-        > a
+        > span
             width: 100%
             color: $lightColor
             font-weight: 500
@@ -940,7 +946,7 @@ li
 .benefits
     display: flex
     width: 100%
-    column-gap: 70px
+    gap: 70px
     +mq(custom, $pixels: 1100)
         column-gap: 30px
     +mq(custom, $pixels: 870)
@@ -1322,6 +1328,7 @@ li
                 max-width: 471px
                 width: 100%
                 display: inline-block
+                filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.25))
                 border-radius: 20px
                 object-fit: cover
                 max-width: 471px
@@ -1443,6 +1450,8 @@ li
     padding-top: 224px
     padding-bottom: 123px
     background-color: $greyColor
+    position: relative
+    overflow: hidden
     +mq(custom, $pixels: 900)
         padding-top: 100px
         padding-bottom: 40px
@@ -1576,10 +1585,13 @@ li
         margin-bottom: 33px
         +mq(sm)
             margin-bottom: 20px
-    > a
+
+    &__link
         +link()
         &:hover
             border-bottom: 1px solid $accentColor
+    &__hidden
+        display: none
 
 //Вызов специалиста
 .call
@@ -1637,7 +1649,7 @@ li
     &__form
         &-top
             display: flex
-            column-gap: 31px
+            gap: 31px
             margin-bottom: 30px
             +mq(custom, $pixels: 450)
                 flex-direction: column
@@ -1814,7 +1826,7 @@ li
     &__icons
         margin-top: auto
         display: flex
-        column-gap: 30px
+        gap: 30px
         margin-bottom: 7px
         > a
             display: inline-block
@@ -2080,7 +2092,7 @@ p
     &__right
         +mq(md)
             width: 100%
-        > span
+        > h4
             font-weight: 500
             font-size: 20px
             line-height: 24px
@@ -2311,7 +2323,6 @@ p
     //Третья страница
 .banner-contacts
     width: 100%
-    background: url(../img/contact-bg.png) no-repeat center/cover
     padding-top: 20px
     position: relative
     z-index: 1
@@ -2384,6 +2395,14 @@ p
             color: $lightColor
             &:hover
                 text-decoration: underline
+.contacts-map
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -2
+
 // Обратный звонок
 .contact-call
     padding: 58px 0
@@ -2980,7 +2999,7 @@ p
     position: fixed
     top: 0
     left: 0
-    z-index: 1000
+    z-index: 100
     width: 100%
     min-height: 100vh
     overflow-y: auto !important
@@ -3026,7 +3045,7 @@ p
                 margin-bottom: 20px
     &__top
         display: flex
-        column-gap: 30px
+        gap: 30px
         margin-bottom: 37px
         +mq(custom, $pixels: 580)
             flex-direction: column
@@ -3169,3 +3188,10 @@ p
         stroke-dashoffset: 1770
     to
         stroke-dashoffset: 0
+.lines
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1
