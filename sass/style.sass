@@ -1,0 +1,3197 @@
+@import '_vars'
+@import '_mixins'
+
+//Fonts
+@font-face
+    font-family: "EuropeExt"
+    src: url(../fonts/europe.ttf) format("truetype")
+    font-weight: bold
+    font-style: normal
+
+$titleFont: 'EuropeExt', sans-serif
+
+html,
+body
+    overflow-x: hidden
+
+//Reset
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-weight: 400
+    font-family: $mainFont
+    color: $textColor
+
+li
+    list-style-type: none
+
+a
+    text-decoration: none
+
+//Styles (blocks)
+.container
+    max-width: 1170px
+    margin: 0 auto
+    width: 100%
+    +mq(custom, $pixels: 1171)
+        margin-left: 20px
+        margin-right: 20px
+        width: calc(100% - 40px) !important
+
+img
+    max-width: 100%
+a
+    text-decoration: none
+    color: inherit
+li
+    list-style-type: none
+
+//Styles
+.banner
+    width: 100%
+    padding-bottom: 116px
+    padding-top: 20px
+    position: relative
+    z-index: 1
+    background: url(../img/main-banner.png) no-repeat center/cover
+    +mq(sm)
+        padding-bottom: 40px
+    &__stroke
+        position: absolute
+        top: 0
+        left: -90px
+        width: 100%
+        height: 100%
+        z-index: -1
+        +mq(custom, $pixels: 1350)
+            display: none
+    &__circle
+        position: absolute
+        max-width: 297px
+        max-height: 297px
+        height: 100%
+        width: 100%
+        border-radius: 50%
+        filter: blur(150px)
+        top: 0
+        left: 0
+        z-index: -1
+        background-color: rgba($accentColor, .6)
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        margin-top: 78px
+        +mq(md)
+            flex-direction: column
+        +mq(xs)
+            margin-top: 40px
+    &__right
+        max-width: 260px
+        width: 100%
+        +mq(md)
+            max-width: initial
+            display: grid
+            grid-template-columns: repeat(4, 1fr )
+            margin-top: 50px
+        +mq(custom, $pixels: 990)
+            grid-template-columns: repeat(2, 1fr )
+            column-gap: 10px
+            row-gap: 10px
+    &__num
+        margin-bottom: 39px
+        > span
+            display: inline-block
+            font-family: $titleFont
+            font-weight: bold
+            font-size: 30px
+            line-height: 31px
+            color: $lightColor
+            margin-bottom: 5px
+            text-transform: uppercase
+            +mq(md)
+                text-align: center
+                display: inline-block
+                width: 100%
+            +mq(sm)
+                font-size: 22px
+            +mq(sm)
+                font-size: 18px
+                line-height: 22px
+        > p
+            font-size: 16px
+            line-height: 22px
+            font-family: $addFont
+            color: $lightColor
+            +mq(md)
+                text-align: center
+
+    &__left
+        max-width: 570px
+        width: 100%
+        +mq(md)
+            max-width: initial
+            .block-link
+                +mq(md)
+                    margin-top: 0
+    &__slogan
+
+        > h1
+            font-weight: bold
+            font-size: 40px
+            line-height: 44px
+            color: $lightColor
+            font-family: 'EuropeExt'
+            text-transform: uppercase
+            margin-bottom: 15px
+            +mq(sm)
+                font-size: 30px
+            +mq(xs)
+                font-size: 22px
+                line-height: 30px
+        > p
+            font-size: 20px
+            line-height: 24px
+            color: $lightColor
+            margin-bottom: 55px
+            > span
+                color: $accentColor
+            +mq(sm)
+                font-size: 16px
+    &__cards
+        display: flex
+        width: 100%
+        gap: 30px
+        align-items: stretch
+        +mq(xs)
+            flex-direction: column
+
+    &__card
+        border-radius: 20px
+        width: 100%
+        position: relative
+        z-index: 2
+        margin-bottom: 51px
+        height: 100%
+        +mq(xs)
+            margin-bottom: 20px
+
+        &:before
+            position: absolute
+            content: ''
+            top: -12px
+            left: -12px
+            width: 28px
+            height: 28px
+            z-index: -1
+            background: url(../icons/plus.svg) no-repeat center/cover
+
+        &-inner
+            border-radius: 20px
+            backdrop-filter: blur(17px)
+            width: 100%
+            padding: 15px 21px
+            background-color: rgba($lightColor, 0.1)
+            position: relative
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            height: 100%
+
+            > span
+                color: $lightColor
+                font-size: 20px
+                line-height: 24px
+                display: inline-block
+                margin-bottom: 12px
+                +mq(xs)
+                    font-size: 18px
+
+            > p
+                font-size: 14px
+                line-height: 19px
+                color: $lightColor
+                font-family: $addFont
+.block-link
+    padding: 9px 19px
+    background-color: $accentColor
+    border-radius: 15px
+    color: $lightColor
+    font-weight: bold
+    font-size: 14px
+    line-height: 13px
+    text-transform: uppercase
+    font-family: $titleFont
+    margin-top: 51px
+    display: inline-flex
+    align-items: center
+    justify-content: flex-start
+    width: auto
+    &:hover
+        background-color: darken($accentColor, 10%)
+    > span
+        font-size: 14px
+        line-height: 16px
+        text-transform: uppercase
+        font-family: $titleFont
+        color: $lightColor
+
+        +mq(xs)
+            font-size: 12px
+
+    > svg
+        width: 36px
+        height: 36px
+        margin-left: 15px
+        +mq(xs)
+            width: 24px
+            height: 24px
+
+.mob-block
+    display: none
+    +mq(custom, $pixels: 1171)
+        display: block
+
+.mob-phone
+    width: 25px
+
+.mob-menu
+    width: 25px
+    height: auto
+    margin-left: 20px
+    +mq(xs)
+        margin-left: 10px
+
+.header
+    box-shadow: 0px 4px 19px rgba(0, 0, 0, 0.25)
+    border-radius: 20px
+
+    &__top
+        border-top-right-radius: 20px
+        border-top-left-radius: 20px
+
+        padding: 14px 27px
+        width: 100%
+        background-color: $lightColor
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        +mq(custom, $pixels: 1171)
+            align-items: center
+            border-radius: 20px
+        +mq(xs)
+            padding: 10px 15px
+
+    &__logo
+        width: 100%
+        object-fit: contain
+
+        &-inner
+            display: flex
+            +mq(xs)
+                align-items: center
+            > a
+                flex-shrink: 0
+                height: 100%
+                display: inline-block
+                width: 151px
+                margin-right: 24px
+                +mq(custom, $pixels: 500)
+                    width: 120px
+                    margin-right: 10px
+            > span
+                display: inline-block
+                margin-top: 5px
+                font-size: 12px
+                line-height: 14px
+                color: rgba($textColor, .5)
+                +mq(custom, $pixels: 400)
+                    display: none
+    &__data
+        display: flex
+        margin-left: 10px
+        margin-right: 10px
+        +mq(custom, $pixels: 1171)
+            display: none
+
+    &__block
+        margin-left: 5px
+        margin-right: 5px
+        min-width: 175px
+
+        > span
+            font-size: 12px
+            line-height: 14px
+            color: rgba($blueColor, .5)
+            margin-bottom: 3px
+            display: block
+
+        > p
+            font-size: 14px
+            line-height: 17px
+            color: $blueColor
+        > a
+            font-size: 14px
+            line-height: 17px
+            color: $blueColor
+            &:hover
+                color: darken($blueColor, 10%)
+    &__phone
+        flex-shrink: 0
+        +mq(custom, $pixels: 1171)
+            display: none
+        > span
+            font-size: 12px
+            line-height: 14px
+            color: rgba($blueColor, .5)
+            margin-bottom: 3px
+            display: block
+        > a
+            font-size: 14px
+            line-height: 17px
+            color: $blueColor
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            &:hover
+                color: darken($blueColor, 10%)
+    &__close
+        display: none
+        +mq(custom, $pixels: 1171)
+            display: block
+            position: absolute
+            top: 12px
+            right: 20px
+            font-size: 30px
+            color: $accentColor
+
+    &__bottom
+        width: 100%
+        padding: 10px 27px
+        background-color: $bottomColor
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+        +mq(custom, $pixels: 1171)
+            overflow-y: auto
+            height: 100vh
+
+        +mq(custom, $pixels: 1171)
+            background-color: $lightColor
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            min-height: 100vh
+            z-index: 100
+            padding: 20px
+            display: none
+            > nav
+                display: flex
+                align-items: flex-start
+                flex-direction: column
+                > ul
+                    display: flex
+                    align-items: flex-start
+                    flex-direction: column
+                    > li
+                        margin-bottom: 20px
+.nav
+    display: flex
+    align-content: center
+    justify-content: space-between
+    width: 100%
+
+    > ul
+        display: flex
+        justify-content: flex-start
+        align-items: center
+
+        > li
+            width: auto
+            margin-right: 40px
+
+            > a
+                display: inline
+                font-weight: 500
+                font-size: 16px
+                line-height: 19px
+                border: 2px solid transparent
+                &:hover
+                    border-bottom: 2px solid $accentColor
+    &__call
+        background-color: transparent
+        font-weight: 500
+        font-size: 16px
+        line-height: 19px
+        border: none
+        width: auto
+        color: $accentColor
+        cursor: pointer
+        border: 2px solid transparent
+        flex-shrink: 0
+        +mq(custom, $pixels: 1171)
+            margin-bottom: 20px
+        &:hover
+            border-bottom: 2px solid $accentColor
+
+.li-link
+    position: relative
+    &:hover > .ul-first
+        display: block
+        z-index: 10
+        +mq(custom, $pixels: 1171)
+            display: none
+
+.ul-first
+    display: none
+    position: absolute
+    width: 314px
+    top: 22px
+    left: 0
+    border-radius: 15px
+    background-color: $lightColor
+    +mq(custom, $pixels: 1171)
+        display: block
+        position: static
+
+    > li:first-child a
+        border-top-right-radius: 15px
+        border-top-left-radius: 15px
+    > li:last-child a
+        border-bottom-right-radius: 15px
+        border-bottom-left-radius: 15px
+    > li:first-child > a
+        &::after
+            content: ''
+            position: absolute
+            right: 20px
+            top: 50%
+            transform: translateY(-50%)
+            width: 4.5px
+            height: 9px
+            display: none
+            background: url(../icons/menu.svg) no-repeat center
+        &:hover
+            background-color: #D2DBDF
+            &::after
+                display: inline-block
+
+    > li
+        display: inline-block
+        width: 100%
+        > a
+            display: inline-block
+            width: 100%
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            padding: 13px 35px 13px 20px
+            position: relative
+            +mq(custom, $pixels: 1171)
+                padding: 10px
+            &:hover
+                background-color: #D2DBDF
+
+.li-link1
+    position: relative
+    &:hover + .ul-second
+        display: block
+
+.ul-second
+    display: none
+    position: absolute
+    top: 0
+    right: -296px
+    padding: 20px
+    border: 2px solid #D2DBDF
+    border-radius: 15px
+    background-color: $lightColor
+    +mq(custom, $pixels: 1171)
+        display: block
+        position: static
+        border: none
+        padding: 5px
+        padding-left: 20px
+    > li
+        margin-bottom: 8px
+        &:last-child
+            margin-bottom: 0
+        &:hover a
+            color: $accentColor
+    &:hover
+        display: block
+
+    // Линии
+.strokes
+    width: 100%
+    height: 100%
+    position: relative
+
+    &__line
+        display: flex
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        +mq(md)
+            display: none
+    &__col
+        height: 100%
+        z-index: 10
+        width: calc(100% / 3)
+        border-left: 2px solid rgba($blueColor, .2)
+        border-right: 2px solid rgba($blueColor, .2)
+        &:nth-child(2)
+            border: none
+
+.clickit
+    position: fixed
+    bottom: 10px
+    z-index: 10
+    left: 40px
+    border-radius: 15px
+    overflow: hidden
+    cursor: pointer
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+    display: none
+    +mq(custom, $pixels: 1426)
+        display: none !important
+    > h3
+        font-weight: bold
+        font-size: 12px
+        line-height: 11px
+        text-transform: uppercase
+        color: $lightColor
+        font-family: $titleFont
+        padding: 12px
+        background-color: $accentColor
+    &__img
+        height: 175px
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.transf
+    transform: scale(1.5)
+    width: 150px
+    left: -40px
+    > .clickit__img
+        object-fit: cover
+        height: 200px
+    > h3
+        display: none
+
+.clickit-active
+    display: block
+
+//Услуги
+.services
+    display: flex
+
+    +mq(sm)
+        display: grid
+        grid-template-columns: repeat(1, 1fr)
+        padding-top: 10px
+        padding-bottom: 10px
+
+    &__col
+        width: calc(100% / 3)
+        padding-left: 45px
+        padding-right: 45px
+        position: relative
+        +mq(custom, $pixels: 1171)
+            padding-left: 20px
+            padding-right: 20px
+        +mq(md)
+            padding-left: 5px
+            padding-right: 5px
+        +mq(sm)
+            width: 100%
+        &:first-child
+            +mq(sm)
+                order: 3
+
+        &--absolute
+            position: absolute
+            top: -23px
+            width: calc(100% - 90px)
+            +mq(custom, $pixels: 1171)
+                width: calc(100% - 40px)
+            +mq(md)
+                width: calc(100% - 10px)
+            +mq(sm)
+                position: static
+                width: 100%
+                order: 1
+
+        &--absolute1
+            position: absolute
+            top: -63px
+            width: calc(100% - 90px)
+            +mq(custom, $pixels: 1171)
+                width: calc(100% - 40px)
+            +mq(md)
+                width: calc(100% - 10px)
+            +mq(sm)
+                position: static
+                width: 100%
+                order: 2
+
+        &:nth-child(2)
+            border: none
+        &:first-child
+            position: relative
+            padding-top: 202px
+            +mq(sm)
+                padding-top: 0
+
+        > h2
+            position: absolute
+            +title()
+            top: 0
+            left: -2px
+            padding-top: 76px
+            padding-left: 45px
+            padding-bottom: 95px
+            z-index: 1
+            color: $blueColor
+            background-color: $lightColor
+            +mq(sm)
+                display: none
+
+    &__block
+        display: inline-block
+        z-index: 2
+        width: 100%
+        height: 270px
+        position: relative
+        border-radius: 20px
+        overflow: hidden
+        display: flex
+        align-items: flex-end
+        padding: 10px
+        margin-bottom: 40px
+        +mq(sm)
+            height: 200px
+            margin-bottom: 10px
+
+        &:hover
+            > span
+                background: rgba(36, 198, 71, 0.4)
+                backdrop-filter: blur(5px)
+                border-radius: 10px
+                > svg
+                    display: block
+        > span
+            width: 100%
+            color: $lightColor
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            display: flex
+            padding: 13px 20px
+            align-items: center
+            justify-content: space-between
+            > svg
+                margin-left: auto
+                flex-shrink: 0
+                display: none
+            +mq(xs)
+                font-size: 16px
+
+        > img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+    &__link
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-start
+        margin-top: 80px
+        margin-bottom: 110px
+        text-align: center
+        flex-grow: 1
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+        +mq(sm)
+            margin-top: 20px
+            margin-bottom: 40px
+            width: initial
+            width: 40%
+        +mq(xs)
+            width: 100%
+
+        > span
+            font-size: 14px
+            line-height: 13px
+            text-transform: uppercase
+            font-family: $titleFont
+            color: $lightColor
+
+        > svg
+            margin-left: auto
+            flex-shrink: 1
+
+// Форма обратной связи
+.connect
+    display: flex
+    justify-content: space-between
+    padding-bottom: 108px
+    background-color: $lightColor
+    +mq(custom, $pixels: 1110)
+        flex-direction: column
+
+    &__left
+        max-width: 500px
+        width: 100%
+        border-radius: 20px
+        height: 407px
+        overflow: hidden
+        margin-top: 23px
+        +mq(custom, $pixels: 1110)
+            max-width: initial
+            width: 100%
+            height: 300px
+        +mq(xs)
+            height: 200px
+
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__right
+        max-width: 538px
+        width: 100%
+        position: relative
+        +mq(custom, $pixels: 1110)
+            max-width: initial
+            width: 100%
+            margin-top: 40px
+        +mq(xs)
+            margin-top: 20px
+        > h2
+            font-family: $titleFont
+            font-weight: bold
+            font-size: 35px
+            line-height: 40px
+            text-transform: uppercase
+            color: $blueColor
+            padding-bottom: 43px
+            padding-top: 30px
+            background-color: $lightColor
+            +mq(custom, $pixels: 1110)
+                padding-bottom: 20px
+            +mq(sm)
+                font-size: 24px
+                line-height: 32px
+            +mq(xs)
+                font-size: 22px
+                line-height: 30px
+                padding-bottom: 10px
+        > p
+            font-size: 20px
+            line-height: 24px
+            background-color: $lightColor
+            padding-bottom: 50px
+            +mq(custom, $pixels: 1110)
+                padding-bottom: 30px
+            +mq(sm)
+                font-size: 16px
+
+    &__form
+        width: 808px
+        position: absolute
+        right: 0
+        top: 300px
+        border-radius: 20px
+        display: flex
+        align-items: stretch
+        +mq(custom, $pixels: 1110)
+            position: static
+        +mq(md)
+            width: 100%
+        +mq(sm)
+            display: flex
+            flex-direction: column
+        +mq(xs)
+            justify-content: center
+            align-items: center
+        +mq(custom, $pixels: 450)
+            align-items: stretch
+
+        > p
+            position: absolute
+            bottom: -85px
+            right: -5px
+            background-color: $lightColor
+            padding-top: 18px
+            font-size: 14px
+            padding-bottom: 30px
+            line-height: 17px
+            color: rgba($textColor, .5)
+            max-width: 331px
+            +mq(custom, $pixels: 1110)
+                right: initial
+                left: 0
+            +mq(xs)
+                left: 50%
+                text-align: center
+                transform: translateX(-50%)
+                margin-top: 10px
+                width: 100%
+
+        &-inner
+            background: rgba(31, 73, 96, 0.1)
+            backdrop-filter: blur(52px)
+            display: flex
+            align-items: flex-start
+            padding: 31px 38px
+            border-top-left-radius: 20px
+            border-bottom-left-radius: 20px
+
+            +mq(md)
+                padding: 15px 20px
+            +mq(sm)
+                border-radius: 20px
+                margin-bottom: 20px
+                width: initial
+            +mq(xs)
+
+                flex-direction: column
+
+        > button
+            width: 192px
+            outline: none
+
+            border: none
+            background-color: $accentColor
+            display: flex
+            flex-direction: column
+            text-align: center
+            justify-content: center
+            align-items: center
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+            cursor: pointer
+            border-top-right-radius: 20px
+            border-bottom-right-radius: 20px
+            +mq(sm)
+                border-radius: 20px
+                flex-direction: row-reverse
+                align-items: center
+                justify-content: center
+                width: initial
+                padding: 6px 18px
+            +mq(custom, $pixels: 370)
+                margin-bottom: 20px
+
+            &:hover,
+            &:focus
+                background-color: darken($accentColor, 10%)
+            > svg
+                margin-bottom: 13px
+                +mq(sm)
+                    width: 25px
+                    margin-bottom: 0
+                    margin-left: 10px
+
+    &__input
+        +mq(sm)
+            display: flex
+            flex-direction: column
+        +mq(custom, $pixels: 450)
+            width: 100%
+
+        &:first-child
+            +mq(xs)
+                margin-bottom: 20px
+        &:first-child
+            margin-right: 30px
+            +mq(xs)
+                margin-right: 0
+
+        > label
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 12px
+            display: inline-block
+        > input
+            padding: 20px 25px
+            border-radius: 15px
+            background-color: $lightColor
+            border: none
+            outline: none
+            font-size: 16px
+            line-height: 19px
+            border: 1px solid $lightColor
+            +mq(sm)
+                padding: 10px 15px
+            +mq(custom, $pixels: 450)
+                width: 100%
+
+            &:focus
+                border: 1px solid $accentColor
+            &::placeholder
+                color: rgba($textColor, 0.3)
+//Выгоды
+.benefits
+    display: flex
+    width: 100%
+    gap: 70px
+    +mq(custom, $pixels: 1100)
+        column-gap: 30px
+    +mq(custom, $pixels: 870)
+        flex-direction: column
+    &__left
+        width: 50%
+        +mq(custom, $pixels: 870)
+            width: 100%
+    &__right
+        width: 50%
+        +mq(custom, $pixels: 870)
+            width: 100%
+    &__link
+        margin-top: 0
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+    &__text
+        max-width: 400px
+        width: 100%
+        padding-bottom: 75px
+        background-color: $lightColor
+
+        +mq(custom, $pixels: 870)
+            margin-bottom: 40px
+            padding-bottom: 0
+        +mq(md)
+            max-width: 550px
+        > h2
+            position: relative
+            font-weight: bold
+            font-size: 60px
+            line-height: 60px
+            text-transform: uppercase
+            color: $blueColor
+            font-family: $titleFont
+            margin-bottom: 31px
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                right: 0
+                width: 21px
+                height: 18px
+                background: url(../icons/quote1.svg) no-repeat center
+                +mq(custom, $pixels: 1270)
+                    display: none
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: -30px
+                width: 21px
+                height: 18px
+                background: url(../icons/quote1.svg) no-repeat center
+                +mq(custom, $pixels: 1270)
+                    display: none
+            +mq(md)
+                font-size: 24px
+                line-height: 32px
+                margin-bottom: 20px
+        > p
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            +mq(md)
+                font-size: 16px
+                font-weight: 400
+
+    &__card
+        width: 100%
+        border-radius: 20px
+        position: relative
+        overflow: hidden
+        margin-bottom: 70px
+        padding: 60px
+        +mq(custom, $pixels: 1100)
+            padding: 30px
+            margin-bottom: 20px
+
+        > img
+            position: absolute
+
+        > span
+            display: inline-block
+            font-weight: bold
+            font-size: 30px
+            line-height: 30px
+            text-transform: uppercase
+            color: $lightColor
+            font-family: $titleFont
+            margin-bottom: 18px
+            +mq(xs)
+                margin-bottom: 15px
+        > p
+            font-size: 20px
+            line-height: 24px
+            color: $lightColor
+            +mq(md)
+                font-size: 16px
+
+        &--edu
+            > span
+                margin-top: 105px
+                +mq(md)
+                    font-size: 24px
+                    line-height: 32px
+            > img
+                top: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                z-index: -1
+                left: 0
+
+        &--quality
+            background-color: $blueColor
+            z-index: 2
+            margin-top: 20px
+            padding-bottom: 80px
+            +mq(custom, $pixels: 870)
+                margin-top: 0
+
+            > svg
+                position: absolute
+                display: inline-block
+                top: 0
+                right: 0
+                z-index: -1
+
+            > span
+                margin-bottom: 48px
+                +mq(md)
+                    font-size: 24px
+                    line-height: 32px
+                    margin-bottom: 20px
+                +mq(xs)
+                    font-size: 18px
+                    line-height: 30px
+
+            li
+                font-weight: 500
+
+                font-size: 25px
+                line-height: 30px
+                color: $lightColor
+                margin-bottom: 34px
+                padding-left: 50px
+                position: relative
+                +mq(md)
+                    font-size: 16px
+                    margin-bottom: 15px
+                +mq(xs)
+                    font-size: 14px
+
+                &::before
+                    position: absolute
+                    top: 0
+                    left: 0
+                    font-size: 30px
+                    line-height: 30px
+                    color: $accentColor
+                    font-family: $titleFont
+                    text-transform: uppercase
+
+                &:first-child::before
+                    content: '1'
+                &:nth-child(2)::before
+                    content: '2'
+                &:last-child::before
+                    content: '3'
+                &:last-child::after
+                    position: absolute
+                    content: 'Независимый'
+                    bottom: -50px
+                    left: 50px
+                    padding: 6px 19px
+                    background-color: $accentColor
+                    color: $lightColor
+                    font-weight: 500
+                    font-size: 16px
+                    line-height: 19px
+                    border-radius: 100px
+        &--video
+            background-color: #E1F3E5
+            z-index: 2
+            > svg
+                position: absolute
+                z-index: -1
+                bottom: 10px
+                width: 85%
+                right: 0
+            > span
+                color: $accentColor
+                +mq(md)
+                    font-size: 24px
+                    line-height: 32px
+                +mq(xs)
+                    font-size: 18px
+                    line-height: 30px
+            > p
+                color: $textColor
+                margin-bottom: 199px
+                +mq(md)
+                    margin-bottom: 100px
+        &--key
+            background-color: #E9EDF0
+            z-index: 2
+            > svg
+                position: absolute
+                top: 0
+                right: 0
+                z-index: -1
+                width: 80%
+            > span
+                color: $blueColor
+                max-width: 70%
+                +mq(xs)
+                    font-size: 18px
+                    line-height: 30px
+            > p
+                color: $textColor
+        &--paint
+            z-index: 2
+            > img
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                object-fit: cover
+                z-index: -1
+            > span
+                margin-top: 163px
+                +mq(md)
+                    font-size: 24px
+                    line-height: 32px
+                +mq(xs)
+                    font-size: 18px
+                    line-height: 30px
+
+        &--link
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 140px
+            background: linear-gradient(93.45deg, #1F4960 12.98%, #24C647 100%)
+            box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+            +mq(custom, $pixels: 870)
+                margin-bottom: 20px
+            > img
+                position: static
+                width: 51px
+                margin-left: auto
+            > span
+                margin-bottom: 0
+                +mq(md)
+                    font-size: 24px
+                    line-height: 32px
+                +mq(xs)
+                    font-size: 18px
+                    line-height: 30px
+
+// Слайдер
+.slider
+
+    &__wrapper
+        width: 100%
+        padding: 129px 0
+        background: url('../img/slider-bg.png') $blueColor no-repeat center/cover
+        position: relative
+        z-index: 1
+
+        +mq(custom, $pixels: 900)
+            padding: 40px 0
+
+    &__main
+        display: flex
+        justify-content: space-between
+        align-items: center
+        overflow: hidden
+        width: 100%
+        +mq(custom, $pixels: 1170)
+            flex-direction: column
+    &__circle
+        position: absolute
+        bottom: 0
+        left: 0
+        max-width: 407px
+        max-height: 407px
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        filter: blur(155px)
+        background-color: rgba($accentColor, .6)
+        z-index: -1
+
+    &__left
+        width: 20%
+        +mq(custom, $pixels: 1170)
+            display: flex
+            width: 100%
+            align-items: center
+            justify-content: space-between
+        +mq(custom, $pixels: 900)
+            flex-direction: column
+            align-items: flex-start
+
+        > h2
+            font-weight: bold
+            font-size: 35px
+            line-height: 40px
+            text-transform: uppercase
+            color: $lightColor
+            font-family: $titleFont
+            margin-bottom: 44px
+            +mq(custom, $pixels: 1170)
+                margin-bottom: 0
+            +mq(custom, $pixels: 900)
+                margin-bottom: 20px
+            +mq(md)
+                font-size: 24px
+                line-height: 32px
+    &__right
+        width: 77%
+        +mq(custom, $pixels: 1170)
+            width: 100%
+    &__arrows
+        display: flex
+    &__link
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+        margin-top: 44px
+        +mq(custom, $pixels: 1170)
+            margin-top: 0
+        +mq(custom, $pixels: 900)
+            margin-top: 20px
+    &-prev,
+    &-next
+        width: 80px
+        height: 80px
+        border: 2px solid $accentColor
+        border-radius: 15px
+        display: flex
+        justify-content: center
+        align-items: center
+        outline: none
+        background: transparent
+        cursor: pointer
+        +mq(md)
+            width: 60px
+            height: 60px
+        &:hover
+            background-color: $accentColor
+    &-next
+        margin-left: 20px
+        transform: scale(-1, 1)
+    &__card
+        width: 100%
+        padding: 40px 20px 40px 120px
+        +mq(custom, $pixels: 900)
+            padding: 20px 10px
+
+        &-outer
+            border: 2px solid $accentColor
+            border-radius: 20px
+            padding: 45px 20px
+            display: flex !important
+            justify-content: flex-end
+            position: relative
+            +mq(custom, $pixels: 900)
+                display: flex
+                justify-content: space-between
+            +mq(custom, $pixels: 700)
+                flex-direction: column
+                padding-top: 20px
+                padding-bottom: 20px
+            > img
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                left: -10%
+                max-width: 471px
+                width: 100%
+                display: inline-block
+                filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.25))
+                border-radius: 20px
+                object-fit: cover
+                max-width: 471px
+                +mq(custom, $pixels: 900)
+                    position: static
+                    transform: none
+                    margin-right: 10px
+                    max-width: initial
+                    width: 50%
+                +mq(custom, $pixels: 700)
+                    width: 100%
+                    height: 200px
+                    margin-bottom: 20px
+
+        &-inner
+            width: initial
+            max-width: 280px
+            +mq(custom, $pixels: 900)
+                margin-left: 20px
+            +mq(custom, $pixels: 700)
+                width: 100%
+                max-width: initial
+                margin-left: 0
+
+            > h3
+                font-weight: bold
+                font-size: 25px
+                line-height: 25px
+                color: $accentColor
+                font-family: $titleFont
+                margin-bottom: 23px
+            > h4
+                font-size: 12px
+                line-height: 14px
+                color: rgba($lightColor, .5)
+                margin-bottom: 3px
+            > a
+                font-weight: 500
+                font-size: 16px
+                line-height: 19px
+                color: $accentColor
+                &:hover
+                    border-bottom: 1px solid $accentColor
+
+    &__list
+        margin-bottom: 39px
+        > li
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+            padding-left: 12px
+            position: relative
+            margin-bottom: 2px
+            &::before
+                content: ''
+                position: absolute
+                top: 8px
+                left: 0
+                width: 9px
+                height: 1px
+                background-color: $accentColor
+
+    &__data
+        display: flex
+        column-gap: 48px
+        &-inner
+            margin-bottom: 16px
+            width: initial
+            > span
+
+                display: inline-block
+                font-size: 12px
+                line-height: 14px
+                color: rgba($lightColor, .5)
+            > p
+                font-weight: 500
+                font-size: 14px
+                line-height: 17px
+                color: $lightColor
+            sup
+                color: $lightColor
+// Бренды
+.brands
+    position: absolute
+    bottom: -101px
+    background-color: $lightColor
+    display: flex
+    left: 50%
+    transform: translateX(-50%)
+    justify-content: space-between
+    border-radius: 20px
+    padding: 50px
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05), 0px 4px 50px rgba(0, 0, 0, 0.15)
+
+    +mq(custom, $pixels: 1170)
+        left: 0
+        transform: none
+    +mq(custom, $pixels: 900)
+        padding: 20px
+        bottom: -50px
+    > img
+        object-fit: contain
+        +mq(custom, $pixels: 900)
+            width: 15% !important
+        &:first-child
+            width: 114px
+        &:nth-child(2)
+            width: 157px
+        &:nth-child(3)
+            width: 185px
+        &:nth-child(4)
+            width: 131px
+        &:nth-child(5)
+            width: 146px
+// Этапы
+.steps
+    width: 100%
+    padding-top: 224px
+    padding-bottom: 123px
+    background-color: $greyColor
+    position: relative
+    overflow: hidden
+    +mq(custom, $pixels: 900)
+        padding-top: 100px
+        padding-bottom: 40px
+
+    &__wrapper
+        display: grid
+        grid-template-columns: repeat(4, 1fr )
+        column-gap: 30px
+        row-gap: 30px
+        margin-bottom: 131px
+        +mq(custom, $pixels: 1100)
+            grid-template-columns: repeat(3, 1fr)
+        +mq(custom, $pixels: 900)
+            margin-bottom: 50px
+        +mq(custom, $pixels: 900)
+            grid-template-columns: repeat(2, 1fr )
+        +mq(sm)
+            grid-template-columns: repeat(1, 1fr)
+
+    &__card
+        width: 100%
+        position: relative
+        z-index: 2
+        height: 100%
+        > h2
+            +title($clr: $blueColor)
+            +mq(sm)
+                font-size: 24px
+                line-height: 32px
+
+        &:first-child
+            &::after
+                content: ''
+        &:nth-child(2)
+            img
+                width: 37px
+            &::after
+                content: '1'
+        &:nth-child(3)
+            img
+                width: 54px
+            &::after
+                content: '2'
+        &:nth-child(4)
+            img
+                width: 54px
+            &::after
+                content: '3'
+        &:nth-child(5)
+            img
+                width: 54px
+            &::after
+                content: '4'
+        &:nth-child(6)
+            img
+                width: 49px
+            &::after
+                content: '5'
+        &:nth-child(7)
+            img
+                width: 42px
+            &::after
+                content: '6'
+        &:nth-child(8)
+            img
+                width: 54px
+            &::after
+                content: '7'
+
+        &::after
+            content: ''
+            position: absolute
+            top: -20px
+            right: -29px
+            font-weight: bold
+            font-size: 60px
+            line-height: 70px
+            z-index: -1
+            text-transform: uppercase
+            color: $accentColor
+            font-family: $titleFont
+
+        &-inner
+            width: 100%
+            background: rgba(31, 73, 96, 0.1)
+            backdrop-filter: blur(52px)
+            border-radius: 20px
+            padding: 25px 20px 20px 20px
+            display: flex
+            height: 100%
+            flex-direction: column
+            align-items: flex-start
+            justify-content: space-between
+
+    &__text
+        margin-top: 16px
+        height: 60%
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        > span
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            color: $blueColor
+            display: inline-block
+            margin-bottom: 10px
+            +mq(sm)
+                font-size: 18px
+                line-height: 20px
+        > p
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            color: $accentColor
+            margin-top: auto
+            +mq(sm)
+                font-size: 16px
+                line-height: 16px
+.seo
+    width: 100%
+    > span
+        +title($fz: 25px, $clr: $blueColor)
+        +mq(sm)
+            font-size: 24px
+            line-height: 32px
+    > p
+        font-size: 16px
+        line-height: 24px
+        margin-bottom: 33px
+        +mq(sm)
+            margin-bottom: 20px
+
+    &__link
+        +link()
+        &:hover
+            border-bottom: 1px solid $accentColor
+    &__hidden
+        display: none
+
+//Вызов специалиста
+.call
+    width: 100%
+    padding-top: 152px
+    padding-bottom: 152px
+    z-index: 1
+    position: relative
+    background: url(../img/form-bg.png) no-repeat center/cover
+    +mq(sm)
+        padding-top: 50px
+        padding-bottom: 50px
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -2
+        background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
+
+    > svg
+        position: absolute
+        top: 0
+        left: 0
+        width: 57.18%
+        object-fit: cover
+        height: 100%
+        z-index: -1
+    &__inner
+        display: flex
+        width: 100%
+        justify-content: flex-end
+    &__text
+        max-width: 571px
+        width: 100%
+        +mq(sm)
+            max-width: initial
+        > h2
+            +title()
+            margin-bottom: 18px
+            +mq(sm)
+                font-size: 24px
+                line-height: 32px
+        > p
+            font-size: 20px
+            line-height: 24px
+            color: $lightColor
+            margin-bottom: 37px
+            +mq(sm)
+                font-size: 16px
+
+    &__form
+        &-top
+            display: flex
+            gap: 31px
+            margin-bottom: 30px
+            +mq(custom, $pixels: 450)
+                flex-direction: column
+        &-bottom
+            display: flex
+            column-gap: 31px
+            align-items: center
+            +mq(custom, $pixels: 450)
+                flex-direction: column
+                align-items: flex-start
+            > span
+                font-size: 14px
+                line-height: 17px
+                color: rgba($lightColor, .5)
+                +mq(custom, $pixels: 450)
+                    margin-bottom: 10px
+    &__link
+        margin-top: 0
+        outline: none
+        border: none
+        cursor: pointer
+        &:focus
+            background-color: darken($accentColor, 10%)
+
+    &__input
+        &:first-child
+            +mq(custom, $pixels: 450)
+                margin-bottom: 20px
+        > label
+            font-size: 14px
+            line-height: 17px
+            color: rgba($lightColor, .5)
+            margin-bottom: 12px
+            display: inline-block
+            +mq(sm)
+                font-size: 14px
+                line-height: 17px
+                margin-bottom: 12px
+        > input
+            width: 100%
+            padding: 20px 25px
+            background-color: $lightColor
+            outline: none
+            border-radius: 15px
+            font-size: 16px
+            line-height: 19px
+            border: 1px solid $lightColor
+            +mq(sm)
+                font-size: 16px
+                line-height: 19px
+                padding: 10px 15px
+            &:focus
+                border: 1px solid $accentColor
+            &::placeholder
+                color: rgba($textColor, .3)
+
+// Подвал
+.footer
+    width: 100%
+    padding-top: 80px
+    padding-bottom: 84px
+    background-color: $footerColor
+    position: relative
+    z-index: 1
+    overflow: hidden
+    +mq(custom, $pixels: 550)
+        padding-top: 40px
+        padding-bottom: 40px
+    &__inner
+        display: grid
+        grid-template-columns: repeat(4, 1fr )
+        column-gap: 60px
+        +mq(custom, $pixels: 1100)
+            column-gap: 20px
+        +mq(custom, $pixels: 900)
+            grid-template-columns: repeat(2, 1fr )
+            row-gap: 40px
+        +mq(custom, $pixels: 550)
+            grid-template-columns: repeat(1, 1fr)
+    &__col
+        &:last-child
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: flex-start
+            > a
+                font-size: 16px
+                line-height: 19px
+                color: rgba($lightColor, .5)
+                font-weight: 400
+                &:hover
+                    text-decoration: underline
+        &:first-child
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+        > a
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            color: $lightColor
+            display: inline-block
+            margin-bottom: 18px
+            &:hover
+                text-decoration: underline
+        > ul li
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+            margin-bottom: 7px
+            > a:hover
+                text-decoration: underline
+                font-weight: 400
+        &:nth-child(3)
+            ul:nth-child(2)
+                li:last-child
+                    margin-bottom: 20px
+        &:nth-child(4)
+            > a
+                display: inline-block
+                margin-top: auto
+    &__top
+        > img
+            max-width: 151px
+            width: 100%
+        > a
+            display: inline-block
+            margin-bottom: 30px
+    &__block
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        margin-bottom: 14px
+        &:nth-child(2)
+
+            > a
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: $lightColor
+                &:hover
+                    text-decoration: underline
+            > button
+                display: inline-block
+                width: initial
+                border: none
+                outline: none
+                background: transparent
+                font-weight: 500
+                font-size: 16px
+                line-height: 19px
+                color: $accentColor
+                cursor: pointer
+                border-bottom: 1px solid transparent
+                &:hover
+                    border-bottom: 1px solid $accentColor
+
+        > span
+            font-size: 12px
+            line-height: 14px
+            color: rgba($lightColor, .5)
+            margin-bottom: 5px
+        > p
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+        > a
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+            &:hover
+                text-decoration: underline
+
+    &__icons
+        margin-top: auto
+        display: flex
+        gap: 30px
+        margin-bottom: 7px
+        > a
+            display: inline-block
+            width: 43px
+            height: 43px
+        svg
+            width: 100%
+            height: 100%
+            cursor: pointer
+            flex-shrink: 0
+            &:hover
+                > path
+                    fill: $lightColor
+                > circle
+                    fill: $accentColor
+
+    &__last
+
+        > a
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            color: $lightColor
+            display: inline-block
+            margin-bottom: 18px
+            display: block
+            &:hover
+                text-decoration: underline
+        > ul li
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+            margin-bottom: 7px
+            &:last-child
+                margin-bottom: 36px
+            > a
+                font-size: 14px
+                line-height: 17px
+                color: $lightColor
+
+                &:hover
+                    text-decoration: underline
+    &__policy
+        margin-bottom: 7px !important
+    &__circle
+        max-width: 491px
+        max-height: 491px
+        width: 100%
+        height: 100%
+        z-index: -1
+        position: absolute
+        border-radius: 50%
+        background-color: rgba($accentColor, .4)
+        filter: blur(200px)
+        &:nth-child(1)
+            bottom: -10%
+            left: -10%
+        &:nth-child(2)
+            top: -10%
+            right: -10%
+p
+    +mq(xs)
+        font-size: 14px !important
+
+// СТРАНИЦА УСЛУГ
+.banner-service
+    position: relative
+    width: 100%
+    background: url(../img/service.png) no-repeat center/cover
+    position: relative
+    z-index: 1
+    padding-bottom: 117px
+    padding-top: 20px
+    +mq(sm)
+        padding-bottom: 40px
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        right: 0
+        background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
+        z-index: -2
+    &__link
+        +mq(xs)
+            margin-top: 30px
+    &__wrapper
+    &__inner
+        max-width: 539px
+        > h1
+            +title($fz: 40px, $lh: 44px)
+            margin-bottom: 28px
+            +mq(sm)
+                font-size: 30px
+                margin-bottom: 20px
+            +mq(xs)
+                font-size: 22px
+                margin-bottom: 14px
+        > h4
+            font-weight: bold
+            font-size: 30px
+            line-height: 44px
+            color: $lightColor
+            +mq(sm)
+                font-size: 24px
+            +mq(xs)
+                font-size: 18px
+
+            > span
+                color: $accentColor
+                font-weight: bold
+                display: inline-block
+                margin-bottom: 55px
+                +mq(sm)
+                    margin-bottom: 20px
+                +mq(xs)
+                    margin-bottom: 10px
+        > p
+            font-size: 20px
+            line-height: 27px
+            color: $lightColor
+            font-family: $addFont
+            margin-bottom: 172px
+            +mq(sm)
+                font-size: 16px
+                margin-bottom: 0
+
+//Хлебные крошки
+.breadcrumbs
+    margin-top: 17px
+    margin-bottom: 56px
+    +mq(sm)
+        margin-bottom: 40px
+    > a
+        font-size: 12px
+        line-height: 14px
+        color: $lightColor
+        &:hover
+            text-decoration: underline
+    > span
+        font-size: 12px
+        line-height: 14px
+        color: $accentColor
+
+// О компании
+.service-about
+    display: flex
+    padding: 100px 0
+    +mq(md)
+        flex-direction: column
+    +mq(sm)
+        padding: 40px 0
+    &__left
+        width: 50%
+        margin-right: 100px
+        +mq(md)
+            width: 100%
+            margin-bottom: 20px
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        > h2
+            +title($clr: $blueColor)
+            margin-bottom: 21px
+            +mq(sm)
+                font-size: 30px
+            +mq(xs)
+                font-size: 22px
+                margin-bottom: 15px
+        > p
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 21px
+            +mq(sm)
+                font-size: 16px
+            +mq(xs)
+                margin-bottom: 10px
+            > a
+                color: $accentColor
+                &:hover
+                    text-decoration: underline
+        > ul > li
+            font-size: 20px
+            line-height: 24px
+            margin-left: 41px
+            position: relative
+            margin-bottom: 10px
+            +mq(sm)
+                font-size: 16px
+                margin-bottom: 5px
+            +mq(xs)
+                font-size: 14px
+                margin-bottom: 3px
+            &::before
+                content: ''
+                position: absolute
+                top: 12px
+                left: -32px
+                width: 9px
+                height: 1px
+                background-color: $accentColor
+
+    &__right
+        width: 50%
+        border-radius: 20px
+        height: 100%
+        overflow: hidden
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+        +mq(md)
+            width: 100%
+            height: 300px
+        +mq(xs)
+            height: 200px
+
+// Почему мы
+.why
+    padding-top: 117px
+    padding-bottom: 134px
+    background-color: $greyColor
+    width: 100%
+    +mq(md)
+        padding-top: 40px
+        padding-bottom: 40px
+    &__wrapper
+        > h2
+            +title($clr: $blueColor)
+            max-width: 794px
+            margin-bottom: 38px
+            +mq(md)
+                font-size: 30px
+                line-height: 30px
+            +mq(xs)
+                font-size: 22px
+    &__inner
+        display: flex
+        +mq(md)
+            flex-direction: column
+    &__left
+        overflow: hidden
+        border-radius: 20px
+        max-width: 370px
+        width: 100%
+        margin-right: 31px
+        +mq(md)
+            max-width: initial
+            width: 100%
+            height: 300px
+            margin-bottom: 20px
+        +mq(xs)
+            height: 200px
+
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+    &__right
+        +mq(md)
+            width: 100%
+        > h4
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            color: $blueColor
+            display: inline-block
+            margin-bottom: 15px
+            +mq(xs)
+                margin-bottom: 10px
+                font-size: 16px
+        > p
+            font-size: 16px
+            line-height: 19px
+            margin-bottom: 36px
+            +mq(xs)
+                margin-bottom: 20px
+            &:last-child
+                margin-bottom: 0
+
+.service-connect
+    padding-top: 70px
+    padding-bottom: 123px
+    +mq(sm)
+        padding-top: 40px
+        margin-bottom: 0
+
+// Услуги по ремонту офисов
+.remont
+    width: 100%
+    padding: 100px 0
+    +mq(custom, $pixels: 820)
+        padding: 40px 0
+
+    &__wrapper
+        position: relative
+
+        .strokes__col:nth-child(1)
+            border-right: none
+
+        .strokes__col:nth-child(3)
+            border-left: none
+
+        > h2
+            +title($clr: $blueColor)
+            padding-bottom: 58px
+            background-color: #fff
+            +mq(sm)
+                font-size: 30px
+                line-height: 30px
+                padding-bottom: 20px
+            +mq(xs)
+                font-size: 22px
+    &__grid
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        margin-bottom: 150px
+        +mq(custom, $pixels: 990)
+            margin-bottom: 100px
+        +mq(custom, $pixels: 820)
+            margin-bottom: 50px
+            grid-template-columns: repeat(2, 1fr)
+        +mq(custom, $pixels: 500)
+            grid-template-columns: repeat(1, 1fr )
+            margin-bottom: 30px
+
+    &__card
+        margin-left: 45px
+        margin-right: 45px
+        margin-bottom: 40px
+        border-radius: 20px
+        overflow: hidden
+        height: 270px
+        z-index: 1
+        padding: 20px
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.25))
+        background: linear-gradient(230.99deg, rgba(36, 198, 71, 0.5) 0%, rgba(36, 198, 71, 0) 50%), linear-gradient(230.99deg, rgba(31, 73, 96, 0) 50%, #1F4960 100%)
+        +mq(custom, $pixels: 1170)
+            margin-left: 20px
+            margin-right: 20px
+        +mq(custom, $pixels: 990)
+            margin-left: 10px
+            margin-right: 10px
+        +mq(sm)
+            height: 200px
+            margin-bottom: 15px
+        +mq(xs)
+            margin-left: 5px
+            margin-right: 5px
+        &:hover
+            > a
+
+                display: flex
+                justify-content: space-between
+                background: rgba(36, 198, 71, 0.4)
+                backdrop-filter: blur(5px)
+                border-radius: 10px
+                align-items: center
+                > svg
+                    display: block
+                    flex-shrink: 0
+
+        > img
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -1
+
+        > span
+            display: inline-block
+            margin-top: 162px
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            color: $lightColor
+            +mq(sm)
+                font-size: 16px
+                margin-top: 110px
+        > a
+            display: inline-block
+            margin-top: 162px
+            padding: 5px 20px
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            color: $lightColor
+            +mq(sm)
+                font-size: 16px
+                margin-top: 110px
+            > svg
+                display: none
+
+.remont-guarantee
+    margin-left: 45px
+    margin-right: 45px
+    margin-bottom: 53px
+    +mq(sm)
+        width: 100%
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: 40px
+    > h3
+        +title($fz: 28px, $lh: 40px, $clr: $blueColor)
+        margin-bottom: 11px
+        +mq(sm)
+            font-size: 30px
+        +mq(sm)
+            font-size: 22px
+    > p
+        font-size: 20px
+        line-height: 24px
+        +mq(sm)
+            font-size: 16px
+
+.remont-table
+    margin-left: 45px
+    margin-right: 45px
+
+    +mq(sm)
+        margin-left: 0
+        margin-right: 0
+    +mq(custom, $pixels: 500)
+        overflow-x: auto
+    > h4
+        +title($fz: 20px, $lh: 40px, $clr: $blueColor)
+        margin-bottom: 15px
+        +mq(xs)
+            font-size: 16px
+    > table
+        width: 100%
+        border-collapse: collapse
+        +mq(custom, $pixels: 500)
+            min-width: 500px
+
+        th
+            color: $lightColor
+            background-color: $blueColor
+            padding: 16px 24px
+            text-align: left
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            +mq(sm)
+                font-size: 18px
+            +mq(xs)
+                font-size: 14px
+                padding: 10px
+        td
+            background: rgba(31, 73, 96, 0.1)
+            padding: 18px 24px
+            font-size: 16px
+            line-height: 19px
+            color: $blueColor
+            border-top: 1px solid $lightColor
+            +mq(sm)
+                font-size: 16px
+            +mq(xs)
+                font-size: 12px
+
+        tr > td:first-child
+            border-top-left-radius: 5px
+            border-bottom-left-radius: 5px
+            +mq(sm)
+                border-top-left-radius: 2px
+                border-bottom-left-radius: 2px
+        tr > td:last-child
+            border-top-right-radius: 5px
+            border-bottom-right-radius: 5px
+            +mq(sm)
+                border-top-right-radius: 2px
+                border-bottom-right-radius: 2px
+        tr > th:first-child
+            border-top-left-radius: 5px
+            border-bottom-left-radius: 5px
+            +mq(sm)
+                border-top-left-radius: 2px
+                border-bottom-left-radius: 2px
+        tr > th:last-child
+            border-top-right-radius: 5px
+            border-bottom-right-radius: 5px
+            +mq(sm)
+                border-top-right-radius: 2px
+                border-bottom-right-radius: 2px
+
+    //Третья страница
+.banner-contacts
+    width: 100%
+    padding-top: 20px
+    position: relative
+    z-index: 1
+    padding-bottom: 219px
+    +mq(sm)
+        padding-bottom: 100px
+    +mq(xs)
+        padding-bottom: 40px
+    > img
+        position: absolute
+        top: 50%
+        left: 50%
+        z-index: -1
+        transform: translate(-50%, -50%)
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
+        z-index: -2
+    &__inner
+        max-width: 295px
+
+        +mq(xs)
+            max-width: 340px
+        > h1
+            +title()
+            margin-bottom: 20px
+            +mq(sm)
+                font-size: 30px
+            +mq(xs)
+                font-size: 22px
+    &__link
+        margin-top: 20px
+    &__block
+        width: 100%
+        max-width: 174px
+        display: flex
+        flex-direction: column
+        margin-bottom: 30px
+        +mq(sm)
+            margin-bottom: 20px
+        +mq(xs)
+            max-width: 200px
+        &:last-child
+            margin-bottom: 43px
+        &:nth-child(2)
+            > a
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: $lightColor
+
+        > span
+            font-size: 12px
+            line-height: 14px
+            color: rgba($lightColor, .5)
+            display: inline-block
+            margin-bottom: 5px
+        > p
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+        > a
+            font-size: 14px
+            line-height: 17px
+            color: $lightColor
+            &:hover
+                text-decoration: underline
+.contacts-map
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -2
+
+// Обратный звонок
+.contact-call
+    padding: 58px 0
+    display: flex
+    +mq(custom, $pixels: 1170)
+        flex-direction: column
+    +mq(xs)
+        padding: 40px 0
+    &__left
+        width: 100%
+        max-width: 331px
+        margin-right: 31px
+        +mq(custom, $pixels: 1170)
+            margin-bottom: 20px
+        > h2
+            +title($clr: $blueColor, $fz: 35px, $lh: 40px)
+            margin-bottom: 24px
+            +mq(sm)
+                font-size: 30px
+                line-height: 30px
+                margin-bottom: 10px
+            +mq(xs)
+                font-size: 22px
+
+        > p
+            font-size: 14px
+            line-height: 17px
+            color: rgba($textColor, .5)
+    &__right
+
+    &__form
+        position: static
+        +mq(custom, $pixels: 1170)
+            width: 100%
+        .connect__input
+            +mq(custom, $pixels: 1170)
+                flex-direction: column
+                > label
+                    display: block
+//СТРАНИЦА ПРОЕКТОВ
+.projects
+    width: 100%
+    background-color: $greyColor
+    padding-top: 20px
+    padding-bottom: 89px
+    +mq(xs)
+        padding-bottom: 40px
+    &-bread
+        > a
+            color: $blueColor
+    &__wrapper
+        > h1
+            +title($clr: $blueColor, $fz: 40px, $lh: 44px)
+            margin-bottom: 17px
+            +mq(md)
+                font-size: 35px
+            +mq(sm)
+                font-size: 30px
+            +mq(sm)
+                font-size: 22px
+    &__inner
+        display: flex
+        flex-direction: column
+        justify-content: center
+    &__tabs
+        margin-bottom: 51px
+        +mq(md)
+            margin-bottom: 30px
+        &--active
+            border: 2px solid $accentColor !important
+        > a
+            display: inline-block
+            color: $blueColor
+            font-weight: 500
+            font-size: 20px
+            line-height: 24px
+            padding: 13px 22px
+            background-color: $lightColor
+            border-radius: 15px
+            margin-bottom: 10px
+            margin-right: 10px
+            border: 2px solid $lightColor
+            +mq(md)
+                font-size: 16px
+            +mq(sm)
+                padding: 10px 15px
+            +mq(xs)
+                font-size: 14px
+                padding: 5px
+                margin-right: 5px
+                margin-bottom: 8px
+            &:hover
+                border: 2px solid $accentColor
+    &__grid
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        column-gap: 51px
+        row-gap: 50px
+        +mq(md)
+            column-gap: 30px
+            row-gap: 30px
+        +mq(md)
+            column-gap: 20px
+            row-gap: 20px
+        +mq(xs)
+            column-gap: 15px
+            row-gap: 15px
+        +mq(custom, $pixels: 450)
+            grid-template-columns: repeat(1, 1fr )
+    &__link
+        margin-top: 70px
+        margin-left: auto
+        margin-right: auto
+
+    &__card
+        width: 100%
+        &:hover .projects__img::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: linear-gradient(230.99deg, #24C647 0%, rgba(36, 198, 71, 0) 50%), linear-gradient(230.99deg, rgba(31, 73, 96, 0.51) 50%, #1F4960 100%)
+            cursor: pointer
+            transform: matrix(-1, 0, 0, 1, 0, 0)
+            z-index: 1
+        &:hover .projects__img::before
+            content: ''
+            position: absolute
+            bottom: 41px
+            right: 44px
+            width: 51px
+            height: 39px
+            background: url(../icons/proj.svg) no-repeat center
+            z-index: 2
+            cursor: pointer
+
+        > span
+            font-size: 25px
+            line-height: 25px
+            text-transform: uppercase
+            color: $blueColor
+            font-family: $titleFont
+            display: block
+            margin-bottom: 10px
+            +mq(md)
+                font-size: 22px
+            +mq(sm)
+                font-size: 20px
+            +mq(xs)
+                font-size: 16px
+                line-height: 20px
+        > a
+            font-weight: 500
+            font-size: 16px
+            line-height: 19px
+            color: $accentColor
+            text-decoration: underline
+            +mq(sm)
+                font-size: 14px
+            &:hover
+                text-decoration: none
+
+    &__img
+        width: 100%
+        border-radius: 20px
+        height: 325px
+        overflow: hidden
+        margin-bottom: 20px
+        position: relative
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15), 0px 4px 28px rgba(0, 0, 0, 0.25)
+        +mq(sm)
+            height: 300px
+        +mq(xs)
+            height: 200px
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+// СТРАНИЦА ПРОЕКТА
+.result
+    width: 100%
+    padding-top: 20px
+    padding-bottom: 332px
+    background: url(../img/result-bg.png) no-repeat center/cover
+    position: relative
+    z-index: 1
+    +mq(md)
+        padding-bottom: 80px
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
+        z-index: -2
+    &__wrapper
+    .breadcrumbs
+        margin-bottom: 180px
+        +mq(sm)
+            margin-bottom: 30px
+    &__inner
+        width: 100%
+        max-width: 539px
+
+        > h1
+            +title($fz: 40px, $lh: 44px)
+            margin-bottom: 17px
+            +mq(sm)
+                font-size: 30px
+                line-height: 30px
+            +mq(xs)
+                font-size: 22px
+                line-height: 20px
+
+        > p
+            font-size: 20px
+            line-height: 27px
+            color: $lightColor
+            font-family: $addFont
+            +mq(sm)
+                font-size: 18px
+            +mq(xs)
+                font-size: 14px
+
+//Информация
+.result-info
+    display: flex
+    +mq(xs)
+        flex-direction: column
+    &__left
+        padding: 100px 30px
+        width: 50%
+        border-left: 2px solid rgba($blueColor, .2)
+        border-right: 2px solid rgba($blueColor, .2)
+        +mq(md)
+            padding: 50px 20px
+        +mq(sm)
+            padding: 30px 10px
+        +mq(xs)
+            width: 100%
+            border: none
+            border-bottom: 2px solid rgba($blueColor, .2)
+        > h2
+            +title($clr: $blueColor)
+            margin-bottom: 60px
+            +mq(md)
+                font-size: 30px
+                line-height: 30px
+            +mq(sm)
+                margin-bottom: 20px
+                font-size: 24px
+            +mq(xs)
+                font-size: 18px
+    &__right
+        width: 50%
+        border-right: 2px solid rgba($blueColor, .2)
+        padding: 100px 30px
+        +mq(md)
+            padding: 50px 20px
+        +mq(sm)
+            padding: 30px 10px
+        +mq(xs)
+            width: 100%
+            border: none
+        > h2
+            +title($clr: $blueColor)
+            margin-bottom: 22px
+            +mq(md)
+                font-size: 30px
+                line-height: 30px
+            +mq(sm)
+                font-size: 24px
+            +mq(xs)
+                font-size: 18px
+        > ul li
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 20px
+            margin-left: 19px
+            position: relative
+            &::before
+                content: ''
+                position: absolute
+                top: 7px
+                left: -13px
+                width: 9px
+                height: 1px
+                background-color: $accentColor
+
+    &__top
+        display: flex
+        margin-bottom: 26px
+        .result-info__block:first-child
+            margin-right: 47px
+            > span
+                margin-bottom: 0
+    &__block
+        &:nth-child(3)
+            margin-bottom: 26px
+        &:nth-child(4)
+            > p
+                font-weight: 400
+        > span
+            font-size: 12px
+            line-height: 14px
+            color: $accentColor
+            margin-bottom: 3px
+            display: inline-block
+        > p
+            font-weight: 500
+            font-size: 14px
+            line-height: 17px
+            > sup
+                font-weight: 500
+                font-size: 8px
+                line-height: 17px
+// Галерея
+.gallery
+    width: 100%
+    background-color: $greyColor
+    padding-top: 107px
+    padding-bottom: 129px
+    +mq(md)
+        padding-top: 50px
+        padding-bottom: 50px
+    &__wrapper
+        > h2
+            +title($clr: $blueColor)
+            margin-bottom: 38px
+            +mq(md)
+                font-size: 30px
+            +mq(xs)
+                font-size: 24px
+                line-height: 24px
+    &__grid
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        gap: 30px
+        +mq(md)
+            gap: 15px
+        +mq(custom, $pixels: 800)
+            grid-template-columns: repeat(3, 1fr)
+        +mq(xs)
+            grid-template-columns: repeat(2, 1fr )
+        +mq(custom, $pixels: 450)
+            grid-template-columns: repeat(2, 1fr )
+    &__card
+        width: 100%
+        height: 200px
+        position: relative
+        z-index: 1
+        overflow: hidden
+        border-radius: 20px
+        filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 28px rgba(0, 0, 0, 0.25))
+        cursor: pointer
+        +mq(custom, $pixels: 450)
+            height: 150px
+        &:hover::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba($accentColor, .8)
+            z-index: 1
+        &:hover::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            z-index: 2
+            background: url(../icons/gallery.svg) no-repeat center
+        > img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+// О КОМПАНИИ
+.banner-about
+    width: 100%
+    background: url(../img/about-bg.png) no-repeat center/cover
+    padding-bottom: 302px
+    padding-top: 20px
+    position: relative
+    z-index: 1
+    +mq(sm)
+        padding-bottom: 50px
+    .breadcrumbs
+        margin-bottom: 180px
+        +mq(sm)
+            margin-bottom: 30px
+
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: linear-gradient(90deg, #253640 10%, rgba(31, 73, 96, 0) 81.42%)
+        z-index: -2
+    &__svg
+        position: absolute
+        top: 10px
+        left: 51px
+        z-index: -1
+    &__inner
+        max-width: 539px
+        width: 100%
+        > h1
+            +title($fz: 40px, $lh: 44px)
+            margin-bottom: 10px
+            +mq(sm)
+                font-size: 30px
+            +mq(xs)
+                font-size: 24px
+        > p
+            font-size: 20px
+            line-height: 27px
+            color: $lightColor
+            font-family: $addFont
+            +mq(sm)
+                font-size: 16px
+// Опыт
+.about-exp
+    display: flex
+    width: 100%
+    +mq(sm)
+        flex-direction: column
+    &__left
+        padding: 100px 0
+        width: 60%
+        display: flex
+        justify-content: flex-end
+        +mq(md)
+            padding: 50px 0
+        +mq(sm)
+            width: 100%
+            padding: 40px 20px
+
+        &-inner
+            max-width: 738px
+            width: 100%
+            padding-right: 102px
+            +mq(custom, $pixels: 1171)
+                padding-left: 20px
+                padding-right: 20%
+            +mq(md)
+                padding-right: 10%
+            +mq(sm)
+                padding-right: 0
+                padding-left: 0
+            > h2
+                +title($fz: 35px, $lh: 40px, $clr: $blueColor)
+                margin-bottom: 21px
+                +mq(sm)
+                    font-size: 30px
+                    line-height: 30px
+                +mq(xs)
+                    font-size: 24px
+            > p
+                font-size: 20px
+                line-height: 24px
+                margin-bottom: 10px
+                +mq(sm)
+                    font-size: 16px
+    &__right
+        padding: 100px 0
+        width: 40%
+        display: flex
+        align-items: flex-start
+        justify-content: flex-start
+        background: url(../img/exp.png) no-repeat center/cover
+        +mq(md)
+            padding: 50px 0
+        +mq(sm)
+            width: 100%
+        &-inner
+            max-width: 430px
+            width: 100%
+            padding-left: 84px
+            +mq(custom, $pixels: 1170)
+                margin-right: 20px
+            +mq(md)
+                padding-left: 10%
+            +mq(sm)
+                max-width: initial
+            span
+                color: $accentColor
+            .banner__num:last-child
+                margin-bottom: 0
+// Объекты
+.objects
+    width: 100%
+    background-color: $greyColor
+    padding-top: 86px
+    padding-bottom: 208px
+    position: relative
+    +mq(sm)
+        padding-top: 40px
+        padding-bottom: 100px
+    > .brands
+        bottom: -50px
+        z-index: 2
+        +mq(custom, $pixels: 1171)
+            left: 0
+            transform: none
+        +mq(md)
+            bottom: -30px
+        +mq(sm)
+            bottom: -20px
+    &__wrapper
+        > h2
+            +title($clr: $blueColor)
+            max-width: 568px
+            margin-bottom: 44px
+            +mq(sm)
+                font-size: 30px
+                line-height: 30px
+            +mq(xs)
+                font-size: 24px
+    &__grid
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        column-gap: 18px
+        row-gap: 27px
+        +mq(custom, $pixels: 1171)
+            grid-template-columns: repeat(4, 1fr )
+        +mq(md)
+            grid-template-columns: repeat(3, 1fr )
+        +mq(sm)
+            grid-template-columns: repeat(2, 1fr )
+        +mq(custom, $pixels: 500)
+            grid-template-columns: repeat(1, 1fr )
+            row-gap: 20px
+    &__card
+        height: 216px
+        background-color: rgba($blueColor, 0.1)
+        margin-bottom: 0
+        flex-shrink: 0
+        +mq(sm)
+            height: 150px
+        .banner__card-inner
+            backdrop-filter: blur(52px)
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            align-items: center
+            padding: 36px 50px
+            height: 100%
+            background: none
+            +mq(sm)
+                padding: 20px
+
+            > img
+                &:first-child
+                    width: 76px
+                &:nth-child(2)
+                    width: 78px
+                &:nth-child(3)
+                    width: 75px
+                &:nth-child(4)
+                    width: 73px
+                &:nth-child(5)
+                    width: 74px
+                &:nth-child(6)
+                    width: 68px
+                &:nth-child(7)
+                    width: 78px
+                &:nth-child(8)
+                    width: 66px
+                &:nth-child(9)
+                    width: 73px
+                &:nth-child(10)
+                    width: 73px
+            > p
+                font-weight: 500
+                font-size: 20px
+                line-height: 24px
+                color: $blueColor
+                text-align: center
+                font-family: $mainFont
+// Обратный звонок
+.order
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 100
+    width: 100%
+    min-height: 100vh
+    overflow-y: auto !important
+    background-color: #D5DDE2
+    display: flex
+    justify-content: center
+    align-items: center
+    display: none
+    &__close
+        display: inline-block
+        position: absolute
+        top: 56px
+        right: 64px
+        width: 40px
+        cursor: pointer
+        +mq(md)
+            top: 20px
+            right: 20px
+            width: 30px
+        +mq(custom, $pixels: 580)
+            width: 24px
+            top: 10px
+        &:hover path
+            stroke: darken($blueColor, 10%)
+
+    &__inner
+        vertical-align: middle
+        width: 100%
+        max-width: 544px
+        +mq(custom, $pixels: 580)
+            margin-left: 20px
+            margin-right: 20px
+            width: calc(100% - 40px)
+            margin-top: 40px
+        > h2
+            +title($clr: $blueColor)
+            margin-bottom: 17px
+        > p
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 57px
+            +mq(xs)
+                margin-bottom: 20px
+    &__top
+        display: flex
+        gap: 30px
+        margin-bottom: 37px
+        +mq(custom, $pixels: 580)
+            flex-direction: column
+        +mq(xs)
+            margin-bottom: 20px
+    &__input
+        width: 100%
+        display: flex
+        flex-direction: column
+        +mq(custom, $pixels: 580)
+            &:first-child
+                margin-bottom: 20px
+        > label
+            font-size: 14px
+            line-height: 17px
+            margin-bottom: 12px
+        > input
+            font-size: 16px
+            line-height: 19px
+            padding: 20px 25px
+            background-color: $lightColor
+            border-radius: 15px
+            outline: none
+            border: 1px solid $lightColor
+            &:focus
+                border: 1px solid $accentColor
+            &::placeholder
+                color: rgba($textColor, .2)
+    &__bottom
+        display: flex
+        align-items: flex-start
+        +mq(custom, $pixels: 500)
+            flex-direction: column
+
+        > p
+            font-size: 14px
+            line-height: 17px
+            color: rgba($textColor, .5)
+            max-width: 213px
+            width: 100%
+            margin-right: 74px
+            +mq(xs)
+                margin-right: 20px
+
+            +mq(custom, $pixels: 500)
+                width: 100%
+                max-width: initial
+                margin-bottom: 20px
+
+    &__link
+        margin-top: 0
+        outline: none
+        border: none
+        cursor: pointer
+        width: initial
+
+// Успешная отправка сообщения
+
+.success
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    display: none
+    > img
+        margin-bottom: 50px
+        +mq(xs)
+            width: 100px
+            margin-bottom: 20px
+    > span
+        display: inline-block
+        +title($clr: $blueColor, $fz: 70px, $lh: 40px)
+        margin-bottom: 28px
+        +mq(xs)
+            font-size: 40px
+            margin-bottom: 10px
+    > p
+        font-weight: 500
+        font-size: 20px
+        line-height: 24px
+    &-order
+        display: flex
+        position: static
+        .success
+            display: flex
+//Анимации
+.banner__path
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path 10s .5s linear forwards
+
+.banner-about__path
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path4 6s .5s linear forwards
+    +mq(custom, $pixels: 1350)
+        display: none
+
+.video-path--active
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path2 12s .5s linear forwards
+
+.key-path--active
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path1 12s .5s linear forwards
+
+.form-strokes--active
+    stroke-dasharray: 1770
+    stroke-dashoffset: 1770
+    animation: path3 8s .5s linear forwards
+
+@keyframes path
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path1
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path2
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path3
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+
+@keyframes path4
+    from
+        stroke-dashoffset: 1770
+    to
+        stroke-dashoffset: 0
+.lines
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: -1

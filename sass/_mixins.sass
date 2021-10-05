@@ -1,0 +1,38 @@
+// Mixins
+=title($fz: 35px, $lh: 40px, $clr: $lightColor)
+    font-size: $fz
+    line-height: $lh
+    font-family: $titleFont
+    text-transform: uppercase
+    color: $clr
+    font-weight: bold
+
+=link($fz: 16px, $lh: 19px)
+    font-size: $fz
+    line-height: $lh
+    color: $accentColor
+
+@mixin mq($size, $type: max, $pixels: $breakpoint-sm)
+    @if $size == 'xxs'
+        @media screen and ($type + -width: $breakpoint-xxs)
+            @content
+    @else if $size == 'xs'
+        @media screen and ($type + -width: $breakpoint-xs)
+            @content
+    @else if $size == 'sm'
+        @media screen and ($type + -width: $breakpoint-sm)
+            @content
+    @else if $size == 'md'
+        @media screen and ($type + -width: $breakpoint-md)
+            @content
+    @else if $size == 'lg'
+        @media screen and ($type + -width: $breakpoint-lg)
+            @content
+    @else if $size == 'xl'
+        @media screen and ($type + -width: $breakpoint-xl)
+            @content
+    @else if $size == 'custom'
+        @media screen and ($type + -width: $pixels + px)
+            @content
+    @else
+        @content
