@@ -36,10 +36,11 @@ $(document).ready(function () {
   $(".nav__call").each(function () {
     $(this).click(function () {
       $(".order").css("display", "flex");
-      $("body").css("height", "100vh");
-      $("body").css("position", "fixed");
+      $("body").css("height", "100%");
+      $("body").css("position", "relative");
       $("body").css("oveflow-y", "hidden");
       $("html").css("oveflow-y", "hidden");
+      $("html").css("height", "100%");
     });
   });
 
@@ -49,6 +50,7 @@ $(document).ready(function () {
     $("body").css("position", "static");
     $("body").css("oveflow-y", "auto");
     $("html").css("oveflow-y", "auto");
+    $("html").css("height", "auto");
   });
 
   $(".clickit").click(function () {
