@@ -44,6 +44,10 @@ $(document).ready(function () {
     });
   });
 
+  $(document).on("touchmove", function (e) {
+    e.preventDefault();
+  });
+
   $(".order__close").click(function () {
     $(".order").css("display", "none");
     $("body").css("height", "auto");
