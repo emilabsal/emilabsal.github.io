@@ -39,6 +39,7 @@ $(document).ready(function () {
       $("body").css("height", "100vh");
       $("body").css("position", "fixed");
       $("body").css("oveflow-y", "hidden");
+      $("html").css("oveflow-y", "hidden");
     });
   });
 
@@ -47,6 +48,7 @@ $(document).ready(function () {
     $("body").css("height", "auto");
     $("body").css("position", "static");
     $("body").css("oveflow-y", "auto");
+    $("html").css("oveflow-y", "auto");
   });
 
   $(".clickit").click(function () {
