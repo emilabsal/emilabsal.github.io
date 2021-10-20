@@ -1,0 +1,778 @@
+@import '_vars'
+@import '_mixins'
+@import '_media'
+
+// Reset
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: $mainFont
+    font-weight: 400
+    color: $darkColor
+    font-size: 100%
+
+html,
+body
+    overflow-x: hidden
+
+a
+    text-decoration: none
+li
+    list-style-type: none
+img
+    max-width: 100%
+.container
+    max-width: 1554px
+    width: 100%
+    margin-left: auto
+    margin-right: auto
+    padding-left: 100px
+    padding-right: 50px
+    +mq(custom, $pixels: 1554)
+        padding-left: 20px
+        padding-right: 20px
+
+.wrapper
+    display: flex
+    +mq(sm)
+        display: block
+.menu
+    width: 138px
+    +mq(md)
+        width: 10%
+    +mq(sm)
+        width: 100%
+.content
+    width: calc(100% - 138px)
+    +mq(md)
+        width: 90%
+    +mq(sm)
+        width: 100%
+
+// Меню
+.menu
+    background-color: $greyColor
+    padding: 20px
+    position: relative
+    +mq(sm)
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+    &__wrapper
+        display: inline-block
+
+        +mq(sm)
+            margin-bottom: 0
+    &__logo
+        +mq(sm)
+            width: 50px
+
+.menu-mobile
+    display: flex
+    flex-direction: column
+    align-items: center
+    cursor: pointer
+
+    &__wrapper
+        margin-left: 20px
+        position: fixed
+        bottom: 35%
+        display: flex
+        justify-content: center
+        +mq(md)
+            margin-left: 2px
+        +mq(sm)
+            position: static
+
+    &__lines
+        margin: 0
+        padding: 0
+        display: flex
+        flex-direction: column
+        align-items: center
+        position: relative
+
+    &__line
+        width: 50px
+        padding: 0
+        height: 2px
+        display: inline-block
+        border-radius: 10px
+        background-color: $darkColor
+        margin-bottom: 10px
+        margin-top: 0
+        transition: .3s
+        &:nth-child(2)
+            transition: 0
+        &:last-child
+            margin-bottom: 0
+
+    &__text
+        margin-top: 13px
+        display: inline-block
+        line-height: 24px
+        +mq(xs)
+            display: none
+
+.transform-up
+    transform: rotate(30deg)
+    margin-bottom: 0 !important
+    height: 1px
+.transform-down
+    transform: rotate(-30deg)
+    margin-bottom: 0 !important
+    height: 1px
+
+.margin
+    margin-bottom: 16px
+
+.top
+    position: absolute
+    top: 16px
+    left: 0
+    animation: toTop .2s forwards
+
+@keyframes toTop
+    from
+        top: 16px
+    to
+        top: 0px
+
+.parallax-window
+    background: transparent
+    min-height: 400px
+
+// Первый экран
+.banner
+    padding-top: 32px
+    padding-bottom: 298.5px
+    position: relative
+    z-index: 1
+
+    +mq(xl)
+        padding-bottom: 200px
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba($lightColor, .4)
+            z-index: -1
+    +mq(md)
+        padding-bottom: 100px
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__desc
+        display: flex
+        flex-direction: column
+        font-size: 14px
+        line-height: 22px
+
+        &--upper
+            text-transform: uppercase
+            font-weight: bold
+        +mq(md)
+            margin-top: 60px
+        +mq(sm)
+            margin-left: auto
+            margin-right: auto
+        +mq(xs)
+            margin-top: 80px
+        +mq(custom, $pixels: 400)
+            margin-top: 100px
+.banner-contacts
+    display: flex
+    +mq(md)
+        position: absolute
+        top: 10px
+        left: 20px
+        width: calc(100% - 40px)
+    +mq(sm)
+        justify-content: space-between
+    +mq(custom, $pixels: 400)
+        flex-direction: column
+        align-items: center
+    &__block
+        display: flex
+        &:first-child
+            margin-right: 50px
+            +mq(custom, $pixels: 400)
+                margin-right: 0
+                margin-bottom: 10px
+        +mq(xs)
+            > svg
+                display: none
+    &__desc
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        margin-left: 14px
+
+        +mq(xs)
+            margin-left: 0
+        +mq(custom, $pixels: 400)
+            margin-right: 0
+            display: flex
+            flex-direction: column
+            align-items: center
+    &__text
+        display: block
+        font-size: 14px
+        line-height: 22px
+        +mq(custom, $pixels: 400)
+            text-align: center
+    &__phone
+        font-size: 16px
+        font-weight: bold
+        display: inline-block
+        line-height: 24px
+    &__call
+        transition: .3s ease
+        font-size: 14px
+        line-height: 24px
+        display: inline
+        width: auto
+        border-bottom: 1px solid $accentColor
+        &:hover
+            color: $accentColor
+.slogan
+    margin-top: 144px
+    width: 636px
+    word-wrap: break-word
+    +mq(sm)
+        width: 100%
+        margin-top: 50px
+    &__title
+        +title($fz: 48px, $lh: 58px)
+        margin-top: 0
+        margin-bottom: 96px
+        word-wrap: break-word
+        +mq(sm)
+            font-size: 36px
+            line-height: 40px
+        +mq(xs)
+            font-size: 30px
+            margin-bottom: 50px
+
+        &--bold
+            font-weight: bold
+            word-wrap: break-word
+        &--big
+            font-size: 64px
+            line-height: 64px
+            display: inline-block
+            margin-top: 10px
+            word-wrap: break-word
+            +mq(sm)
+                font-size: 40px
+                line-height: 40px
+            +mq(xs)
+                font-size: 30px
+.button
+    width: 243px
+    word-wrap: break-word
+    overflow-wrap: break-word
+    display: flex
+    align-items: center
+    padding-top: 20px
+    padding-bottom: 20px
+    padding-left: 32px
+    padding-right: 90px
+    background-color: $accentColor
+    outline: none
+    border: none
+    color: $lightColor
+    line-height: 19px
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%, 0% 38%)
+    margin-bottom: 24px
+    position: relative
+    cursor: pointer
+    white-space: normal
+    overflow: hidden
+    transition: .3s ease
+    +mq(xs)
+        font-size: 14px
+        padding-top: 15px
+        padding-bottom: 15px
+    > svg
+        transition: .3s ease
+    &:hover
+        background-color: $accentDarkColor
+        > svg .change
+            fill: $accentColor
+        > svg
+            transform: rotate(-10deg) translateY(10%)
+
+    > svg
+        position: absolute
+        right: 14px
+        bottom: 0
+    &__wrapper
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+    &__message
+        width: 243px
+        line-height: 24px
+        word-wrap: break-word
+        +mq(xs)
+            font-size: 14px
+
+// Второй экран
+.numbers
+
+    &__wrapper
+        display: flex
+        +mq(xs)
+            flex-direction: column
+
+.numbers-line
+    position: absolute
+    bottom: 0px
+    left: 0px
+    width: 1.5px
+    transform: translateY(0px)
+    height: 120%
+    background-color: $accentColor
+    z-index: 1
+
+    &-mobile
+        +mq(xs)
+            height: 120%
+
+.numbers-card
+    max-width: 715px
+    padding-left: 24px
+    padding-top: 65px
+    padding-right: 100px
+    position: relative
+    +mq(lg)
+        width: calc(100% / 3)
+        padding: 50px 24px 0 24px
+    +mq(sm)
+        padding: 50px 15px 0 15px
+    +mq(xs)
+        max-width: initial
+        width: 100%
+        padding: 20px 10px
+
+    &__title
+        font-size: 32px
+        line-height: 28px
+        color: $accentColor
+        margin-bottom: 38px
+        padding-left: 30px
+        position: relative
+        word-wrap: break-word
+        +mq(sm)
+            font-size: 22px
+        +mq(xs)
+            margin-bottom: 20px
+
+        &--bold
+            font-weight: bold
+            color: $accentColor
+    &__text
+        line-height: 24px
+        word-wrap: break-word
+        +mq(sm)
+            font-size: 14px
+    &__circle
+        position: absolute
+        top: 50%
+        transform: translateY(-50%)
+        left: 0
+        background-color: $accentLightColor
+        width: 0px
+        height: 0px
+        border-radius: 50%
+        z-index: -1
+
+.numbers-card__circle-mobile
+    +mq(xs)
+        width: 61px
+        height: 61px
+
+@keyframes circle
+    from
+        width: 0px
+        height: 0px
+    to
+        width: 61px
+        height: 61px
+
+@keyframes circleback
+    from
+        width: 61px
+        height: 61px
+    to
+        width: 0px
+        height: 0px
+
+@keyframes line
+    from
+        height: 120%
+    to
+        height: 75%
+
+@keyframes lineback
+    from
+        height: 75%
+    to
+        height: 120%
+
+// Слайдер
+.slider
+    display: flex
+    overflow-x: hidden
+
+    &__wrapper
+        overflow-x: hidden
+        margin-bottom: 112px
+        padding-top: 160px
+        background-color: $lightColor
+        z-index: 1
+        +mq(sm)
+            padding-top: 100px
+        +mq(xs)
+            padding-top: 50px
+            margin-bottom: 50px
+    &__top
+        display: flex
+        justify-content: space-between
+        margin-bottom: 64px
+        +mq(xs)
+            flex-direction: column
+            margin-bottom: 30px
+    &__title
+        +title()
+        display: flex
+        flex-direction: column
+        margin-right: 10px
+        overflow-wrap: break-word
+        word-wrap: break-word
+        width: auto
+        animation: cardchange 4s
+        +mq(sm)
+            font-size: 36px
+            line-height: 40px
+        +mq(xs)
+            font-size: 26px
+            margin-bottom: 20px
+            margin-right: 0
+
+        &--bold
+            font-weight: bold
+    &-card
+        margin-right: 32px
+        width: 327px
+        min-height: 368px
+        height: 100%
+        overflow-x: hidden
+        overflow-y: auto
+        position: relative
+        padding: 30px 24px
+        display: flex !important
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        flex-shrink: 0
+        transform: skewX(0deg)
+        will-change: transform
+        contain: strict
+        transition: .3s
+        +mq(lg)
+            min-height: initial
+            height: 350px
+            overflow-y: hidden
+        +mq(xs)
+            margin-right: 10px
+
+        &:hover
+            .slider-back
+                opacity: 1
+                visibility: visible
+            .slider-card__text
+                display: block
+            .button
+                display: flex
+            .slider-card__title
+                color: $darkColor
+
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(#190202, .52)
+            z-index: -2
+        > img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            z-index: -2
+        &__desc
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            width: 100%
+            word-wrap: break-word
+            overflow-x: hidden
+        &__title
+            color: $lightColor
+            font-size: 20px
+            font-weight: bold
+            margin-bottom: 24px
+            display: block
+            width: 100%
+            text-align: left
+            overflow-wrap: break-word
+            transition: .3s
+            word-wrap: break-word
+        &__text
+            line-height: 24px
+            display: none
+            margin-bottom: 10px
+            overflow-wrap: break-word
+            word-wrap: break-word
+            transition: .3s
+        .button
+            margin-bottom: 0
+            max-width: 212px
+            display: none
+
+    &-back
+        border: 1px solid $lightGreyColor
+        width: 100%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: $lightGreyColor
+        z-index: -1
+        transition: .3s
+        opacity: 0
+        visibility: hidden
+        &__img
+            width: 90%
+            margin-top: 70px
+            margin-left: 10px
+            display: inline-block
+    &__arrows
+        flex-shrink: 0
+        display: flex
+    &-prev,
+    &-next
+        width: 72px
+        height: 72px
+        border-radius: 50%
+        background: $lightColor
+        border: 1px solid $lightGreyColor
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-shrink: 0
+        transition: background-color 1s ease
+        overflow: hidden
+        +mq(sm)
+            width: 50px
+            height: 50px
+        > svg path
+            transition: .3s ease
+        &::after
+            display: none
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            background-color: $accentColor
+            z-index: -1
+        &:hover
+            &::after
+                display: block
+            > svg path
+                stroke: $lightColor
+    &-prev
+        transform: scale(-1, 1)
+        margin-right: 24px
+        position: relative
+        &::after
+            animation: scale forwards .3s
+    &-next
+        margin-right: 0
+        position: relative
+        > svg
+            z-index: 2
+        &:hover::after
+            display: block
+            z-index: 1
+        &::after
+            animation: scaleNext forwards .3s
+
+.slick-track
+    height: 100%
+
+@keyframes scale
+    from
+        transform: scale(0)
+    to
+        transform: scale(1)
+
+@keyframes scaleNext
+    from
+        transform: scale(0)
+    to
+        transform: scale(1)
+
+// Третий экран
+.team
+    display: flex
+    +mq(md)
+        flex-direction: column
+    &-about
+        width: 50%
+        background-color: $lightGreyColor
+        padding-top: 126px
+        padding-bottom: 126px
+        padding-right: 50px
+        position: relative
+        +mq(md)
+            width: 100%
+        +mq(sm)
+            padding-top: 30px
+            padding-bottom: 30px
+        +mq(xs)
+            padding-right: 10px
+            padding-left: 10px
+
+        &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: -500%
+            z-index: -1
+            width: 500%
+            height: 100%
+            background-color: $lightGreyColor
+            +mq(xs)
+                display: none
+
+        &--bold
+            font-weight: bold
+
+        &__title
+            +title()
+            margin-bottom: 64px
+            overflow-wrap: break-word
+            word-wrap: break-word
+            > span
+                display: block
+            +mq(sm)
+                font-size: 36px
+                line-height: 40px
+                margin-bottom: 30px
+            +mq(xs)
+                font-size: 26px
+        &__text
+            font-size: 20px
+            line-height: 28px
+            margin-bottom: 33px
+            overflow-wrap: break-word
+            word-wrap: break-word
+            +mq(sm)
+                font-size: 16px
+        &__list
+            margin-bottom: 64px
+        &__item
+            margin-bottom: 20px
+            line-height: 24px
+            padding-left: 30px
+            position: relative
+            overflow-wrap: break-word
+            word-wrap: break-word
+            +mq(sm)
+                font-size: 14px
+            &::after
+                content: ''
+                position: absolute
+                top: 5px
+                left: 0
+                background: url(../icons/mark.svg) no-repeat center/cover
+                width: 20px
+                height: 21px
+        .button
+            width: 350px
+            +mq(xs)
+                width: 100%
+    &__right
+        position: relative
+        width: 50%
+        overflow: hidden
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+        +mq(md)
+            width: 100%
+            padding-bottom: 300px
+        +mq(sm)
+            padding-bottom: 160px
+        +mq(xs)
+            padding-bottom: 0
+    &__img
+        position: absolute
+        top: 40px
+        left: -45px
+        +mq(md)
+            left: 0
+        +mq(sm)
+            width: 250px
+        +mq(xs)
+            width: auto
+            height: 100%
+    &__logo
+        text-align: right
+        width: 85%
+        margin-top: 126px
+        margin-left: auto
+        margin-bottom: 50px
+        +mq(xs)
+            width: 70%
+    &-city
+        width: 80%
+        margin-left: auto
+        min-height: 385px
+        background: url(../images/city-bg.png) no-repeat center/cover
+        display: flex
+        align-items: flex-end
+        +mq(xs)
+            z-index: 2
+            width: 100%
+        &__text
+            padding-top: 32px
+            padding-bottom: 32px
+            padding-right: 27px
+            padding-left: 30%
+            background-color: rgba($lightColor, .41)
+            border: 1px solid $lightGreyColor
+            font-size: 18px
+            line-height: 26px
+            +mq(xs)
+                padding: 20px
+                font-size: 16px
+        &--bold
+            font-weight: bold
